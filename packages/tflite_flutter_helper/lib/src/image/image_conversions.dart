@@ -46,7 +46,7 @@ class ImageConversions {
 
     final image = Image.fromBytes(grayscale.getWidth(shape),
         grayscale.getHeight(shape), uint8Buffer.getBuffer().asUint8List(),
-        format: Format.luminance);
+        format: Format.luminance,);
 
     return image;
   }
@@ -78,7 +78,7 @@ class ImageConversions {
         break;
       default:
         throw StateError(
-            "${buffer.getDataType()} is unsupported with TensorBuffer.");
+            '${buffer.getDataType()} is unsupported with TensorBuffer.',);
     }
   }
 }

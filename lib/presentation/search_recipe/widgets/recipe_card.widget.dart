@@ -78,11 +78,11 @@ class RecipeCard extends StatelessWidget {
                     level: recipe.level!.name,
                     category: recipe.category!.name,
                     cuisine: recipe.cuisine!.name,
-                  )
+                  ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

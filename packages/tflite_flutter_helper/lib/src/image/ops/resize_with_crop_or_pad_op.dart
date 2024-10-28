@@ -24,7 +24,7 @@ class ResizeWithCropOrPadOp implements ImageOperator {
   /// width: [_targetWidth]. It adopts center-crop and zero-padding.
   /// You can pass whith [_cropLeft] and [_cropTop] top-left position of a crop to overide the default centered one.
   ResizeWithCropOrPadOp(this._targetHeight, this._targetWidth,
-      [this._cropLeft, this._cropTop])
+      [this._cropLeft, this._cropTop,])
       : _output = Image(_targetWidth, _targetHeight);
 
   /// Applies the defined resizing with cropping or/and padding on [image] and returns the
@@ -93,7 +93,7 @@ class ResizeWithCropOrPadOp implements ImageOperator {
         srcX: srcL,
         srcY: srcT,
         srcH: srcB - srcT,
-        srcW: srcR - srcL);
+        srcW: srcR - srcL,);
 
     image.loadImage(resized);
 
@@ -101,7 +101,7 @@ class ResizeWithCropOrPadOp implements ImageOperator {
   }
 
   Tuple2<int, int> _computeCropPosition(int targetSize, int imageSize,
-      [int? cropPosition]) {
+      [int? cropPosition,]) {
     int srcLT;
     int srcRB;
 
@@ -121,7 +121,7 @@ class ResizeWithCropOrPadOp implements ImageOperator {
     if ((_cropLeft == null && _cropTop != null) ||
         (_cropLeft != null && _cropTop == null)) {
       throw ArgumentError(
-          "Crop position argument (_cropLeft, _cropTop) is invalid, got: ($_cropLeft, $_cropTop)");
+          'Crop position argument (_cropLeft, _cropTop) is invalid, got: ($_cropLeft, $_cropTop)',);
     }
 
     // Check crop position input if both provided
@@ -131,7 +131,7 @@ class ResizeWithCropOrPadOp implements ImageOperator {
         int leftWidth = _cropLeft! + _targetWidth;
         int bottomHeight = _cropTop! + _targetHeight;
         throw ArgumentError(
-            "The crop position is outside the image : crop(x:x+cropWidth,y+cropHeight) = ($_cropLeft:$leftWidth, $_cropTop:$bottomHeight) not in imageSize(x,y) = ($w, $h)");
+            'The crop position is outside the image : crop(x:x+cropWidth,y+cropHeight) = ($_cropLeft:$leftWidth, $_cropTop:$bottomHeight) not in imageSize(x,y) = ($w, $h)',);
       }
     }
   }
@@ -148,9 +148,9 @@ class ResizeWithCropOrPadOp implements ImageOperator {
 
   @override
   Point inverseTransform(
-      Point point, int inputImageHeight, int inputImageWidth) {
+      Point point, int inputImageHeight, int inputImageWidth,) {
     return _transformImpl(
-        point, _targetHeight, _targetWidth, inputImageHeight, inputImageWidth);
+        point, _targetHeight, _targetWidth, inputImageHeight, inputImageWidth,);
   }
 
   Point _transformImpl(Point point, int srcH, int srcW, int dstH, int dstW) {
@@ -166,7 +166,7 @@ class ResizeWithCropOrPadOp implements ImageOperator {
       int? srcY,
       int? srcW,
       int? srcH,
-      bool blend = false}) {
+      bool blend = false,}) {
     dstX ??= 0;
     dstY ??= 0;
     srcX ??= 0;

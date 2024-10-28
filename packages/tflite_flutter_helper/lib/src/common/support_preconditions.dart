@@ -6,7 +6,7 @@ class SupportPreconditions {
   static String checkNotEmpty(String string, {Object? errorMessage}) {
     if (string.length == 0) {
       throw ArgumentError(
-          _resolveMessage(errorMessage, "Given String is empty or null."));
+          _resolveMessage(errorMessage, 'Given String is empty or null.'),);
     }
     return string;
   }
@@ -20,7 +20,7 @@ class SupportPreconditions {
   static int checkElementIndex(int index, int size, {Object? desc}) {
     if (index < 0 || index >= size) {
       throw RangeError(_resolveMessage(
-          desc, "Index $index out of the bounds for List of size $size"));
+          desc, 'Index $index out of the bounds for List of size $size',),);
     }
     return index;
   }

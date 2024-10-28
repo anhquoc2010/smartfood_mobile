@@ -6,9 +6,9 @@ part of 'get_recipes_result.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetRecipeResultDTO _$$_GetRecipeResultDTOFromJson(
+_$GetRecipeResultDTOImpl _$$GetRecipeResultDTOImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetRecipeResultDTO(
+    _$GetRecipeResultDTOImpl(
       data: (json['data'] as List<dynamic>)
           .map((e) => RecipeModel.fromJson(e as Map<String, dynamic>))
           .toList(),

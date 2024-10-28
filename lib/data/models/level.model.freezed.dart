@@ -12,7 +12,7 @@ part of 'level.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LevelModel _$LevelModelFromJson(Map<String, dynamic> json) {
   return _LevelModel.fromJson(json);
@@ -79,11 +79,11 @@ class _$LevelModelCopyWithImpl<$Res, $Val extends LevelModel>
 }
 
 /// @nodoc
-abstract class _$$_LevelModelCopyWith<$Res>
+abstract class _$$LevelModelImplCopyWith<$Res>
     implements $LevelModelCopyWith<$Res> {
-  factory _$$_LevelModelCopyWith(
-          _$_LevelModel value, $Res Function(_$_LevelModel) then) =
-      __$$_LevelModelCopyWithImpl<$Res>;
+  factory _$$LevelModelImplCopyWith(
+          _$LevelModelImpl value, $Res Function(_$LevelModelImpl) then) =
+      __$$LevelModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +93,11 @@ abstract class _$$_LevelModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LevelModelCopyWithImpl<$Res>
-    extends _$LevelModelCopyWithImpl<$Res, _$_LevelModel>
-    implements _$$_LevelModelCopyWith<$Res> {
-  __$$_LevelModelCopyWithImpl(
-      _$_LevelModel _value, $Res Function(_$_LevelModel) _then)
+class __$$LevelModelImplCopyWithImpl<$Res>
+    extends _$LevelModelCopyWithImpl<$Res, _$LevelModelImpl>
+    implements _$$LevelModelImplCopyWith<$Res> {
+  __$$LevelModelImplCopyWithImpl(
+      _$LevelModelImpl _value, $Res Function(_$LevelModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$_LevelModelCopyWithImpl<$Res>
     Object? name = null,
     Object? isChosen = freezed,
   }) {
-    return _then(_$_LevelModel(
+    return _then(_$LevelModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -123,15 +123,15 @@ class __$$_LevelModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_LevelModel implements _LevelModel {
-  _$_LevelModel(
+class _$LevelModelImpl implements _LevelModel {
+  _$LevelModelImpl(
       {required this.id,
       required this.name,
       @JsonKey(includeFromJson: false, includeToJson: false)
-          this.isChosen = false});
+      this.isChosen = false});
 
-  factory _$_LevelModel.fromJson(Map<String, dynamic> json) =>
-      _$$_LevelModelFromJson(json);
+  factory _$LevelModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LevelModelImplFromJson(json);
 
   @override
   final String id;
@@ -147,10 +147,10 @@ class _$_LevelModel implements _LevelModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LevelModel &&
+            other is _$LevelModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             const DeepCollectionEquality().equals(other.isChosen, isChosen));
@@ -164,8 +164,8 @@ class _$_LevelModel implements _LevelModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LevelModelCopyWith<_$_LevelModel> get copyWith =>
-      __$$_LevelModelCopyWithImpl<_$_LevelModel>(this, _$identity);
+  _$$LevelModelImplCopyWith<_$LevelModelImpl> get copyWith =>
+      __$$LevelModelImplCopyWithImpl<_$LevelModelImpl>(this, _$identity);
 }
 
 abstract class _LevelModel implements LevelModel {
@@ -173,10 +173,10 @@ abstract class _LevelModel implements LevelModel {
       {required final String id,
       required final RecipeLevel name,
       @JsonKey(includeFromJson: false, includeToJson: false)
-          dynamic isChosen}) = _$_LevelModel;
+      dynamic isChosen}) = _$LevelModelImpl;
 
   factory _LevelModel.fromJson(Map<String, dynamic> json) =
-      _$_LevelModel.fromJson;
+      _$LevelModelImpl.fromJson;
 
   @override
   String get id;
@@ -189,6 +189,6 @@ abstract class _LevelModel implements LevelModel {
   set isChosen(dynamic value);
   @override
   @JsonKey(ignore: true)
-  _$$_LevelModelCopyWith<_$_LevelModel> get copyWith =>
+  _$$LevelModelImplCopyWith<_$LevelModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

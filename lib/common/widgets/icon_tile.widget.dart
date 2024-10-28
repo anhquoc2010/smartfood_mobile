@@ -52,7 +52,7 @@ class IconTile extends StatelessWidget {
                 TextStyles.s14RegularText.copyWith(
                   color: color,
                 ),
-          )
+          ),
         ],
       ),
     );

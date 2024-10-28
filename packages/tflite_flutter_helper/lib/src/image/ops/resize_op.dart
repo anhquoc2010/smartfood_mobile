@@ -50,9 +50,9 @@ class ResizeOp implements ImageOperator {
 
   @override
   Point inverseTransform(
-      Point point, int inputImageHeight, int inputImageWidth) {
+      Point point, int inputImageHeight, int inputImageWidth,) {
     return Point(point.x * inputImageWidth / _targetWidth,
-        point.y * inputImageHeight / _targetHeight);
+        point.y * inputImageHeight / _targetHeight,);
   }
 }
 

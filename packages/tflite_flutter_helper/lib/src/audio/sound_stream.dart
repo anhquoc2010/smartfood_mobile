@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'recorder_stream.dart';
+import 'package:tflite_flutter_helper/src/audio/recorder_stream.dart';
 
 const methodChannelName = 'com.tfliteflutter.tflite_flutter_helper:methods';
 
@@ -29,7 +29,7 @@ class SoundStream {
 
   Future<dynamic> _onMethodCall(MethodCall call) async {
     switch (call.method) {
-      case "platformEvent":
+      case 'platformEvent':
         eventsStreamController.add(call.arguments);
         break;
     }

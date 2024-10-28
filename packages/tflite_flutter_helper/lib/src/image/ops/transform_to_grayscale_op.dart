@@ -23,7 +23,7 @@ class TransformToGrayscaleOp extends ImageOperator {
 
   @override
   Point<num> inverseTransform(
-      Point<num> point, int inputImageHeight, int inputImageWidth) {
+      Point<num> point, int inputImageHeight, int inputImageWidth,) {
     return point;
   }
 }

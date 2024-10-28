@@ -51,11 +51,11 @@ class TensorBufferUint8 extends TensorBuffer {
   @override
   void loadList(List src, {required List<int> shape}) {
     SupportPreconditions.checkNotNull(src,
-        message: "The array to be loaded cannot be null.");
+        message: 'The array to be loaded cannot be null.',);
     SupportPreconditions.checkArgument(
         src.length == TensorBuffer.computeFlatSize(shape),
         errorMessage:
-            "The size of the array to be loaded does not match the specified shape.");
+            'The size of the array to be loaded does not match the specified shape.',);
     resize(shape);
 
     if (src is List<double>) {
@@ -68,7 +68,7 @@ class TensorBufferUint8 extends TensorBuffer {
       }
     } else {
       throw ArgumentError(
-          'Only List<double> and List<int> are supported but src is: ${src.runtimeType}');
+          'Only List<double> and List<int> are supported but src is: ${src.runtimeType}',);
     }
   }
 }

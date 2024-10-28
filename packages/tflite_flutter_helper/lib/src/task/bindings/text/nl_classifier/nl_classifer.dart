@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
-import 'types.dart';
+import 'package:tflite_flutter_helper/src/task/bindings/text/nl_classifier/types.dart';
 
 import 'package:tflite_flutter_helper/src/task/bindings/dlib.dart';
 
@@ -10,31 +10,31 @@ import 'package:tflite_flutter_helper/src/task/bindings/dlib.dart';
 // Creates NLClassifier from model path and options, returns nullptr if the file
 // doesn't exist or is not a well formatted TFLite model path.
 Pointer<TfLiteNLClassifier> Function(Pointer<Utf8> modelPath,
-    Pointer<TfLiteNLClassifierOptions> options)
+    Pointer<TfLiteNLClassifierOptions> options,)
 NLClassifierFromFileAndOptions = tflitelib
     .lookup<NativeFunction<_NLClassifierFromFileAndOptions_native_t>>(
-    'NLClassifierFromFileAndOptions')
+    'NLClassifierFromFileAndOptions',)
     .asFunction();
 
 typedef _NLClassifierFromFileAndOptions_native_t = Pointer<TfLiteNLClassifier> Function(
     Pointer<Utf8> modelPath,
-    Pointer<TfLiteNLClassifierOptions> options);
+    Pointer<TfLiteNLClassifierOptions> options,);
 
 // Invokes the encapsulated TFLite model and classifies the input text.
 Pointer<TfLiteCategories> Function(Pointer<TfLiteNLClassifier> classifier,
-    Pointer<Utf8> text)
+    Pointer<Utf8> text,)
 NLClassifierClassify = tflitelib
     .lookup<NativeFunction<_NLClassifierClassify_native_t>>(
-    'NLClassifierClassify')
+    'NLClassifierClassify',)
     .asFunction();
 
 typedef _NLClassifierClassify_native_t = Pointer<TfLiteCategories> Function(Pointer<TfLiteNLClassifier> classifier,
-    Pointer<Utf8> text);
+    Pointer<Utf8> text,);
 
 // Deletes NLClassifer instance
 void Function(Pointer<TfLiteNLClassifier>) NLClassifierDelete = tflitelib
     .lookup<NativeFunction<_NLClassifierDelete_native_t>>(
-    'NLClassifierDelete')
+    'NLClassifierDelete',)
     .asFunction();
 
 typedef _NLClassifierDelete_native_t = Void Function(Pointer<TfLiteNLClassifier>);

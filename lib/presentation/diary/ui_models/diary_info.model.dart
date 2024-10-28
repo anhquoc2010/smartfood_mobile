@@ -82,6 +82,6 @@ class DiaryInfoUIModel {
           title: LocaleKeys.meal_dinner.tr(),
           type: MealType.dinner,
           meals: dinner,
-        )
+        ),
       ];
 }

@@ -232,7 +232,7 @@ class SearchRecipeBloc extends Bloc<SearchRecipeEvent, SearchRecipeState> {
         ingredients: [
           if (state.queryDto.ingredients != null)
             ...state.queryDto.ingredients!,
-          event.ingredient
+          event.ingredient,
         ],
       ),
     );

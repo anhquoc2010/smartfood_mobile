@@ -39,7 +39,7 @@ class MacrosItem extends StatelessWidget {
                       CommonShimmer(
                         width: 50,
                         height: 14.sp,
-                      )
+                      ),
                     ],
                   ),
                 )
@@ -56,9 +56,9 @@ class MacrosItem extends StatelessWidget {
                         '${item.consume} / ${item.value} g',
                         style: TextStyles.s14RegularText,
                       ),
-                    )
+                    ),
                   ],
-                )
+                ),
         ],
       ),
     );

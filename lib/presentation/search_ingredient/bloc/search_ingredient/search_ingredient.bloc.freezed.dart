@@ -12,7 +12,7 @@ part of 'search_ingredient.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SearchIngredientEvent {
@@ -82,18 +82,20 @@ class _$SearchIngredientEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetAllCopyWith<$Res> {
-  factory _$$_GetAllCopyWith(_$_GetAll value, $Res Function(_$_GetAll) then) =
-      __$$_GetAllCopyWithImpl<$Res>;
+abstract class _$$GetAllImplCopyWith<$Res> {
+  factory _$$GetAllImplCopyWith(
+          _$GetAllImpl value, $Res Function(_$GetAllImpl) then) =
+      __$$GetAllImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? searchKey});
 }
 
 /// @nodoc
-class __$$_GetAllCopyWithImpl<$Res>
-    extends _$SearchIngredientEventCopyWithImpl<$Res, _$_GetAll>
-    implements _$$_GetAllCopyWith<$Res> {
-  __$$_GetAllCopyWithImpl(_$_GetAll _value, $Res Function(_$_GetAll) _then)
+class __$$GetAllImplCopyWithImpl<$Res>
+    extends _$SearchIngredientEventCopyWithImpl<$Res, _$GetAllImpl>
+    implements _$$GetAllImplCopyWith<$Res> {
+  __$$GetAllImplCopyWithImpl(
+      _$GetAllImpl _value, $Res Function(_$GetAllImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +103,7 @@ class __$$_GetAllCopyWithImpl<$Res>
   $Res call({
     Object? searchKey = freezed,
   }) {
-    return _then(_$_GetAll(
+    return _then(_$GetAllImpl(
       searchKey: freezed == searchKey
           ? _value.searchKey
           : searchKey // ignore: cast_nullable_to_non_nullable
@@ -112,8 +114,8 @@ class __$$_GetAllCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetAll implements _GetAll {
-  const _$_GetAll({this.searchKey});
+class _$GetAllImpl implements _GetAll {
+  const _$GetAllImpl({this.searchKey});
 
   @override
   final String? searchKey;
@@ -124,10 +126,10 @@ class _$_GetAll implements _GetAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAll &&
+            other is _$GetAllImpl &&
             (identical(other.searchKey, searchKey) ||
                 other.searchKey == searchKey));
   }
@@ -138,8 +140,8 @@ class _$_GetAll implements _GetAll {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAllCopyWith<_$_GetAll> get copyWith =>
-      __$$_GetAllCopyWithImpl<_$_GetAll>(this, _$identity);
+  _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
+      __$$GetAllImplCopyWithImpl<_$GetAllImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -211,33 +213,34 @@ class _$_GetAll implements _GetAll {
 }
 
 abstract class _GetAll implements SearchIngredientEvent {
-  const factory _GetAll({final String? searchKey}) = _$_GetAll;
+  const factory _GetAll({final String? searchKey}) = _$GetAllImpl;
 
   String? get searchKey;
   @JsonKey(ignore: true)
-  _$$_GetAllCopyWith<_$_GetAll> get copyWith =>
+  _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_RefreshCopyWith<$Res> {
-  factory _$$_RefreshCopyWith(
-          _$_Refresh value, $Res Function(_$_Refresh) then) =
-      __$$_RefreshCopyWithImpl<$Res>;
+abstract class _$$RefreshImplCopyWith<$Res> {
+  factory _$$RefreshImplCopyWith(
+          _$RefreshImpl value, $Res Function(_$RefreshImpl) then) =
+      __$$RefreshImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RefreshCopyWithImpl<$Res>
-    extends _$SearchIngredientEventCopyWithImpl<$Res, _$_Refresh>
-    implements _$$_RefreshCopyWith<$Res> {
-  __$$_RefreshCopyWithImpl(_$_Refresh _value, $Res Function(_$_Refresh) _then)
+class __$$RefreshImplCopyWithImpl<$Res>
+    extends _$SearchIngredientEventCopyWithImpl<$Res, _$RefreshImpl>
+    implements _$$RefreshImplCopyWith<$Res> {
+  __$$RefreshImplCopyWithImpl(
+      _$RefreshImpl _value, $Res Function(_$RefreshImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Refresh implements _Refresh {
-  const _$_Refresh();
+class _$RefreshImpl implements _Refresh {
+  const _$RefreshImpl();
 
   @override
   String toString() {
@@ -245,9 +248,9 @@ class _$_Refresh implements _Refresh {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Refresh);
+        (other.runtimeType == runtimeType && other is _$RefreshImpl);
   }
 
   @override
@@ -323,29 +326,29 @@ class _$_Refresh implements _Refresh {
 }
 
 abstract class _Refresh implements SearchIngredientEvent {
-  const factory _Refresh() = _$_Refresh;
+  const factory _Refresh() = _$RefreshImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadMoreCopyWith<$Res> {
-  factory _$$_LoadMoreCopyWith(
-          _$_LoadMore value, $Res Function(_$_LoadMore) then) =
-      __$$_LoadMoreCopyWithImpl<$Res>;
+abstract class _$$LoadMoreImplCopyWith<$Res> {
+  factory _$$LoadMoreImplCopyWith(
+          _$LoadMoreImpl value, $Res Function(_$LoadMoreImpl) then) =
+      __$$LoadMoreImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadMoreCopyWithImpl<$Res>
-    extends _$SearchIngredientEventCopyWithImpl<$Res, _$_LoadMore>
-    implements _$$_LoadMoreCopyWith<$Res> {
-  __$$_LoadMoreCopyWithImpl(
-      _$_LoadMore _value, $Res Function(_$_LoadMore) _then)
+class __$$LoadMoreImplCopyWithImpl<$Res>
+    extends _$SearchIngredientEventCopyWithImpl<$Res, _$LoadMoreImpl>
+    implements _$$LoadMoreImplCopyWith<$Res> {
+  __$$LoadMoreImplCopyWithImpl(
+      _$LoadMoreImpl _value, $Res Function(_$LoadMoreImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadMore implements _LoadMore {
-  const _$_LoadMore();
+class _$LoadMoreImpl implements _LoadMore {
+  const _$LoadMoreImpl();
 
   @override
   String toString() {
@@ -353,9 +356,9 @@ class _$_LoadMore implements _LoadMore {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadMore);
+        (other.runtimeType == runtimeType && other is _$LoadMoreImpl);
   }
 
   @override
@@ -431,7 +434,7 @@ class _$_LoadMore implements _LoadMore {
 }
 
 abstract class _LoadMore implements SearchIngredientEvent {
-  const factory _LoadMore() = _$_LoadMore;
+  const factory _LoadMore() = _$LoadMoreImpl;
 }
 
 /// @nodoc
@@ -514,11 +517,12 @@ class _$SearchIngredientStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SearchIngredientStateCopyWith<$Res>
+abstract class _$$SearchIngredientStateImplCopyWith<$Res>
     implements $SearchIngredientStateCopyWith<$Res> {
-  factory _$$_SearchIngredientStateCopyWith(_$_SearchIngredientState value,
-          $Res Function(_$_SearchIngredientState) then) =
-      __$$_SearchIngredientStateCopyWithImpl<$Res>;
+  factory _$$SearchIngredientStateImplCopyWith(
+          _$SearchIngredientStateImpl value,
+          $Res Function(_$SearchIngredientStateImpl) then) =
+      __$$SearchIngredientStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -533,11 +537,12 @@ abstract class _$$_SearchIngredientStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SearchIngredientStateCopyWithImpl<$Res>
-    extends _$SearchIngredientStateCopyWithImpl<$Res, _$_SearchIngredientState>
-    implements _$$_SearchIngredientStateCopyWith<$Res> {
-  __$$_SearchIngredientStateCopyWithImpl(_$_SearchIngredientState _value,
-      $Res Function(_$_SearchIngredientState) _then)
+class __$$SearchIngredientStateImplCopyWithImpl<$Res>
+    extends _$SearchIngredientStateCopyWithImpl<$Res,
+        _$SearchIngredientStateImpl>
+    implements _$$SearchIngredientStateImplCopyWith<$Res> {
+  __$$SearchIngredientStateImplCopyWithImpl(_$SearchIngredientStateImpl _value,
+      $Res Function(_$SearchIngredientStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -547,7 +552,7 @@ class __$$_SearchIngredientStateCopyWithImpl<$Res>
     Object? queryInfo = null,
     Object? ingredients = freezed,
   }) {
-    return _then(_$_SearchIngredientState(
+    return _then(_$SearchIngredientStateImpl(
       paginationDto: null == paginationDto
           ? _value.paginationDto
           : paginationDto // ignore: cast_nullable_to_non_nullable
@@ -566,8 +571,8 @@ class __$$_SearchIngredientStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SearchIngredientState implements _SearchIngredientState {
-  const _$_SearchIngredientState(
+class _$SearchIngredientStateImpl implements _SearchIngredientState {
+  const _$SearchIngredientStateImpl(
       {required this.paginationDto,
       required this.queryInfo,
       final List<IngredientModel>? ingredients})
@@ -593,10 +598,10 @@ class _$_SearchIngredientState implements _SearchIngredientState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchIngredientState &&
+            other is _$SearchIngredientStateImpl &&
             (identical(other.paginationDto, paginationDto) ||
                 other.paginationDto == paginationDto) &&
             (identical(other.queryInfo, queryInfo) ||
@@ -612,16 +617,16 @@ class _$_SearchIngredientState implements _SearchIngredientState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchIngredientStateCopyWith<_$_SearchIngredientState> get copyWith =>
-      __$$_SearchIngredientStateCopyWithImpl<_$_SearchIngredientState>(
-          this, _$identity);
+  _$$SearchIngredientStateImplCopyWith<_$SearchIngredientStateImpl>
+      get copyWith => __$$SearchIngredientStateImplCopyWithImpl<
+          _$SearchIngredientStateImpl>(this, _$identity);
 }
 
 abstract class _SearchIngredientState implements SearchIngredientState {
   const factory _SearchIngredientState(
       {required final PaginationQueryDTO<dynamic> paginationDto,
       required final QueryDataInfo queryInfo,
-      final List<IngredientModel>? ingredients}) = _$_SearchIngredientState;
+      final List<IngredientModel>? ingredients}) = _$SearchIngredientStateImpl;
 
   @override
   PaginationQueryDTO<dynamic> get paginationDto;
@@ -631,6 +636,6 @@ abstract class _SearchIngredientState implements SearchIngredientState {
   List<IngredientModel>? get ingredients;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchIngredientStateCopyWith<_$_SearchIngredientState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchIngredientStateImplCopyWith<_$SearchIngredientStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

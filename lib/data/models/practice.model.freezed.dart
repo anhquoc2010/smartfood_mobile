@@ -12,7 +12,7 @@ part of 'practice.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PracticeModel _$PracticeModelFromJson(Map<String, dynamic> json) {
   return _PracticeModel.fromJson(json);
@@ -86,11 +86,11 @@ class _$PracticeModelCopyWithImpl<$Res, $Val extends PracticeModel>
 }
 
 /// @nodoc
-abstract class _$$_PracticeModelCopyWith<$Res>
+abstract class _$$PracticeModelImplCopyWith<$Res>
     implements $PracticeModelCopyWith<$Res> {
-  factory _$$_PracticeModelCopyWith(
-          _$_PracticeModel value, $Res Function(_$_PracticeModel) then) =
-      __$$_PracticeModelCopyWithImpl<$Res>;
+  factory _$$PracticeModelImplCopyWith(
+          _$PracticeModelImpl value, $Res Function(_$PracticeModelImpl) then) =
+      __$$PracticeModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -98,11 +98,11 @@ abstract class _$$_PracticeModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PracticeModelCopyWithImpl<$Res>
-    extends _$PracticeModelCopyWithImpl<$Res, _$_PracticeModel>
-    implements _$$_PracticeModelCopyWith<$Res> {
-  __$$_PracticeModelCopyWithImpl(
-      _$_PracticeModel _value, $Res Function(_$_PracticeModel) _then)
+class __$$PracticeModelImplCopyWithImpl<$Res>
+    extends _$PracticeModelCopyWithImpl<$Res, _$PracticeModelImpl>
+    implements _$$PracticeModelImplCopyWith<$Res> {
+  __$$PracticeModelImplCopyWithImpl(
+      _$PracticeModelImpl _value, $Res Function(_$PracticeModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -114,7 +114,7 @@ class __$$_PracticeModelCopyWithImpl<$Res>
     Object? minute = null,
     Object? practiceDuration = freezed,
   }) {
-    return _then(_$_PracticeModel(
+    return _then(_$PracticeModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -141,8 +141,8 @@ class __$$_PracticeModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_PracticeModel extends _PracticeModel {
-  _$_PracticeModel(
+class _$PracticeModelImpl extends _PracticeModel {
+  _$PracticeModelImpl(
       {required this.id,
       required this.name,
       required this.calo,
@@ -150,8 +150,8 @@ class _$_PracticeModel extends _PracticeModel {
       this.practiceDuration})
       : super._();
 
-  factory _$_PracticeModel.fromJson(Map<String, dynamic> json) =>
-      _$$_PracticeModelFromJson(json);
+  factory _$PracticeModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PracticeModelImplFromJson(json);
 
   @override
   final String id;
@@ -170,10 +170,10 @@ class _$_PracticeModel extends _PracticeModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PracticeModel &&
+            other is _$PracticeModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.calo, calo) || other.calo == calo) &&
@@ -190,8 +190,8 @@ class _$_PracticeModel extends _PracticeModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PracticeModelCopyWith<_$_PracticeModel> get copyWith =>
-      __$$_PracticeModelCopyWithImpl<_$_PracticeModel>(this, _$identity);
+  _$$PracticeModelImplCopyWith<_$PracticeModelImpl> get copyWith =>
+      __$$PracticeModelImplCopyWithImpl<_$PracticeModelImpl>(this, _$identity);
 }
 
 abstract class _PracticeModel extends PracticeModel {
@@ -200,11 +200,11 @@ abstract class _PracticeModel extends PracticeModel {
       required final String name,
       required final double calo,
       required final int minute,
-      final int? practiceDuration}) = _$_PracticeModel;
+      final int? practiceDuration}) = _$PracticeModelImpl;
   _PracticeModel._() : super._();
 
   factory _PracticeModel.fromJson(Map<String, dynamic> json) =
-      _$_PracticeModel.fromJson;
+      _$PracticeModelImpl.fromJson;
 
   @override
   String get id;
@@ -218,6 +218,6 @@ abstract class _PracticeModel extends PracticeModel {
   int? get practiceDuration;
   @override
   @JsonKey(ignore: true)
-  _$$_PracticeModelCopyWith<_$_PracticeModel> get copyWith =>
+  _$$PracticeModelImplCopyWith<_$PracticeModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

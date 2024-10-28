@@ -2,8 +2,8 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
-import 'dlib.dart';
-import 'types.dart';
+import 'package:tflite_flutter/src/bindings/dlib.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
 
 /// Returns the type of a tensor element.
 TfLiteType tfLiteTensorType(Pointer<TfLiteTensor> t) =>
@@ -13,12 +13,12 @@ int Function(Pointer<TfLiteTensor>) _tfLiteTensorType = tflitelib
     .asFunction();
 
 typedef _TfLiteTensorType_native_t = /*TfLiteType*/ Int32 Function(
-    Pointer<TfLiteTensor>);
+    Pointer<TfLiteTensor>,);
 
 /// Returns the number of dimensions that the tensor has.
 int Function(Pointer<TfLiteTensor>) tfLiteTensorNumDims = tflitelib
     .lookup<NativeFunction<_TfLiteTensorNumDims_native_t>>(
-        'TfLiteTensorNumDims')
+        'TfLiteTensorNumDims',)
     .asFunction();
 
 typedef _TfLiteTensorNumDims_native_t = Int32 Function(Pointer<TfLiteTensor>);
@@ -32,12 +32,12 @@ int Function(Pointer<TfLiteTensor> tensor, int dimIndex) tfLiteTensorDim =
         .asFunction();
 
 typedef _TfLiteTensorDim_native_t = Int32 Function(
-    Pointer<TfLiteTensor> tensor, Int32 dimIndex);
+    Pointer<TfLiteTensor> tensor, Int32 dimIndex,);
 
 /// Returns the size of the underlying data in bytes.
 int Function(Pointer<TfLiteTensor>) tfLiteTensorByteSize = tflitelib
     .lookup<NativeFunction<_TfLiteTensorByteSize_native_t>>(
-        'TfLiteTensorByteSize')
+        'TfLiteTensorByteSize',)
     .asFunction();
 
 typedef _TfLiteTensorByteSize_native_t = Int32 Function(Pointer<TfLiteTensor>);
@@ -53,7 +53,7 @@ Pointer<Void> Function(Pointer<TfLiteTensor>) tfLiteTensorData = tflitelib
     .asFunction();
 
 typedef _TfLiteTensorData_native_t = Pointer<Void> Function(
-    Pointer<TfLiteTensor>);
+    Pointer<TfLiteTensor>,);
 
 /// Returns the (null-terminated) name of the tensor.
 Pointer<Utf8> Function(Pointer<TfLiteTensor>) tfLiteTensorName = tflitelib
@@ -61,7 +61,7 @@ Pointer<Utf8> Function(Pointer<TfLiteTensor>) tfLiteTensorName = tflitelib
     .asFunction();
 
 typedef _TfLiteTensorName_native_t = Pointer<Utf8> Function(
-    Pointer<TfLiteTensor>);
+    Pointer<TfLiteTensor>,);
 
 /// Copies from the provided input buffer into the tensor's buffer.
 ///
@@ -73,7 +73,7 @@ int Function(
   int inputDataSize,
 ) tfLiteTensorCopyFromBuffer = tflitelib
     .lookup<NativeFunction<_TfLiteTensorCopyFromBuffer_native_t>>(
-        'TfLiteTensorCopyFromBuffer')
+        'TfLiteTensorCopyFromBuffer',)
     .asFunction();
 
 typedef _TfLiteTensorCopyFromBuffer_native_t = /*TfLiteStatus*/ Int32 Function(
@@ -92,7 +92,7 @@ int Function(
   int outputDataSize,
 ) tfLiteTensorCopyToBuffer = tflitelib
     .lookup<NativeFunction<_TfLiteTensorCopyToBuffer_native_t>>(
-        'TfLiteTensorCopyToBuffer')
+        'TfLiteTensorCopyToBuffer',)
     .asFunction();
 
 typedef _TfLiteTensorCopyToBuffer_native_t = /*TfLiteStatus*/ Int32 Function(
@@ -104,7 +104,7 @@ typedef _TfLiteTensorCopyToBuffer_native_t = /*TfLiteStatus*/ Int32 Function(
 TfLiteQuantizationParams Function(Pointer<TfLiteTensor> tensor)
     tfLiteTensorQuantizationParams = tflitelib
         .lookup<NativeFunction<_TfLiteTensorQuantizationParams_native_t>>(
-            'TfLiteTensorQuantizationParams')
+            'TfLiteTensorQuantizationParams',)
         .asFunction();
 
 typedef _TfLiteTensorQuantizationParams_native_t

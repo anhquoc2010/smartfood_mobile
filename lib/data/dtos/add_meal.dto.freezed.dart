@@ -12,7 +12,7 @@ part of 'add_meal.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AddMealDTO {
@@ -74,11 +74,11 @@ class _$AddMealDTOCopyWithImpl<$Res, $Val extends AddMealDTO>
 }
 
 /// @nodoc
-abstract class _$$_AddMealDTOCopyWith<$Res>
+abstract class _$$AddMealDTOImplCopyWith<$Res>
     implements $AddMealDTOCopyWith<$Res> {
-  factory _$$_AddMealDTOCopyWith(
-          _$_AddMealDTO value, $Res Function(_$_AddMealDTO) then) =
-      __$$_AddMealDTOCopyWithImpl<$Res>;
+  factory _$$AddMealDTOImplCopyWith(
+          _$AddMealDTOImpl value, $Res Function(_$AddMealDTOImpl) then) =
+      __$$AddMealDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -88,11 +88,11 @@ abstract class _$$_AddMealDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AddMealDTOCopyWithImpl<$Res>
-    extends _$AddMealDTOCopyWithImpl<$Res, _$_AddMealDTO>
-    implements _$$_AddMealDTOCopyWith<$Res> {
-  __$$_AddMealDTOCopyWithImpl(
-      _$_AddMealDTO _value, $Res Function(_$_AddMealDTO) _then)
+class __$$AddMealDTOImplCopyWithImpl<$Res>
+    extends _$AddMealDTOCopyWithImpl<$Res, _$AddMealDTOImpl>
+    implements _$$AddMealDTOImplCopyWith<$Res> {
+  __$$AddMealDTOImplCopyWithImpl(
+      _$AddMealDTOImpl _value, $Res Function(_$AddMealDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +102,7 @@ class __$$_AddMealDTOCopyWithImpl<$Res>
     Object? typeOfMeal = null,
     Object? dishes = null,
   }) {
-    return _then(_$_AddMealDTO(
+    return _then(_$AddMealDTOImpl(
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -122,10 +122,10 @@ class __$$_AddMealDTOCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true, createFactory: false)
-class _$_AddMealDTO extends _AddMealDTO {
-  _$_AddMealDTO(
+class _$AddMealDTOImpl extends _AddMealDTO {
+  _$AddMealDTOImpl(
       {@JsonKey(includeFromJson: false, includeToJson: false)
-          required this.date,
+      required this.date,
       required this.typeOfMeal,
       required final List<MealModel> dishes})
       : _dishes = dishes,
@@ -150,10 +150,10 @@ class _$_AddMealDTO extends _AddMealDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddMealDTO &&
+            other is _$AddMealDTOImpl &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.typeOfMeal, typeOfMeal) ||
                 other.typeOfMeal == typeOfMeal) &&
@@ -168,12 +168,12 @@ class _$_AddMealDTO extends _AddMealDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddMealDTOCopyWith<_$_AddMealDTO> get copyWith =>
-      __$$_AddMealDTOCopyWithImpl<_$_AddMealDTO>(this, _$identity);
+  _$$AddMealDTOImplCopyWith<_$AddMealDTOImpl> get copyWith =>
+      __$$AddMealDTOImplCopyWithImpl<_$AddMealDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddMealDTOToJson(
+    return _$$AddMealDTOImplToJson(
       this,
     );
   }
@@ -182,9 +182,9 @@ class _$_AddMealDTO extends _AddMealDTO {
 abstract class _AddMealDTO extends AddMealDTO {
   factory _AddMealDTO(
       {@JsonKey(includeFromJson: false, includeToJson: false)
-          required final DateTime date,
+      required final DateTime date,
       required final MealType typeOfMeal,
-      required final List<MealModel> dishes}) = _$_AddMealDTO;
+      required final List<MealModel> dishes}) = _$AddMealDTOImpl;
   _AddMealDTO._() : super._();
 
   @override
@@ -196,6 +196,6 @@ abstract class _AddMealDTO extends AddMealDTO {
   List<MealModel> get dishes;
   @override
   @JsonKey(ignore: true)
-  _$$_AddMealDTOCopyWith<_$_AddMealDTO> get copyWith =>
+  _$$AddMealDTOImplCopyWith<_$AddMealDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

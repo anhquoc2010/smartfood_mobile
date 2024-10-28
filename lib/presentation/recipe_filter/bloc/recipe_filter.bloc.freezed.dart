@@ -12,7 +12,7 @@ part of 'recipe_filter.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RecipeFilterEvent {
@@ -93,24 +93,25 @@ class _$RecipeFilterEventCopyWithImpl<$Res, $Val extends RecipeFilterEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+abstract class _$$StartedImplCopyWith<$Res> {
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$RecipeFilterEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$RecipeFilterEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started();
+class _$StartedImpl implements _Started {
+  const _$StartedImpl();
 
   @override
   String toString() {
@@ -118,9 +119,9 @@ class _$_Started implements _Started {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Started);
+        (other.runtimeType == runtimeType && other is _$StartedImpl);
   }
 
   @override
@@ -208,27 +209,29 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements RecipeFilterEvent {
-  const factory _Started() = _$_Started;
+  const factory _Started() = _$StartedImpl;
 }
 
 /// @nodoc
-abstract class _$$_ResetCopyWith<$Res> {
-  factory _$$_ResetCopyWith(_$_Reset value, $Res Function(_$_Reset) then) =
-      __$$_ResetCopyWithImpl<$Res>;
+abstract class _$$ResetImplCopyWith<$Res> {
+  factory _$$ResetImplCopyWith(
+          _$ResetImpl value, $Res Function(_$ResetImpl) then) =
+      __$$ResetImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ResetCopyWithImpl<$Res>
-    extends _$RecipeFilterEventCopyWithImpl<$Res, _$_Reset>
-    implements _$$_ResetCopyWith<$Res> {
-  __$$_ResetCopyWithImpl(_$_Reset _value, $Res Function(_$_Reset) _then)
+class __$$ResetImplCopyWithImpl<$Res>
+    extends _$RecipeFilterEventCopyWithImpl<$Res, _$ResetImpl>
+    implements _$$ResetImplCopyWith<$Res> {
+  __$$ResetImplCopyWithImpl(
+      _$ResetImpl _value, $Res Function(_$ResetImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Reset implements _Reset {
-  const _$_Reset();
+class _$ResetImpl implements _Reset {
+  const _$ResetImpl();
 
   @override
   String toString() {
@@ -236,9 +239,9 @@ class _$_Reset implements _Reset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Reset);
+        (other.runtimeType == runtimeType && other is _$ResetImpl);
   }
 
   @override
@@ -326,24 +329,24 @@ class _$_Reset implements _Reset {
 }
 
 abstract class _Reset implements RecipeFilterEvent {
-  const factory _Reset() = _$_Reset;
+  const factory _Reset() = _$ResetImpl;
 }
 
 /// @nodoc
-abstract class _$$_ToggleCategoryCopyWith<$Res> {
-  factory _$$_ToggleCategoryCopyWith(
-          _$_ToggleCategory value, $Res Function(_$_ToggleCategory) then) =
-      __$$_ToggleCategoryCopyWithImpl<$Res>;
+abstract class _$$ToggleCategoryImplCopyWith<$Res> {
+  factory _$$ToggleCategoryImplCopyWith(_$ToggleCategoryImpl value,
+          $Res Function(_$ToggleCategoryImpl) then) =
+      __$$ToggleCategoryImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool isSelected, int index});
 }
 
 /// @nodoc
-class __$$_ToggleCategoryCopyWithImpl<$Res>
-    extends _$RecipeFilterEventCopyWithImpl<$Res, _$_ToggleCategory>
-    implements _$$_ToggleCategoryCopyWith<$Res> {
-  __$$_ToggleCategoryCopyWithImpl(
-      _$_ToggleCategory _value, $Res Function(_$_ToggleCategory) _then)
+class __$$ToggleCategoryImplCopyWithImpl<$Res>
+    extends _$RecipeFilterEventCopyWithImpl<$Res, _$ToggleCategoryImpl>
+    implements _$$ToggleCategoryImplCopyWith<$Res> {
+  __$$ToggleCategoryImplCopyWithImpl(
+      _$ToggleCategoryImpl _value, $Res Function(_$ToggleCategoryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -352,7 +355,7 @@ class __$$_ToggleCategoryCopyWithImpl<$Res>
     Object? isSelected = null,
     Object? index = null,
   }) {
-    return _then(_$_ToggleCategory(
+    return _then(_$ToggleCategoryImpl(
       isSelected: null == isSelected
           ? _value.isSelected
           : isSelected // ignore: cast_nullable_to_non_nullable
@@ -367,8 +370,8 @@ class __$$_ToggleCategoryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ToggleCategory implements _ToggleCategory {
-  const _$_ToggleCategory({required this.isSelected, required this.index});
+class _$ToggleCategoryImpl implements _ToggleCategory {
+  const _$ToggleCategoryImpl({required this.isSelected, required this.index});
 
   @override
   final bool isSelected;
@@ -381,10 +384,10 @@ class _$_ToggleCategory implements _ToggleCategory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ToggleCategory &&
+            other is _$ToggleCategoryImpl &&
             (identical(other.isSelected, isSelected) ||
                 other.isSelected == isSelected) &&
             (identical(other.index, index) || other.index == index));
@@ -396,8 +399,9 @@ class _$_ToggleCategory implements _ToggleCategory {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ToggleCategoryCopyWith<_$_ToggleCategory> get copyWith =>
-      __$$_ToggleCategoryCopyWithImpl<_$_ToggleCategory>(this, _$identity);
+  _$$ToggleCategoryImplCopyWith<_$ToggleCategoryImpl> get copyWith =>
+      __$$ToggleCategoryImplCopyWithImpl<_$ToggleCategoryImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -483,30 +487,30 @@ class _$_ToggleCategory implements _ToggleCategory {
 abstract class _ToggleCategory implements RecipeFilterEvent {
   const factory _ToggleCategory(
       {required final bool isSelected,
-      required final int index}) = _$_ToggleCategory;
+      required final int index}) = _$ToggleCategoryImpl;
 
   bool get isSelected;
   int get index;
   @JsonKey(ignore: true)
-  _$$_ToggleCategoryCopyWith<_$_ToggleCategory> get copyWith =>
+  _$$ToggleCategoryImplCopyWith<_$ToggleCategoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ToggleLevelCopyWith<$Res> {
-  factory _$$_ToggleLevelCopyWith(
-          _$_ToggleLevel value, $Res Function(_$_ToggleLevel) then) =
-      __$$_ToggleLevelCopyWithImpl<$Res>;
+abstract class _$$ToggleLevelImplCopyWith<$Res> {
+  factory _$$ToggleLevelImplCopyWith(
+          _$ToggleLevelImpl value, $Res Function(_$ToggleLevelImpl) then) =
+      __$$ToggleLevelImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool isSelected, int index});
 }
 
 /// @nodoc
-class __$$_ToggleLevelCopyWithImpl<$Res>
-    extends _$RecipeFilterEventCopyWithImpl<$Res, _$_ToggleLevel>
-    implements _$$_ToggleLevelCopyWith<$Res> {
-  __$$_ToggleLevelCopyWithImpl(
-      _$_ToggleLevel _value, $Res Function(_$_ToggleLevel) _then)
+class __$$ToggleLevelImplCopyWithImpl<$Res>
+    extends _$RecipeFilterEventCopyWithImpl<$Res, _$ToggleLevelImpl>
+    implements _$$ToggleLevelImplCopyWith<$Res> {
+  __$$ToggleLevelImplCopyWithImpl(
+      _$ToggleLevelImpl _value, $Res Function(_$ToggleLevelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -515,7 +519,7 @@ class __$$_ToggleLevelCopyWithImpl<$Res>
     Object? isSelected = null,
     Object? index = null,
   }) {
-    return _then(_$_ToggleLevel(
+    return _then(_$ToggleLevelImpl(
       isSelected: null == isSelected
           ? _value.isSelected
           : isSelected // ignore: cast_nullable_to_non_nullable
@@ -530,8 +534,8 @@ class __$$_ToggleLevelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ToggleLevel implements _ToggleLevel {
-  const _$_ToggleLevel({required this.isSelected, required this.index});
+class _$ToggleLevelImpl implements _ToggleLevel {
+  const _$ToggleLevelImpl({required this.isSelected, required this.index});
 
   @override
   final bool isSelected;
@@ -544,10 +548,10 @@ class _$_ToggleLevel implements _ToggleLevel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ToggleLevel &&
+            other is _$ToggleLevelImpl &&
             (identical(other.isSelected, isSelected) ||
                 other.isSelected == isSelected) &&
             (identical(other.index, index) || other.index == index));
@@ -559,8 +563,8 @@ class _$_ToggleLevel implements _ToggleLevel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ToggleLevelCopyWith<_$_ToggleLevel> get copyWith =>
-      __$$_ToggleLevelCopyWithImpl<_$_ToggleLevel>(this, _$identity);
+  _$$ToggleLevelImplCopyWith<_$ToggleLevelImpl> get copyWith =>
+      __$$ToggleLevelImplCopyWithImpl<_$ToggleLevelImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -646,30 +650,30 @@ class _$_ToggleLevel implements _ToggleLevel {
 abstract class _ToggleLevel implements RecipeFilterEvent {
   const factory _ToggleLevel(
       {required final bool isSelected,
-      required final int index}) = _$_ToggleLevel;
+      required final int index}) = _$ToggleLevelImpl;
 
   bool get isSelected;
   int get index;
   @JsonKey(ignore: true)
-  _$$_ToggleLevelCopyWith<_$_ToggleLevel> get copyWith =>
+  _$$ToggleLevelImplCopyWith<_$ToggleLevelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ToggleCuisineCopyWith<$Res> {
-  factory _$$_ToggleCuisineCopyWith(
-          _$_ToggleCuisine value, $Res Function(_$_ToggleCuisine) then) =
-      __$$_ToggleCuisineCopyWithImpl<$Res>;
+abstract class _$$ToggleCuisineImplCopyWith<$Res> {
+  factory _$$ToggleCuisineImplCopyWith(
+          _$ToggleCuisineImpl value, $Res Function(_$ToggleCuisineImpl) then) =
+      __$$ToggleCuisineImplCopyWithImpl<$Res>;
   @useResult
   $Res call({bool isSelected, int index});
 }
 
 /// @nodoc
-class __$$_ToggleCuisineCopyWithImpl<$Res>
-    extends _$RecipeFilterEventCopyWithImpl<$Res, _$_ToggleCuisine>
-    implements _$$_ToggleCuisineCopyWith<$Res> {
-  __$$_ToggleCuisineCopyWithImpl(
-      _$_ToggleCuisine _value, $Res Function(_$_ToggleCuisine) _then)
+class __$$ToggleCuisineImplCopyWithImpl<$Res>
+    extends _$RecipeFilterEventCopyWithImpl<$Res, _$ToggleCuisineImpl>
+    implements _$$ToggleCuisineImplCopyWith<$Res> {
+  __$$ToggleCuisineImplCopyWithImpl(
+      _$ToggleCuisineImpl _value, $Res Function(_$ToggleCuisineImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -678,7 +682,7 @@ class __$$_ToggleCuisineCopyWithImpl<$Res>
     Object? isSelected = null,
     Object? index = null,
   }) {
-    return _then(_$_ToggleCuisine(
+    return _then(_$ToggleCuisineImpl(
       isSelected: null == isSelected
           ? _value.isSelected
           : isSelected // ignore: cast_nullable_to_non_nullable
@@ -693,8 +697,8 @@ class __$$_ToggleCuisineCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ToggleCuisine implements _ToggleCuisine {
-  const _$_ToggleCuisine({required this.isSelected, required this.index});
+class _$ToggleCuisineImpl implements _ToggleCuisine {
+  const _$ToggleCuisineImpl({required this.isSelected, required this.index});
 
   @override
   final bool isSelected;
@@ -707,10 +711,10 @@ class _$_ToggleCuisine implements _ToggleCuisine {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ToggleCuisine &&
+            other is _$ToggleCuisineImpl &&
             (identical(other.isSelected, isSelected) ||
                 other.isSelected == isSelected) &&
             (identical(other.index, index) || other.index == index));
@@ -722,8 +726,8 @@ class _$_ToggleCuisine implements _ToggleCuisine {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ToggleCuisineCopyWith<_$_ToggleCuisine> get copyWith =>
-      __$$_ToggleCuisineCopyWithImpl<_$_ToggleCuisine>(this, _$identity);
+  _$$ToggleCuisineImplCopyWith<_$ToggleCuisineImpl> get copyWith =>
+      __$$ToggleCuisineImplCopyWithImpl<_$ToggleCuisineImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -809,12 +813,12 @@ class _$_ToggleCuisine implements _ToggleCuisine {
 abstract class _ToggleCuisine implements RecipeFilterEvent {
   const factory _ToggleCuisine(
       {required final bool isSelected,
-      required final int index}) = _$_ToggleCuisine;
+      required final int index}) = _$ToggleCuisineImpl;
 
   bool get isSelected;
   int get index;
   @JsonKey(ignore: true)
-  _$$_ToggleCuisineCopyWith<_$_ToggleCuisine> get copyWith =>
+  _$$ToggleCuisineImplCopyWith<_$ToggleCuisineImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -883,11 +887,11 @@ class _$RecipeFilterStateCopyWithImpl<$Res, $Val extends RecipeFilterState>
 }
 
 /// @nodoc
-abstract class _$$_RecipeFilterStateCopyWith<$Res>
+abstract class _$$RecipeFilterStateImplCopyWith<$Res>
     implements $RecipeFilterStateCopyWith<$Res> {
-  factory _$$_RecipeFilterStateCopyWith(_$_RecipeFilterState value,
-          $Res Function(_$_RecipeFilterState) then) =
-      __$$_RecipeFilterStateCopyWithImpl<$Res>;
+  factory _$$RecipeFilterStateImplCopyWith(_$RecipeFilterStateImpl value,
+          $Res Function(_$RecipeFilterStateImpl) then) =
+      __$$RecipeFilterStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -898,11 +902,11 @@ abstract class _$$_RecipeFilterStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RecipeFilterStateCopyWithImpl<$Res>
-    extends _$RecipeFilterStateCopyWithImpl<$Res, _$_RecipeFilterState>
-    implements _$$_RecipeFilterStateCopyWith<$Res> {
-  __$$_RecipeFilterStateCopyWithImpl(
-      _$_RecipeFilterState _value, $Res Function(_$_RecipeFilterState) _then)
+class __$$RecipeFilterStateImplCopyWithImpl<$Res>
+    extends _$RecipeFilterStateCopyWithImpl<$Res, _$RecipeFilterStateImpl>
+    implements _$$RecipeFilterStateImplCopyWith<$Res> {
+  __$$RecipeFilterStateImplCopyWithImpl(_$RecipeFilterStateImpl _value,
+      $Res Function(_$RecipeFilterStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -913,7 +917,7 @@ class __$$_RecipeFilterStateCopyWithImpl<$Res>
     Object? levels = null,
     Object? status = null,
   }) {
-    return _then(_$_RecipeFilterState(
+    return _then(_$RecipeFilterStateImpl(
       categories: null == categories
           ? _value._categories
           : categories // ignore: cast_nullable_to_non_nullable
@@ -936,8 +940,8 @@ class __$$_RecipeFilterStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RecipeFilterState implements _RecipeFilterState {
-  const _$_RecipeFilterState(
+class _$RecipeFilterStateImpl implements _RecipeFilterState {
+  const _$RecipeFilterStateImpl(
       {final List<CategoryModel> categories = const [],
       final List<CuisineModel> cuisines = const [],
       final List<LevelModel> levels = const [],
@@ -983,10 +987,10 @@ class _$_RecipeFilterState implements _RecipeFilterState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RecipeFilterState &&
+            other is _$RecipeFilterStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._categories, _categories) &&
             const DeepCollectionEquality().equals(other._cuisines, _cuisines) &&
@@ -1005,8 +1009,8 @@ class _$_RecipeFilterState implements _RecipeFilterState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecipeFilterStateCopyWith<_$_RecipeFilterState> get copyWith =>
-      __$$_RecipeFilterStateCopyWithImpl<_$_RecipeFilterState>(
+  _$$RecipeFilterStateImplCopyWith<_$RecipeFilterStateImpl> get copyWith =>
+      __$$RecipeFilterStateImplCopyWithImpl<_$RecipeFilterStateImpl>(
           this, _$identity);
 }
 
@@ -1015,7 +1019,7 @@ abstract class _RecipeFilterState implements RecipeFilterState {
       {final List<CategoryModel> categories,
       final List<CuisineModel> cuisines,
       final List<LevelModel> levels,
-      final QueryStatus status}) = _$_RecipeFilterState;
+      final QueryStatus status}) = _$RecipeFilterStateImpl;
 
   @override
   List<CategoryModel> get categories;
@@ -1027,6 +1031,6 @@ abstract class _RecipeFilterState implements RecipeFilterState {
   QueryStatus get status;
   @override
   @JsonKey(ignore: true)
-  _$$_RecipeFilterStateCopyWith<_$_RecipeFilterState> get copyWith =>
+  _$$RecipeFilterStateImplCopyWith<_$RecipeFilterStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

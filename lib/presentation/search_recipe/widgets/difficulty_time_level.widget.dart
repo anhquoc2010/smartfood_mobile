@@ -65,7 +65,7 @@ class DifficultyCategoryCuisine extends StatelessWidget {
             icon: UniconsLine.map_marker_info,
             title: cuisine,
           ),
-        )
+        ),
       ],
     );
   }

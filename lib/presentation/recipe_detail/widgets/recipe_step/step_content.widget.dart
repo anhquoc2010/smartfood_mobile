@@ -76,7 +76,7 @@ class _RecipeStepBodyState extends State<RecipeStepBody> {
               );
             },
           ),
-        )
+        ),
       ],
     );
   }

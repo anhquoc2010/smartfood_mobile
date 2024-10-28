@@ -16,7 +16,7 @@ class CalorieInDay extends StatelessWidget {
             CalorieRadialGauge(
               itemSize: itemSize,
             ),
-            LeftConsumedTotalCalorie(itemSize: itemSize)
+            LeftConsumedTotalCalorie(itemSize: itemSize),
           ],
         );
       },

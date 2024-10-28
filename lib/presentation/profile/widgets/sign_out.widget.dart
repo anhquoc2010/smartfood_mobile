@@ -47,7 +47,7 @@ class SignOut extends StatelessWidget {
                       LocaleKeys.auth_logout.tr(),
                       style: TextStyles.s14BoldText
                           .copyWith(color: ColorStyles.red400),
-                    )
+                    ),
                   ],
                 ),
               ),

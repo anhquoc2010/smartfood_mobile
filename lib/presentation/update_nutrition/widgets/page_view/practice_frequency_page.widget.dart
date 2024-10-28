@@ -52,7 +52,7 @@ class _PracticeFrequencyPageState extends State<PracticeFrequencyPage> {
         title: LocaleKeys.measure_very_heavy.tr(),
         index: PracticeMode.veryHeavy,
         isSelected: PracticeMode.veryHeavy == widget.initIndex,
-      )
+      ),
     ]);
 
     super.initState();

@@ -12,7 +12,7 @@ part of 'home.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$HomeEvent {
@@ -81,25 +81,26 @@ class _$HomeEventCopyWithImpl<$Res, $Val extends HomeEvent>
 }
 
 /// @nodoc
-abstract class _$$_GetRecommendedRecipesCopyWith<$Res> {
-  factory _$$_GetRecommendedRecipesCopyWith(_$_GetRecommendedRecipes value,
-          $Res Function(_$_GetRecommendedRecipes) then) =
-      __$$_GetRecommendedRecipesCopyWithImpl<$Res>;
+abstract class _$$GetRecommendedRecipesImplCopyWith<$Res> {
+  factory _$$GetRecommendedRecipesImplCopyWith(
+          _$GetRecommendedRecipesImpl value,
+          $Res Function(_$GetRecommendedRecipesImpl) then) =
+      __$$GetRecommendedRecipesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetRecommendedRecipesCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_GetRecommendedRecipes>
-    implements _$$_GetRecommendedRecipesCopyWith<$Res> {
-  __$$_GetRecommendedRecipesCopyWithImpl(_$_GetRecommendedRecipes _value,
-      $Res Function(_$_GetRecommendedRecipes) _then)
+class __$$GetRecommendedRecipesImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetRecommendedRecipesImpl>
+    implements _$$GetRecommendedRecipesImplCopyWith<$Res> {
+  __$$GetRecommendedRecipesImplCopyWithImpl(_$GetRecommendedRecipesImpl _value,
+      $Res Function(_$GetRecommendedRecipesImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_GetRecommendedRecipes implements _GetRecommendedRecipes {
-  const _$_GetRecommendedRecipes();
+class _$GetRecommendedRecipesImpl implements _GetRecommendedRecipes {
+  const _$GetRecommendedRecipesImpl();
 
   @override
   String toString() {
@@ -107,9 +108,10 @@ class _$_GetRecommendedRecipes implements _GetRecommendedRecipes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetRecommendedRecipes);
+        (other.runtimeType == runtimeType &&
+            other is _$GetRecommendedRecipesImpl);
   }
 
   @override
@@ -186,29 +188,29 @@ class _$_GetRecommendedRecipes implements _GetRecommendedRecipes {
 }
 
 abstract class _GetRecommendedRecipes implements HomeEvent {
-  const factory _GetRecommendedRecipes() = _$_GetRecommendedRecipes;
+  const factory _GetRecommendedRecipes() = _$GetRecommendedRecipesImpl;
 }
 
 /// @nodoc
-abstract class _$$_GetTenRecipesCopyWith<$Res> {
-  factory _$$_GetTenRecipesCopyWith(
-          _$_GetTenRecipes value, $Res Function(_$_GetTenRecipes) then) =
-      __$$_GetTenRecipesCopyWithImpl<$Res>;
+abstract class _$$GetTenRecipesImplCopyWith<$Res> {
+  factory _$$GetTenRecipesImplCopyWith(
+          _$GetTenRecipesImpl value, $Res Function(_$GetTenRecipesImpl) then) =
+      __$$GetTenRecipesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GetTenRecipesCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_GetTenRecipes>
-    implements _$$_GetTenRecipesCopyWith<$Res> {
-  __$$_GetTenRecipesCopyWithImpl(
-      _$_GetTenRecipes _value, $Res Function(_$_GetTenRecipes) _then)
+class __$$GetTenRecipesImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$GetTenRecipesImpl>
+    implements _$$GetTenRecipesImplCopyWith<$Res> {
+  __$$GetTenRecipesImplCopyWithImpl(
+      _$GetTenRecipesImpl _value, $Res Function(_$GetTenRecipesImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_GetTenRecipes implements _GetTenRecipes {
-  const _$_GetTenRecipes();
+class _$GetTenRecipesImpl implements _GetTenRecipes {
+  const _$GetTenRecipesImpl();
 
   @override
   String toString() {
@@ -216,9 +218,9 @@ class _$_GetTenRecipes implements _GetTenRecipes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GetTenRecipes);
+        (other.runtimeType == runtimeType && other is _$GetTenRecipesImpl);
   }
 
   @override
@@ -295,28 +297,29 @@ class _$_GetTenRecipes implements _GetTenRecipes {
 }
 
 abstract class _GetTenRecipes implements HomeEvent {
-  const factory _GetTenRecipes() = _$_GetTenRecipes;
+  const factory _GetTenRecipes() = _$GetTenRecipesImpl;
 }
 
 /// @nodoc
-abstract class _$$_RefreshCopyWith<$Res> {
-  factory _$$_RefreshCopyWith(
-          _$_Refresh value, $Res Function(_$_Refresh) then) =
-      __$$_RefreshCopyWithImpl<$Res>;
+abstract class _$$RefreshImplCopyWith<$Res> {
+  factory _$$RefreshImplCopyWith(
+          _$RefreshImpl value, $Res Function(_$RefreshImpl) then) =
+      __$$RefreshImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RefreshCopyWithImpl<$Res>
-    extends _$HomeEventCopyWithImpl<$Res, _$_Refresh>
-    implements _$$_RefreshCopyWith<$Res> {
-  __$$_RefreshCopyWithImpl(_$_Refresh _value, $Res Function(_$_Refresh) _then)
+class __$$RefreshImplCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res, _$RefreshImpl>
+    implements _$$RefreshImplCopyWith<$Res> {
+  __$$RefreshImplCopyWithImpl(
+      _$RefreshImpl _value, $Res Function(_$RefreshImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Refresh implements _Refresh {
-  const _$_Refresh();
+class _$RefreshImpl implements _Refresh {
+  const _$RefreshImpl();
 
   @override
   String toString() {
@@ -324,9 +327,9 @@ class _$_Refresh implements _Refresh {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Refresh);
+        (other.runtimeType == runtimeType && other is _$RefreshImpl);
   }
 
   @override
@@ -403,7 +406,7 @@ class _$_Refresh implements _Refresh {
 }
 
 abstract class _Refresh implements HomeEvent {
-  const factory _Refresh() = _$_Refresh;
+  const factory _Refresh() = _$RefreshImpl;
 }
 
 /// @nodoc
@@ -473,10 +476,11 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
 }
 
 /// @nodoc
-abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
-  factory _$$_HomeStateCopyWith(
-          _$_HomeState value, $Res Function(_$_HomeState) then) =
-      __$$_HomeStateCopyWithImpl<$Res>;
+abstract class _$$HomeStateImplCopyWith<$Res>
+    implements $HomeStateCopyWith<$Res> {
+  factory _$$HomeStateImplCopyWith(
+          _$HomeStateImpl value, $Res Function(_$HomeStateImpl) then) =
+      __$$HomeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -489,11 +493,11 @@ abstract class _$$_HomeStateCopyWith<$Res> implements $HomeStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_HomeStateCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$_HomeState>
-    implements _$$_HomeStateCopyWith<$Res> {
-  __$$_HomeStateCopyWithImpl(
-      _$_HomeState _value, $Res Function(_$_HomeState) _then)
+class __$$HomeStateImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$HomeStateImpl>
+    implements _$$HomeStateImplCopyWith<$Res> {
+  __$$HomeStateImplCopyWithImpl(
+      _$HomeStateImpl _value, $Res Function(_$HomeStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -503,7 +507,7 @@ class __$$_HomeStateCopyWithImpl<$Res>
     Object? recipeType = null,
     Object? recipes = freezed,
   }) {
-    return _then(_$_HomeState(
+    return _then(_$HomeStateImpl(
       queryInfo: null == queryInfo
           ? _value.queryInfo
           : queryInfo // ignore: cast_nullable_to_non_nullable
@@ -522,8 +526,8 @@ class __$$_HomeStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_HomeState implements _HomeState {
-  const _$_HomeState(
+class _$HomeStateImpl implements _HomeState {
+  const _$HomeStateImpl(
       {required this.queryInfo,
       this.recipeType = RecipeType.normal,
       final List<RecipeModel>? recipes})
@@ -550,10 +554,10 @@ class _$_HomeState implements _HomeState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeState &&
+            other is _$HomeStateImpl &&
             (identical(other.queryInfo, queryInfo) ||
                 other.queryInfo == queryInfo) &&
             (identical(other.recipeType, recipeType) ||
@@ -568,15 +572,15 @@ class _$_HomeState implements _HomeState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>
-      __$$_HomeStateCopyWithImpl<_$_HomeState>(this, _$identity);
+  _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
+      __$$HomeStateImplCopyWithImpl<_$HomeStateImpl>(this, _$identity);
 }
 
 abstract class _HomeState implements HomeState {
   const factory _HomeState(
       {required final QueryDataInfo queryInfo,
       final RecipeType recipeType,
-      final List<RecipeModel>? recipes}) = _$_HomeState;
+      final List<RecipeModel>? recipes}) = _$HomeStateImpl;
 
   @override
   QueryDataInfo get queryInfo;
@@ -586,6 +590,6 @@ abstract class _HomeState implements HomeState {
   List<RecipeModel>? get recipes;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeStateCopyWith<_$_HomeState> get copyWith =>
+  _$$HomeStateImplCopyWith<_$HomeStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

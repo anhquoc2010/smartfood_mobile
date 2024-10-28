@@ -3,10 +3,10 @@ import 'package:smarthealthy/common/widgets/focused_menu/focused_menu_details.da
 import 'package:smarthealthy/common/widgets/focused_menu/focused_menu_item.dart';
 
 class FocusedMenuHolderController {
-  late _FocusedMenuHolderState _widgetState;
+  late FocusedMenuHolderState _widgetState;
   bool _isOpened = false;
 
-  void _addState(_FocusedMenuHolderState widgetState) {
+  void _addState(FocusedMenuHolderState widgetState) {
     _widgetState = widgetState;
   }
 
@@ -66,23 +66,22 @@ class FocusedMenuHolder extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _FocusedMenuHolderState createState() => _FocusedMenuHolderState(controller);
+  FocusedMenuHolderState createState() => FocusedMenuHolderState();
 }
 
-class _FocusedMenuHolderState extends State<FocusedMenuHolder> {
+class FocusedMenuHolderState extends State<FocusedMenuHolder> {
   GlobalKey containerKey = GlobalKey();
   Offset childOffset = const Offset(0, 0);
   Size? childSize;
 
-  _FocusedMenuHolderState(FocusedMenuHolderController? _controller) {
-    if (_controller != null) {
-      _controller._addState(this);
+  FocusedMenuHolderState() {
+    if (widget.controller != null) {
+      widget.controller!._addState(this);
     }
   }
 
   void _getOffset() {
-    RenderBox renderBox =
-        containerKey.currentContext!.findRenderObject() as RenderBox;
+    RenderBox renderBox = containerKey.currentContext!.findRenderObject() as RenderBox;
     Size size = renderBox.size;
     Offset offset = renderBox.localToGlobal(Offset.zero);
     setState(() {
@@ -117,8 +116,7 @@ class _FocusedMenuHolderState extends State<FocusedMenuHolder> {
     await Navigator.push(
       context,
       PageRouteBuilder(
-        transitionDuration:
-            widget.duration ?? const Duration(milliseconds: 100),
+        transitionDuration: widget.duration ?? const Duration(milliseconds: 100),
         pageBuilder: (context, animation, secondaryAnimation) {
           animation = Tween(begin: 0.0, end: 1.0).animate(
             CurvedAnimation(parent: animation, curve: Curves.linear),

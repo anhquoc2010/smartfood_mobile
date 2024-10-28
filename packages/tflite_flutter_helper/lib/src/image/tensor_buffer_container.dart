@@ -23,22 +23,22 @@ class TensorBufferContainer implements BaseImageContainer {
   static TensorBufferContainer create(TensorBuffer buffer, ColorSpaceType colorSpaceType) {
     checkArgument(
         colorSpaceType == ColorSpaceType.RGB || colorSpaceType == ColorSpaceType.GRAYSCALE,
-        message: "Only ColorSpaceType.RGB and ColorSpaceType.GRAYSCALE are supported. Use"
-            + " `create(TensorBuffer, ImageProperties)` for other color space types.");
+        message: 'Only ColorSpaceType.RGB and ColorSpaceType.GRAYSCALE are supported. Use'
+            + ' `create(TensorBuffer, ImageProperties)` for other color space types.',);
 
     return TensorBufferContainer._(
         buffer,
         colorSpaceType,
         colorSpaceType.getHeight(buffer.getShape()),
-        colorSpaceType.getWidth(buffer.getShape()));
+        colorSpaceType.getWidth(buffer.getShape()),);
   }
 
   TensorBufferContainer._(
-      TensorBuffer buffer, ColorSpaceType colorSpaceType, int height, int width) {
+      TensorBuffer buffer, ColorSpaceType colorSpaceType, int height, int width,) {
     checkArgument(
         colorSpaceType != ColorSpaceType.YUV_420_888,
-        message: "The actual encoding format of YUV420 is required. Choose a ColorSpaceType from: NV12,"
-            + " NV21, YV12, YV21. Use YUV_420_888 only when loading an android.media.Image.");
+        message: 'The actual encoding format of YUV420 is required. Choose a ColorSpaceType from: NV12,'
+            + ' NV21, YV12, YV21. Use YUV_420_888 only when loading an android.media.Image.',);
 
     colorSpaceType.assertNumElements(buffer.getFlatSize(), height, width);
     this._buffer = buffer;
@@ -53,7 +53,7 @@ class TensorBufferContainer implements BaseImageContainer {
         TensorBuffer.createFrom(_buffer, _buffer.getDataType()),
         colorSpaceType,
         height,
-        width);
+        width,);
   }
 
   @override
@@ -83,7 +83,7 @@ class TensorBufferContainer implements BaseImageContainer {
   @override
   CameraImage get mediaImage {
     throw UnsupportedError(
-        "Converting from TensorBuffer to android.media.Image is unsupported.");
+        'Converting from TensorBuffer to android.media.Image is unsupported.',);
   }
 
   @override

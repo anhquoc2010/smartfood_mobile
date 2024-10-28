@@ -12,7 +12,7 @@ part of 'user_nutrition.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UpdateUserNutritionDTO {
@@ -88,11 +88,12 @@ class _$UpdateUserNutritionDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_UpdateUserNutritionDTOCopyWith<$Res>
+abstract class _$$UpdateUserNutritionDTOImplCopyWith<$Res>
     implements $UpdateUserNutritionDTOCopyWith<$Res> {
-  factory _$$_UpdateUserNutritionDTOCopyWith(_$_UpdateUserNutritionDTO value,
-          $Res Function(_$_UpdateUserNutritionDTO) then) =
-      __$$_UpdateUserNutritionDTOCopyWithImpl<$Res>;
+  factory _$$UpdateUserNutritionDTOImplCopyWith(
+          _$UpdateUserNutritionDTOImpl value,
+          $Res Function(_$UpdateUserNutritionDTOImpl) then) =
+      __$$UpdateUserNutritionDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,12 +105,13 @@ abstract class _$$_UpdateUserNutritionDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UpdateUserNutritionDTOCopyWithImpl<$Res>
+class __$$UpdateUserNutritionDTOImplCopyWithImpl<$Res>
     extends _$UpdateUserNutritionDTOCopyWithImpl<$Res,
-        _$_UpdateUserNutritionDTO>
-    implements _$$_UpdateUserNutritionDTOCopyWith<$Res> {
-  __$$_UpdateUserNutritionDTOCopyWithImpl(_$_UpdateUserNutritionDTO _value,
-      $Res Function(_$_UpdateUserNutritionDTO) _then)
+        _$UpdateUserNutritionDTOImpl>
+    implements _$$UpdateUserNutritionDTOImplCopyWith<$Res> {
+  __$$UpdateUserNutritionDTOImplCopyWithImpl(
+      _$UpdateUserNutritionDTOImpl _value,
+      $Res Function(_$UpdateUserNutritionDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -121,7 +123,7 @@ class __$$_UpdateUserNutritionDTOCopyWithImpl<$Res>
     Object? weight = null,
     Object? practiceMode = null,
   }) {
-    return _then(_$_UpdateUserNutritionDTO(
+    return _then(_$UpdateUserNutritionDTOImpl(
       age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
@@ -148,8 +150,8 @@ class __$$_UpdateUserNutritionDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createFactory: false)
-class _$_UpdateUserNutritionDTO implements _UpdateUserNutritionDTO {
-  _$_UpdateUserNutritionDTO(
+class _$UpdateUserNutritionDTOImpl implements _UpdateUserNutritionDTO {
+  _$UpdateUserNutritionDTOImpl(
       {required this.age,
       required this.gender,
       required this.height,
@@ -173,10 +175,10 @@ class _$_UpdateUserNutritionDTO implements _UpdateUserNutritionDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateUserNutritionDTO &&
+            other is _$UpdateUserNutritionDTOImpl &&
             (identical(other.age, age) || other.age == age) &&
             (identical(other.gender, gender) || other.gender == gender) &&
             (identical(other.height, height) || other.height == height) &&
@@ -193,13 +195,13 @@ class _$_UpdateUserNutritionDTO implements _UpdateUserNutritionDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateUserNutritionDTOCopyWith<_$_UpdateUserNutritionDTO> get copyWith =>
-      __$$_UpdateUserNutritionDTOCopyWithImpl<_$_UpdateUserNutritionDTO>(
-          this, _$identity);
+  _$$UpdateUserNutritionDTOImplCopyWith<_$UpdateUserNutritionDTOImpl>
+      get copyWith => __$$UpdateUserNutritionDTOImplCopyWithImpl<
+          _$UpdateUserNutritionDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UpdateUserNutritionDTOToJson(
+    return _$$UpdateUserNutritionDTOImplToJson(
       this,
     );
   }
@@ -211,7 +213,7 @@ abstract class _UpdateUserNutritionDTO implements UpdateUserNutritionDTO {
       required final GenderType gender,
       required final double height,
       required final double weight,
-      required final PracticeMode practiceMode}) = _$_UpdateUserNutritionDTO;
+      required final PracticeMode practiceMode}) = _$UpdateUserNutritionDTOImpl;
 
   @override
   int get age;
@@ -225,6 +227,6 @@ abstract class _UpdateUserNutritionDTO implements UpdateUserNutritionDTO {
   PracticeMode get practiceMode;
   @override
   @JsonKey(ignore: true)
-  _$$_UpdateUserNutritionDTOCopyWith<_$_UpdateUserNutritionDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$UpdateUserNutritionDTOImplCopyWith<_$UpdateUserNutritionDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

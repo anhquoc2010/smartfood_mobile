@@ -31,7 +31,7 @@ class PracticeLoadingList extends StatelessWidget {
                   '',
                   style: TextStyles.s14MediumText
                       .copyWith(color: ColorStyles.red400),
-                )
+                ),
               ],
             ),
           ),

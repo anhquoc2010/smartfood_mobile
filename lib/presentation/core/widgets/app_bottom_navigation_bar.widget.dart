@@ -49,7 +49,7 @@ class AppBottomNavigationBar extends StatelessWidget {
               NavItem(
                 iconSvg: Assets.icons.navbar.profile,
                 title: LocaleKeys.root_management.tr(),
-              )
+              ),
             ],
           );
         },

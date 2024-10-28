@@ -93,7 +93,7 @@ class _AppState extends State<App> {
           BlocProvider(
             create: (_) =>
                 HomeBloc(recipeRepository: getIt.get<RecipeRepository>()),
-          )
+          ),
         ],
         child: GestureDetector(
           onTap: () {

@@ -12,7 +12,7 @@ part of 'cuisine.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CuisineModel _$CuisineModelFromJson(Map<String, dynamic> json) {
   return _CuisineModel.fromJson(json);
@@ -79,11 +79,11 @@ class _$CuisineModelCopyWithImpl<$Res, $Val extends CuisineModel>
 }
 
 /// @nodoc
-abstract class _$$_CuisineModelCopyWith<$Res>
+abstract class _$$CuisineModelImplCopyWith<$Res>
     implements $CuisineModelCopyWith<$Res> {
-  factory _$$_CuisineModelCopyWith(
-          _$_CuisineModel value, $Res Function(_$_CuisineModel) then) =
-      __$$_CuisineModelCopyWithImpl<$Res>;
+  factory _$$CuisineModelImplCopyWith(
+          _$CuisineModelImpl value, $Res Function(_$CuisineModelImpl) then) =
+      __$$CuisineModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +93,11 @@ abstract class _$$_CuisineModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CuisineModelCopyWithImpl<$Res>
-    extends _$CuisineModelCopyWithImpl<$Res, _$_CuisineModel>
-    implements _$$_CuisineModelCopyWith<$Res> {
-  __$$_CuisineModelCopyWithImpl(
-      _$_CuisineModel _value, $Res Function(_$_CuisineModel) _then)
+class __$$CuisineModelImplCopyWithImpl<$Res>
+    extends _$CuisineModelCopyWithImpl<$Res, _$CuisineModelImpl>
+    implements _$$CuisineModelImplCopyWith<$Res> {
+  __$$CuisineModelImplCopyWithImpl(
+      _$CuisineModelImpl _value, $Res Function(_$CuisineModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$_CuisineModelCopyWithImpl<$Res>
     Object? name = null,
     Object? isChosen = null,
   }) {
-    return _then(_$_CuisineModel(
+    return _then(_$CuisineModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,15 +126,15 @@ class __$$_CuisineModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_CuisineModel implements _CuisineModel {
-  _$_CuisineModel(
+class _$CuisineModelImpl implements _CuisineModel {
+  _$CuisineModelImpl(
       {required this.id,
       required this.name,
       @JsonKey(includeFromJson: false, includeToJson: false)
-          this.isChosen = false});
+      this.isChosen = false});
 
-  factory _$_CuisineModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CuisineModelFromJson(json);
+  factory _$CuisineModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CuisineModelImplFromJson(json);
 
   @override
   final String id;
@@ -150,10 +150,10 @@ class _$_CuisineModel implements _CuisineModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CuisineModel &&
+            other is _$CuisineModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.isChosen, isChosen) ||
@@ -167,8 +167,8 @@ class _$_CuisineModel implements _CuisineModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CuisineModelCopyWith<_$_CuisineModel> get copyWith =>
-      __$$_CuisineModelCopyWithImpl<_$_CuisineModel>(this, _$identity);
+  _$$CuisineModelImplCopyWith<_$CuisineModelImpl> get copyWith =>
+      __$$CuisineModelImplCopyWithImpl<_$CuisineModelImpl>(this, _$identity);
 }
 
 abstract class _CuisineModel implements CuisineModel {
@@ -176,10 +176,10 @@ abstract class _CuisineModel implements CuisineModel {
       {required final String id,
       required final String name,
       @JsonKey(includeFromJson: false, includeToJson: false)
-          bool isChosen}) = _$_CuisineModel;
+      bool isChosen}) = _$CuisineModelImpl;
 
   factory _CuisineModel.fromJson(Map<String, dynamic> json) =
-      _$_CuisineModel.fromJson;
+      _$CuisineModelImpl.fromJson;
 
   @override
   String get id;
@@ -192,6 +192,6 @@ abstract class _CuisineModel implements CuisineModel {
   set isChosen(bool value);
   @override
   @JsonKey(ignore: true)
-  _$$_CuisineModelCopyWith<_$_CuisineModel> get copyWith =>
+  _$$CuisineModelImplCopyWith<_$CuisineModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

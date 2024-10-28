@@ -6,8 +6,8 @@ part of 'diary.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DiaryModel _$$_DiaryModelFromJson(Map<String, dynamic> json) =>
-    _$_DiaryModel(
+_$DiaryModelImpl _$$DiaryModelImplFromJson(Map<String, dynamic> json) =>
+    _$DiaryModelImpl(
       date: DateTime.parse(json['date'] as String),
       totalCalories: (json['totalCalories'] as num?)?.toDouble(),
       fat: (json['fat'] as num?)?.toDouble(),

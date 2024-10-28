@@ -12,7 +12,7 @@ part of 'get_ingredient_result.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetIngredientResultDTO _$GetIngredientResultDTOFromJson(
     Map<String, dynamic> json) {
@@ -79,11 +79,12 @@ class _$GetIngredientResultDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetIngredientResultDTOCopyWith<$Res>
+abstract class _$$GetIngredientResultDTOImplCopyWith<$Res>
     implements $GetIngredientResultDTOCopyWith<$Res> {
-  factory _$$_GetIngredientResultDTOCopyWith(_$_GetIngredientResultDTO value,
-          $Res Function(_$_GetIngredientResultDTO) then) =
-      __$$_GetIngredientResultDTOCopyWithImpl<$Res>;
+  factory _$$GetIngredientResultDTOImplCopyWith(
+          _$GetIngredientResultDTOImpl value,
+          $Res Function(_$GetIngredientResultDTOImpl) then) =
+      __$$GetIngredientResultDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<IngredientModel> data, PaginationMetaDTO meta});
@@ -93,12 +94,13 @@ abstract class _$$_GetIngredientResultDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetIngredientResultDTOCopyWithImpl<$Res>
+class __$$GetIngredientResultDTOImplCopyWithImpl<$Res>
     extends _$GetIngredientResultDTOCopyWithImpl<$Res,
-        _$_GetIngredientResultDTO>
-    implements _$$_GetIngredientResultDTOCopyWith<$Res> {
-  __$$_GetIngredientResultDTOCopyWithImpl(_$_GetIngredientResultDTO _value,
-      $Res Function(_$_GetIngredientResultDTO) _then)
+        _$GetIngredientResultDTOImpl>
+    implements _$$GetIngredientResultDTOImplCopyWith<$Res> {
+  __$$GetIngredientResultDTOImplCopyWithImpl(
+      _$GetIngredientResultDTOImpl _value,
+      $Res Function(_$GetIngredientResultDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +109,7 @@ class __$$_GetIngredientResultDTOCopyWithImpl<$Res>
     Object? data = null,
     Object? meta = null,
   }) {
-    return _then(_$_GetIngredientResultDTO(
+    return _then(_$GetIngredientResultDTOImpl(
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -122,13 +124,13 @@ class __$$_GetIngredientResultDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_GetIngredientResultDTO implements _GetIngredientResultDTO {
-  const _$_GetIngredientResultDTO(
+class _$GetIngredientResultDTOImpl implements _GetIngredientResultDTO {
+  const _$GetIngredientResultDTOImpl(
       {required final List<IngredientModel> data, required this.meta})
       : _data = data;
 
-  factory _$_GetIngredientResultDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_GetIngredientResultDTOFromJson(json);
+  factory _$GetIngredientResultDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetIngredientResultDTOImplFromJson(json);
 
   final List<IngredientModel> _data;
   @override
@@ -147,10 +149,10 @@ class _$_GetIngredientResultDTO implements _GetIngredientResultDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetIngredientResultDTO &&
+            other is _$GetIngredientResultDTOImpl &&
             const DeepCollectionEquality().equals(other._data, _data) &&
             (identical(other.meta, meta) || other.meta == meta));
   }
@@ -163,18 +165,18 @@ class _$_GetIngredientResultDTO implements _GetIngredientResultDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetIngredientResultDTOCopyWith<_$_GetIngredientResultDTO> get copyWith =>
-      __$$_GetIngredientResultDTOCopyWithImpl<_$_GetIngredientResultDTO>(
-          this, _$identity);
+  _$$GetIngredientResultDTOImplCopyWith<_$GetIngredientResultDTOImpl>
+      get copyWith => __$$GetIngredientResultDTOImplCopyWithImpl<
+          _$GetIngredientResultDTOImpl>(this, _$identity);
 }
 
 abstract class _GetIngredientResultDTO implements GetIngredientResultDTO {
   const factory _GetIngredientResultDTO(
       {required final List<IngredientModel> data,
-      required final PaginationMetaDTO meta}) = _$_GetIngredientResultDTO;
+      required final PaginationMetaDTO meta}) = _$GetIngredientResultDTOImpl;
 
   factory _GetIngredientResultDTO.fromJson(Map<String, dynamic> json) =
-      _$_GetIngredientResultDTO.fromJson;
+      _$GetIngredientResultDTOImpl.fromJson;
 
   @override
   List<IngredientModel> get data;
@@ -182,6 +184,6 @@ abstract class _GetIngredientResultDTO implements GetIngredientResultDTO {
   PaginationMetaDTO get meta;
   @override
   @JsonKey(ignore: true)
-  _$$_GetIngredientResultDTOCopyWith<_$_GetIngredientResultDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GetIngredientResultDTOImplCopyWith<_$GetIngredientResultDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

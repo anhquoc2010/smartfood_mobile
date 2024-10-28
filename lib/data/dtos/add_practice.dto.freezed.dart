@@ -12,7 +12,7 @@ part of 'add_practice.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AddPracticeDTO {
@@ -37,7 +37,7 @@ abstract class $AddPracticeDTOCopyWith<$Res> {
   $Res call(
       {@JsonKey(includeFromJson: false, includeToJson: false)
       @JsonTimeConverter()
-          DateTime date,
+      DateTime date,
       String exerciseId,
       int practiceDuration});
 }
@@ -77,27 +77,27 @@ class _$AddPracticeDTOCopyWithImpl<$Res, $Val extends AddPracticeDTO>
 }
 
 /// @nodoc
-abstract class _$$_AddPracticeDTOCopyWith<$Res>
+abstract class _$$AddPracticeDTOImplCopyWith<$Res>
     implements $AddPracticeDTOCopyWith<$Res> {
-  factory _$$_AddPracticeDTOCopyWith(
-          _$_AddPracticeDTO value, $Res Function(_$_AddPracticeDTO) then) =
-      __$$_AddPracticeDTOCopyWithImpl<$Res>;
+  factory _$$AddPracticeDTOImplCopyWith(_$AddPracticeDTOImpl value,
+          $Res Function(_$AddPracticeDTOImpl) then) =
+      __$$AddPracticeDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(includeFromJson: false, includeToJson: false)
       @JsonTimeConverter()
-          DateTime date,
+      DateTime date,
       String exerciseId,
       int practiceDuration});
 }
 
 /// @nodoc
-class __$$_AddPracticeDTOCopyWithImpl<$Res>
-    extends _$AddPracticeDTOCopyWithImpl<$Res, _$_AddPracticeDTO>
-    implements _$$_AddPracticeDTOCopyWith<$Res> {
-  __$$_AddPracticeDTOCopyWithImpl(
-      _$_AddPracticeDTO _value, $Res Function(_$_AddPracticeDTO) _then)
+class __$$AddPracticeDTOImplCopyWithImpl<$Res>
+    extends _$AddPracticeDTOCopyWithImpl<$Res, _$AddPracticeDTOImpl>
+    implements _$$AddPracticeDTOImplCopyWith<$Res> {
+  __$$AddPracticeDTOImplCopyWithImpl(
+      _$AddPracticeDTOImpl _value, $Res Function(_$AddPracticeDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$_AddPracticeDTOCopyWithImpl<$Res>
     Object? exerciseId = null,
     Object? practiceDuration = null,
   }) {
-    return _then(_$_AddPracticeDTO(
+    return _then(_$AddPracticeDTOImpl(
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -126,11 +126,11 @@ class __$$_AddPracticeDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createFactory: false)
-class _$_AddPracticeDTO implements _AddPracticeDTO {
-  _$_AddPracticeDTO(
+class _$AddPracticeDTOImpl implements _AddPracticeDTO {
+  _$AddPracticeDTOImpl(
       {@JsonKey(includeFromJson: false, includeToJson: false)
       @JsonTimeConverter()
-          required this.date,
+      required this.date,
       required this.exerciseId,
       required this.practiceDuration});
 
@@ -149,10 +149,10 @@ class _$_AddPracticeDTO implements _AddPracticeDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddPracticeDTO &&
+            other is _$AddPracticeDTOImpl &&
             (identical(other.date, date) || other.date == date) &&
             (identical(other.exerciseId, exerciseId) ||
                 other.exerciseId == exerciseId) &&
@@ -168,12 +168,13 @@ class _$_AddPracticeDTO implements _AddPracticeDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddPracticeDTOCopyWith<_$_AddPracticeDTO> get copyWith =>
-      __$$_AddPracticeDTOCopyWithImpl<_$_AddPracticeDTO>(this, _$identity);
+  _$$AddPracticeDTOImplCopyWith<_$AddPracticeDTOImpl> get copyWith =>
+      __$$AddPracticeDTOImplCopyWithImpl<_$AddPracticeDTOImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddPracticeDTOToJson(
+    return _$$AddPracticeDTOImplToJson(
       this,
     );
   }
@@ -183,9 +184,9 @@ abstract class _AddPracticeDTO implements AddPracticeDTO {
   factory _AddPracticeDTO(
       {@JsonKey(includeFromJson: false, includeToJson: false)
       @JsonTimeConverter()
-          required final DateTime date,
+      required final DateTime date,
       required final String exerciseId,
-      required final int practiceDuration}) = _$_AddPracticeDTO;
+      required final int practiceDuration}) = _$AddPracticeDTOImpl;
 
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -197,6 +198,6 @@ abstract class _AddPracticeDTO implements AddPracticeDTO {
   int get practiceDuration;
   @override
   @JsonKey(ignore: true)
-  _$$_AddPracticeDTOCopyWith<_$_AddPracticeDTO> get copyWith =>
+  _$$AddPracticeDTOImplCopyWith<_$AddPracticeDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

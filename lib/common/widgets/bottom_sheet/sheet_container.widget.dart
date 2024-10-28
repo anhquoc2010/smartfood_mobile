@@ -30,7 +30,7 @@ class SheetSearchContainer extends StatelessWidget {
             hintText: hintText,
             onFieldSubmitted: onFieldSubmitted,
           ),
-          Expanded(child: child)
+          Expanded(child: child),
         ],
       ),
     );

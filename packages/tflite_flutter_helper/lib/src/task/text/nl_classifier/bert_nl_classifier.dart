@@ -33,15 +33,15 @@ class BertNLClassifier {
   ///
   /// throws [FileSystemException] If model file fails to load.
   static BertNLClassifier create(String modelPath,
-      {BertNLClassifierOptions? options}) {
+      {BertNLClassifierOptions? options,}) {
     if (options == null) {
       options = BertNLClassifierOptions();
     }
     final nativePtr = BertNLClassifierFromFileAndOptions(
-        modelPath.toNativeUtf8(), options.base);
+        modelPath.toNativeUtf8(), options.base,);
     if (nativePtr == nullptr) {
       throw FileSystemException(
-          "Failed to create BertNLClassifier.", modelPath);
+          'Failed to create BertNLClassifier.', modelPath,);
     }
     return BertNLClassifier._(nativePtr);
   }
@@ -57,7 +57,7 @@ class BertNLClassifier {
   ///
   /// throws [FileSystemException] If model file fails to load.
   static BertNLClassifier createFromFileAndOptions(
-      File modelFile, BertNLClassifierOptions options) {
+      File modelFile, BertNLClassifierOptions options,) {
     return create(modelFile.path, options: options);
   }
 
@@ -67,7 +67,7 @@ class BertNLClassifier {
   ///
   /// throws [FileSystemException] If model file fails to load.
   static Future<BertNLClassifier> createFromAsset(String assetPath,
-      {BertNLClassifierOptions? options}) async {
+      {BertNLClassifierOptions? options,}) async {
     final modelFile = await FileUtil.loadFileOnDevice(assetPath);
     return create(modelFile.path, options: options);
   }
@@ -80,7 +80,7 @@ class BertNLClassifier {
     final categoryList = List.generate(
       ref.size,
       (i) => Category(
-          ref.categories[i].text.toDartString(), ref.categories[i].score),
+          ref.categories[i].text.toDartString(), ref.categories[i].score,),
     );
     return categoryList;
   }

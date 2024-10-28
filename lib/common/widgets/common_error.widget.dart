@@ -35,7 +35,7 @@ class CommonError extends StatelessWidget {
                 onPressed: onRefresh!,
                 content: LocaleKeys.button_try_again.tr(),
               ),
-            )
+            ),
         ],
       ),
     );

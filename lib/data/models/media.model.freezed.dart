@@ -12,7 +12,7 @@ part of 'media.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MediaModel _$MediaModelFromJson(Map<String, dynamic> json) {
   return _MediaModel.fromJson(json);
@@ -67,22 +67,22 @@ class _$MediaModelCopyWithImpl<$Res, $Val extends MediaModel>
 }
 
 /// @nodoc
-abstract class _$$_MediaModelCopyWith<$Res>
+abstract class _$$MediaModelImplCopyWith<$Res>
     implements $MediaModelCopyWith<$Res> {
-  factory _$$_MediaModelCopyWith(
-          _$_MediaModel value, $Res Function(_$_MediaModel) then) =
-      __$$_MediaModelCopyWithImpl<$Res>;
+  factory _$$MediaModelImplCopyWith(
+          _$MediaModelImpl value, $Res Function(_$MediaModelImpl) then) =
+      __$$MediaModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String url});
 }
 
 /// @nodoc
-class __$$_MediaModelCopyWithImpl<$Res>
-    extends _$MediaModelCopyWithImpl<$Res, _$_MediaModel>
-    implements _$$_MediaModelCopyWith<$Res> {
-  __$$_MediaModelCopyWithImpl(
-      _$_MediaModel _value, $Res Function(_$_MediaModel) _then)
+class __$$MediaModelImplCopyWithImpl<$Res>
+    extends _$MediaModelCopyWithImpl<$Res, _$MediaModelImpl>
+    implements _$$MediaModelImplCopyWith<$Res> {
+  __$$MediaModelImplCopyWithImpl(
+      _$MediaModelImpl _value, $Res Function(_$MediaModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -91,7 +91,7 @@ class __$$_MediaModelCopyWithImpl<$Res>
     Object? id = null,
     Object? url = null,
   }) {
-    return _then(_$_MediaModel(
+    return _then(_$MediaModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -106,11 +106,11 @@ class __$$_MediaModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_MediaModel implements _MediaModel {
-  const _$_MediaModel({required this.id, required this.url});
+class _$MediaModelImpl implements _MediaModel {
+  const _$MediaModelImpl({required this.id, required this.url});
 
-  factory _$_MediaModel.fromJson(Map<String, dynamic> json) =>
-      _$$_MediaModelFromJson(json);
+  factory _$MediaModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MediaModelImplFromJson(json);
 
   @override
   final String id;
@@ -123,10 +123,10 @@ class _$_MediaModel implements _MediaModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MediaModel &&
+            other is _$MediaModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.url, url) || other.url == url));
   }
@@ -138,16 +138,16 @@ class _$_MediaModel implements _MediaModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MediaModelCopyWith<_$_MediaModel> get copyWith =>
-      __$$_MediaModelCopyWithImpl<_$_MediaModel>(this, _$identity);
+  _$$MediaModelImplCopyWith<_$MediaModelImpl> get copyWith =>
+      __$$MediaModelImplCopyWithImpl<_$MediaModelImpl>(this, _$identity);
 }
 
 abstract class _MediaModel implements MediaModel {
   const factory _MediaModel(
-      {required final String id, required final String url}) = _$_MediaModel;
+      {required final String id, required final String url}) = _$MediaModelImpl;
 
   factory _MediaModel.fromJson(Map<String, dynamic> json) =
-      _$_MediaModel.fromJson;
+      _$MediaModelImpl.fromJson;
 
   @override
   String get id;
@@ -155,6 +155,6 @@ abstract class _MediaModel implements MediaModel {
   String get url;
   @override
   @JsonKey(ignore: true)
-  _$$_MediaModelCopyWith<_$_MediaModel> get copyWith =>
+  _$$MediaModelImplCopyWith<_$MediaModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

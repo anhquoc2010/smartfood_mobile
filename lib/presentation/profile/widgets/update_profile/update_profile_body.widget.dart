@@ -42,7 +42,7 @@ class UpdateProfileBody extends StatelessWidget {
                 userNotifier.value =
                     userNotifier.value.copyWith(lastName: value);
               },
-            )
+            ),
           ],
         ),
       ),

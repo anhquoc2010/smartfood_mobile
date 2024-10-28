@@ -41,7 +41,7 @@ class NormalizeOp implements TensorOperator {
     }
 
     SupportPreconditions.checkArgument(stddev != 0.0,
-        errorMessage: "Stddev cannot be zero.");
+        errorMessage: 'Stddev cannot be zero.',);
     bool meansIsZeroAndDevsIs1 = false;
     if (mean == 0.0 && stddev == 1.0) {
       meansIsZeroAndDevsIs1 = true;
@@ -77,13 +77,13 @@ class NormalizeOp implements TensorOperator {
   /// Throws [ArgumentError] if any [stddev] is zero, or [mean] has different
   /// number of elements with [stddev], or any of them is empty.
   NormalizeOp.multipleChannels(List<double> mean, List<double> stddev) {
-    SupportPreconditions.checkNotNull(mean, message: "Mean cannot be null");
-    SupportPreconditions.checkNotNull(stddev, message: "Stddev cannot be null");
+    SupportPreconditions.checkNotNull(mean, message: 'Mean cannot be null');
+    SupportPreconditions.checkNotNull(stddev, message: 'Stddev cannot be null');
     SupportPreconditions.checkArgument(mean.length == stddev.length,
         errorMessage:
-            "Per channel normalization requires same number of means and stddevs");
+            'Per channel normalization requires same number of means and stddevs',);
     SupportPreconditions.checkArgument(mean.length > 0,
-        errorMessage: "Means and stddevs are empty.");
+        errorMessage: 'Means and stddevs are empty.',);
     this.mean = mean.toList();
     this.stddev = stddev.toList();
 
@@ -91,7 +91,7 @@ class NormalizeOp implements TensorOperator {
     this.numChannels = mean.length;
     for (int i = 0; i < numChannels; i++) {
       SupportPreconditions.checkArgument(this.stddev[i] != 0,
-          errorMessage: "Stddev cannot be zero.");
+          errorMessage: 'Stddev cannot be zero.',);
       if (this.stddev[i] != 1 || this.mean[i] != 0) {
         allMeansAreZeroAndAllDevsAre1 = false;
       }
@@ -114,7 +114,7 @@ class NormalizeOp implements TensorOperator {
         numChannels == 1 ||
             (shape.length != 0 && shape[shape.length - 1] == numChannels),
         errorMessage:
-            "Number of means (stddevs) is not same with number of channels (size of last axis).");
+            'Number of means (stddevs) is not same with number of channels (size of last axis).',);
 
     int flatSize = input.getFlatSize();
     List<double> values = List.filled(flatSize, 0);

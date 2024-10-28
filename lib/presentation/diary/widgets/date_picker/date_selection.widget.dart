@@ -47,7 +47,7 @@ class DateSelection extends StatelessWidget {
                   ),
                 );
               },
-            )
+            ),
           ],
         ),
       ),

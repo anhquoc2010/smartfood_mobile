@@ -27,7 +27,7 @@ class JumpIndicator extends IndicatorPainter {
       ).animate(
         CurvedAnimation(
           parent: animationController!,
-          curve: Interval(0.5, 1.0),
+          curve: const Interval(0.5, 1.0),
         ),
       );
 
@@ -38,7 +38,7 @@ class JumpIndicator extends IndicatorPainter {
       ).animate(
         CurvedAnimation(
           parent: animationController!,
-          curve: Interval(0.0, 0.5),
+          curve: const Interval(0.0, 0.5),
         ),
       );
 }

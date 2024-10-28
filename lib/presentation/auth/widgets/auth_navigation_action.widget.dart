@@ -45,7 +45,7 @@ class AuthNavigationAction extends StatelessWidget {
                 color: ColorStyles.primary,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

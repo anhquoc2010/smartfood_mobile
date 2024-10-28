@@ -7,10 +7,11 @@
 // ignore_for_file: type=lint
 // ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal,deprecated_member_use
 
-import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
-import 'package:lottie/lottie.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart' as _svg;
+import 'package:lottie/lottie.dart' as _lottie;
+import 'package:vector_graphics/vector_graphics.dart' as _vg;
 
 class $AssetsFontsGen {
   const $AssetsFontsGen();
@@ -31,21 +32,32 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// Directory path: assets/icons/auth
   $AssetsIconsAuthGen get auth => const $AssetsIconsAuthGen();
 
   /// File path: assets/icons/calo.svg
   SvgGenImage get calo => const SvgGenImage('assets/icons/calo.svg');
 
+  /// Directory path: assets/icons/diary
   $AssetsIconsDiaryGen get diary => const $AssetsIconsDiaryGen();
+
+  /// Directory path: assets/icons/difficulty_level
   $AssetsIconsDifficultyLevelGen get difficultyLevel =>
       const $AssetsIconsDifficultyLevelGen();
 
   /// File path: assets/icons/filter.svg
   SvgGenImage get filter => const SvgGenImage('assets/icons/filter.svg');
 
+  /// Directory path: assets/icons/home
   $AssetsIconsHomeGen get home => const $AssetsIconsHomeGen();
+
+  /// Directory path: assets/icons/launcher
   $AssetsIconsLauncherGen get launcher => const $AssetsIconsLauncherGen();
+
+  /// Directory path: assets/icons/navbar
   $AssetsIconsNavbarGen get navbar => const $AssetsIconsNavbarGen();
+
+  /// Directory path: assets/icons/profile
   $AssetsIconsProfileGen get profile => const $AssetsIconsProfileGen();
 
   /// File path: assets/icons/weight.svg
@@ -58,9 +70,16 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// Directory path: assets/images/bmi
   $AssetsImagesBmiGen get bmi => const $AssetsImagesBmiGen();
+
+  /// Directory path: assets/images/cooking
   $AssetsImagesCookingGen get cooking => const $AssetsImagesCookingGen();
+
+  /// Directory path: assets/images/diary
   $AssetsImagesDiaryGen get diary => const $AssetsImagesDiaryGen();
+
+  /// Directory path: assets/images/lottie
   $AssetsImagesLottieGen get lottie => const $AssetsImagesLottieGen();
 }
 
@@ -143,6 +162,7 @@ class $AssetsIconsDifficultyLevelGen {
 class $AssetsIconsHomeGen {
   const $AssetsIconsHomeGen();
 
+  /// Directory path: assets/icons/home/nutrition
   $AssetsIconsHomeNutritionGen get nutrition =>
       const $AssetsIconsHomeNutritionGen();
 }
@@ -285,9 +305,16 @@ class Assets {
 }
 
 class AssetGenImage {
-  const AssetGenImage(this._assetName);
+  const AssetGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  });
 
   final String _assetName;
+
+  final Size? size;
+  final Set<String> flavors;
 
   Image image({
     Key? key,
@@ -307,7 +334,7 @@ class AssetGenImage {
     ImageRepeat repeat = ImageRepeat.noRepeat,
     Rect? centerSlice,
     bool matchTextDirection = false,
-    bool gaplessPlayback = false,
+    bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
     FilterQuality filterQuality = FilterQuality.low,
@@ -359,11 +386,24 @@ class AssetGenImage {
 }
 
 class SvgGenImage {
-  const SvgGenImage(this._assetName);
+  const SvgGenImage(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = false;
+
+  const SvgGenImage.vec(
+    this._assetName, {
+    this.size,
+    this.flavors = const {},
+  }) : _isVecFormat = true;
 
   final String _assetName;
+  final Size? size;
+  final Set<String> flavors;
+  final bool _isVecFormat;
 
-  SvgPicture svg({
+  _svg.SvgPicture svg({
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
@@ -376,19 +416,32 @@ class SvgGenImage {
     WidgetBuilder? placeholderBuilder,
     String? semanticsLabel,
     bool excludeFromSemantics = false,
-    SvgTheme theme = const SvgTheme(),
+    _svg.SvgTheme? theme,
     ColorFilter? colorFilter,
     Clip clipBehavior = Clip.hardEdge,
     @deprecated Color? color,
     @deprecated BlendMode colorBlendMode = BlendMode.srcIn,
     @deprecated bool cacheColorFilter = false,
   }) {
-    return SvgPicture.asset(
-      _assetName,
+    final _svg.BytesLoader loader;
+    if (_isVecFormat) {
+      loader = _vg.AssetBytesLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+      );
+    } else {
+      loader = _svg.SvgAssetLoader(
+        _assetName,
+        assetBundle: bundle,
+        packageName: package,
+        theme: theme,
+      );
+    }
+    return _svg.SvgPicture(
+      loader,
       key: key,
       matchTextDirection: matchTextDirection,
-      bundle: bundle,
-      package: package,
       width: width,
       height: height,
       fit: fit,
@@ -397,10 +450,8 @@ class SvgGenImage {
       placeholderBuilder: placeholderBuilder,
       semanticsLabel: semanticsLabel,
       excludeFromSemantics: excludeFromSemantics,
-      theme: theme,
-      colorFilter: colorFilter,
-      color: color,
-      colorBlendMode: colorBlendMode,
+      colorFilter: colorFilter ??
+          (color == null ? null : ColorFilter.mode(color, colorBlendMode)),
       clipBehavior: clipBehavior,
       cacheColorFilter: cacheColorFilter,
     );
@@ -412,23 +463,31 @@ class SvgGenImage {
 }
 
 class LottieGenImage {
-  const LottieGenImage(this._assetName);
+  const LottieGenImage(
+    this._assetName, {
+    this.flavors = const {},
+  });
 
   final String _assetName;
+  final Set<String> flavors;
 
-  LottieBuilder lottie({
+  _lottie.LottieBuilder lottie({
     Animation<double>? controller,
     bool? animate,
-    FrameRate? frameRate,
+    _lottie.FrameRate? frameRate,
     bool? repeat,
     bool? reverse,
-    LottieDelegates? delegates,
-    LottieOptions? options,
-    void Function(LottieComposition)? onLoaded,
-    LottieImageProviderFactory? imageProviderFactory,
+    _lottie.LottieDelegates? delegates,
+    _lottie.LottieOptions? options,
+    void Function(_lottie.LottieComposition)? onLoaded,
+    _lottie.LottieImageProviderFactory? imageProviderFactory,
     Key? key,
     AssetBundle? bundle,
-    Widget Function(BuildContext, Widget, LottieComposition?)? frameBuilder,
+    Widget Function(
+      BuildContext,
+      Widget,
+      _lottie.LottieComposition?,
+    )? frameBuilder,
     ImageErrorWidgetBuilder? errorBuilder,
     double? width,
     double? height,
@@ -439,7 +498,7 @@ class LottieGenImage {
     FilterQuality? filterQuality,
     void Function(String)? onWarning,
   }) {
-    return Lottie.asset(
+    return _lottie.Lottie.asset(
       _assetName,
       controller: controller,
       animate: animate,

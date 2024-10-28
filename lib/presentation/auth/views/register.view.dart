@@ -79,11 +79,11 @@ class _RegisterView extends StatelessWidget {
                   Spacer(),
                   AuthNavigationAction(
                     isLogin: false,
-                  )
+                  ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

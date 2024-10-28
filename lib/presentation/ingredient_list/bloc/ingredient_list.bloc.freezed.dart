@@ -12,7 +12,7 @@ part of 'ingredient_list.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$IngredientListEvent {
@@ -99,11 +99,11 @@ class _$IngredientListEventCopyWithImpl<$Res, $Val extends IngredientListEvent>
 }
 
 /// @nodoc
-abstract class _$$_UpdatedCopyWith<$Res>
+abstract class _$$UpdatedImplCopyWith<$Res>
     implements $IngredientListEventCopyWith<$Res> {
-  factory _$$_UpdatedCopyWith(
-          _$_Updated value, $Res Function(_$_Updated) then) =
-      __$$_UpdatedCopyWithImpl<$Res>;
+  factory _$$UpdatedImplCopyWith(
+          _$UpdatedImpl value, $Res Function(_$UpdatedImpl) then) =
+      __$$UpdatedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({IngredientModel ingredient});
@@ -113,10 +113,11 @@ abstract class _$$_UpdatedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UpdatedCopyWithImpl<$Res>
-    extends _$IngredientListEventCopyWithImpl<$Res, _$_Updated>
-    implements _$$_UpdatedCopyWith<$Res> {
-  __$$_UpdatedCopyWithImpl(_$_Updated _value, $Res Function(_$_Updated) _then)
+class __$$UpdatedImplCopyWithImpl<$Res>
+    extends _$IngredientListEventCopyWithImpl<$Res, _$UpdatedImpl>
+    implements _$$UpdatedImplCopyWith<$Res> {
+  __$$UpdatedImplCopyWithImpl(
+      _$UpdatedImpl _value, $Res Function(_$UpdatedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +125,7 @@ class __$$_UpdatedCopyWithImpl<$Res>
   $Res call({
     Object? ingredient = null,
   }) {
-    return _then(_$_Updated(
+    return _then(_$UpdatedImpl(
       null == ingredient
           ? _value.ingredient
           : ingredient // ignore: cast_nullable_to_non_nullable
@@ -135,8 +136,8 @@ class __$$_UpdatedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Updated implements _Updated {
-  const _$_Updated(this.ingredient);
+class _$UpdatedImpl implements _Updated {
+  const _$UpdatedImpl(this.ingredient);
 
   @override
   final IngredientModel ingredient;
@@ -147,10 +148,10 @@ class _$_Updated implements _Updated {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Updated &&
+            other is _$UpdatedImpl &&
             (identical(other.ingredient, ingredient) ||
                 other.ingredient == ingredient));
   }
@@ -161,8 +162,8 @@ class _$_Updated implements _Updated {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdatedCopyWith<_$_Updated> get copyWith =>
-      __$$_UpdatedCopyWithImpl<_$_Updated>(this, _$identity);
+  _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
+      __$$UpdatedImplCopyWithImpl<_$UpdatedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -222,13 +223,13 @@ class _$_Updated implements _Updated {
 }
 
 abstract class _Updated implements IngredientListEvent {
-  const factory _Updated(final IngredientModel ingredient) = _$_Updated;
+  const factory _Updated(final IngredientModel ingredient) = _$UpdatedImpl;
 
   @override
   IngredientModel get ingredient;
   @override
   @JsonKey(ignore: true)
-  _$$_UpdatedCopyWith<_$_Updated> get copyWith =>
+  _$$UpdatedImplCopyWith<_$UpdatedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -275,22 +276,22 @@ class _$IngredientListStateCopyWithImpl<$Res, $Val extends IngredientListState>
 }
 
 /// @nodoc
-abstract class _$$_IngredientListStateCopyWith<$Res>
+abstract class _$$IngredientListStateImplCopyWith<$Res>
     implements $IngredientListStateCopyWith<$Res> {
-  factory _$$_IngredientListStateCopyWith(_$_IngredientListState value,
-          $Res Function(_$_IngredientListState) then) =
-      __$$_IngredientListStateCopyWithImpl<$Res>;
+  factory _$$IngredientListStateImplCopyWith(_$IngredientListStateImpl value,
+          $Res Function(_$IngredientListStateImpl) then) =
+      __$$IngredientListStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<IngredientModel> ingredients});
 }
 
 /// @nodoc
-class __$$_IngredientListStateCopyWithImpl<$Res>
-    extends _$IngredientListStateCopyWithImpl<$Res, _$_IngredientListState>
-    implements _$$_IngredientListStateCopyWith<$Res> {
-  __$$_IngredientListStateCopyWithImpl(_$_IngredientListState _value,
-      $Res Function(_$_IngredientListState) _then)
+class __$$IngredientListStateImplCopyWithImpl<$Res>
+    extends _$IngredientListStateCopyWithImpl<$Res, _$IngredientListStateImpl>
+    implements _$$IngredientListStateImplCopyWith<$Res> {
+  __$$IngredientListStateImplCopyWithImpl(_$IngredientListStateImpl _value,
+      $Res Function(_$IngredientListStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -298,7 +299,7 @@ class __$$_IngredientListStateCopyWithImpl<$Res>
   $Res call({
     Object? ingredients = null,
   }) {
-    return _then(_$_IngredientListState(
+    return _then(_$IngredientListStateImpl(
       ingredients: null == ingredients
           ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
@@ -309,8 +310,8 @@ class __$$_IngredientListStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_IngredientListState implements _IngredientListState {
-  const _$_IngredientListState(
+class _$IngredientListStateImpl implements _IngredientListState {
+  const _$IngredientListStateImpl(
       {final List<IngredientModel> ingredients = const []})
       : _ingredients = ingredients;
 
@@ -329,10 +330,10 @@ class _$_IngredientListState implements _IngredientListState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IngredientListState &&
+            other is _$IngredientListStateImpl &&
             const DeepCollectionEquality()
                 .equals(other._ingredients, _ingredients));
   }
@@ -344,19 +345,19 @@ class _$_IngredientListState implements _IngredientListState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IngredientListStateCopyWith<_$_IngredientListState> get copyWith =>
-      __$$_IngredientListStateCopyWithImpl<_$_IngredientListState>(
+  _$$IngredientListStateImplCopyWith<_$IngredientListStateImpl> get copyWith =>
+      __$$IngredientListStateImplCopyWithImpl<_$IngredientListStateImpl>(
           this, _$identity);
 }
 
 abstract class _IngredientListState implements IngredientListState {
   const factory _IngredientListState(
-      {final List<IngredientModel> ingredients}) = _$_IngredientListState;
+      {final List<IngredientModel> ingredients}) = _$IngredientListStateImpl;
 
   @override
   List<IngredientModel> get ingredients;
   @override
   @JsonKey(ignore: true)
-  _$$_IngredientListStateCopyWith<_$_IngredientListState> get copyWith =>
+  _$$IngredientListStateImplCopyWith<_$IngredientListStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

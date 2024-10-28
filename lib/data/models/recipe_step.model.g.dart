@@ -6,11 +6,12 @@ part of 'recipe_step.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RecipeStepModel _$$_RecipeStepModelFromJson(Map<String, dynamic> json) =>
-    _$_RecipeStepModel(
+_$RecipeStepModelImpl _$$RecipeStepModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RecipeStepModelImpl(
       id: json['id'] as String,
       content: json['content'] as String,
-      order: json['order'] as int,
+      order: (json['order'] as num).toInt(),
       media: (json['media'] as List<dynamic>?)
           ?.map((e) => MediaModel.fromJson(e as Map<String, dynamic>))
           .toList(),

@@ -12,7 +12,7 @@ part of 'submit_recipe_rating.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SubmitRecipeRatingDTO {
@@ -66,22 +66,24 @@ class _$SubmitRecipeRatingDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SubmitRecipeRatingDTOCopyWith<$Res>
+abstract class _$$SubmitRecipeRatingDTOImplCopyWith<$Res>
     implements $SubmitRecipeRatingDTOCopyWith<$Res> {
-  factory _$$_SubmitRecipeRatingDTOCopyWith(_$_SubmitRecipeRatingDTO value,
-          $Res Function(_$_SubmitRecipeRatingDTO) then) =
-      __$$_SubmitRecipeRatingDTOCopyWithImpl<$Res>;
+  factory _$$SubmitRecipeRatingDTOImplCopyWith(
+          _$SubmitRecipeRatingDTOImpl value,
+          $Res Function(_$SubmitRecipeRatingDTOImpl) then) =
+      __$$SubmitRecipeRatingDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int value, @JsonKey(includeToJson: false) String id});
 }
 
 /// @nodoc
-class __$$_SubmitRecipeRatingDTOCopyWithImpl<$Res>
-    extends _$SubmitRecipeRatingDTOCopyWithImpl<$Res, _$_SubmitRecipeRatingDTO>
-    implements _$$_SubmitRecipeRatingDTOCopyWith<$Res> {
-  __$$_SubmitRecipeRatingDTOCopyWithImpl(_$_SubmitRecipeRatingDTO _value,
-      $Res Function(_$_SubmitRecipeRatingDTO) _then)
+class __$$SubmitRecipeRatingDTOImplCopyWithImpl<$Res>
+    extends _$SubmitRecipeRatingDTOCopyWithImpl<$Res,
+        _$SubmitRecipeRatingDTOImpl>
+    implements _$$SubmitRecipeRatingDTOImplCopyWith<$Res> {
+  __$$SubmitRecipeRatingDTOImplCopyWithImpl(_$SubmitRecipeRatingDTOImpl _value,
+      $Res Function(_$SubmitRecipeRatingDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +92,7 @@ class __$$_SubmitRecipeRatingDTOCopyWithImpl<$Res>
     Object? value = null,
     Object? id = null,
   }) {
-    return _then(_$_SubmitRecipeRatingDTO(
+    return _then(_$SubmitRecipeRatingDTOImpl(
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -105,8 +107,8 @@ class __$$_SubmitRecipeRatingDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createFactory: false)
-class _$_SubmitRecipeRatingDTO implements _SubmitRecipeRatingDTO {
-  _$_SubmitRecipeRatingDTO(
+class _$SubmitRecipeRatingDTOImpl implements _SubmitRecipeRatingDTO {
+  _$SubmitRecipeRatingDTOImpl(
       {required this.value, @JsonKey(includeToJson: false) required this.id});
 
   @override
@@ -121,10 +123,10 @@ class _$_SubmitRecipeRatingDTO implements _SubmitRecipeRatingDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SubmitRecipeRatingDTO &&
+            other is _$SubmitRecipeRatingDTOImpl &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.id, id) || other.id == id));
   }
@@ -136,13 +138,13 @@ class _$_SubmitRecipeRatingDTO implements _SubmitRecipeRatingDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SubmitRecipeRatingDTOCopyWith<_$_SubmitRecipeRatingDTO> get copyWith =>
-      __$$_SubmitRecipeRatingDTOCopyWithImpl<_$_SubmitRecipeRatingDTO>(
-          this, _$identity);
+  _$$SubmitRecipeRatingDTOImplCopyWith<_$SubmitRecipeRatingDTOImpl>
+      get copyWith => __$$SubmitRecipeRatingDTOImplCopyWithImpl<
+          _$SubmitRecipeRatingDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SubmitRecipeRatingDTOToJson(
+    return _$$SubmitRecipeRatingDTOImplToJson(
       this,
     );
   }
@@ -152,7 +154,7 @@ abstract class _SubmitRecipeRatingDTO implements SubmitRecipeRatingDTO {
   factory _SubmitRecipeRatingDTO(
           {required final int value,
           @JsonKey(includeToJson: false) required final String id}) =
-      _$_SubmitRecipeRatingDTO;
+      _$SubmitRecipeRatingDTOImpl;
 
   @override
   int get value;
@@ -161,6 +163,6 @@ abstract class _SubmitRecipeRatingDTO implements SubmitRecipeRatingDTO {
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_SubmitRecipeRatingDTOCopyWith<_$_SubmitRecipeRatingDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SubmitRecipeRatingDTOImplCopyWith<_$SubmitRecipeRatingDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

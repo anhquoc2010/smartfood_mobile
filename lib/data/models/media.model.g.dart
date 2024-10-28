@@ -6,8 +6,8 @@ part of 'media.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MediaModel _$$_MediaModelFromJson(Map<String, dynamic> json) =>
-    _$_MediaModel(
+_$MediaModelImpl _$$MediaModelImplFromJson(Map<String, dynamic> json) =>
+    _$MediaModelImpl(
       id: json['id'] as String,
       url: json['url'] as String,
     );

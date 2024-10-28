@@ -35,11 +35,11 @@ abstract class ColorSpaceType {
   /// @throws ArgumentError if {@code shape} does not match the color space type
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   void assertShape(List<int> shape) {
-    assertRgbOrGrayScale("assertShape()");
+    assertRgbOrGrayScale('assertShape()');
 
     List<int> normalizedShape = getNormalizedShape(shape);
     checkArgument(isValidNormalizedShape(normalizedShape),
-        message: getShapeInfoMessage() + "The provided image shape is $shape");
+        message: getShapeInfoMessage() + 'The provided image shape is $shape',);
   }
 
   /// Verifies if the given {@code numElements} in an image buffer matches {@code height} / {@code
@@ -51,8 +51,8 @@ abstract class ColorSpaceType {
   void assertNumElements(int numElements, int height, int width) {
     checkArgument(numElements >= getNumElements(height, width),
         message:
-            "The given number of elements $numElements does not match the image ${this.toString()} in $height x $width. The" +
-                " expected number of elements should be at least ${getNumElements(height, width)}.");
+            'The given number of elements $numElements does not match the image ${this.toString()} in $height x $width. The' +
+                ' expected number of elements should be at least ${getNumElements(height, width)}.',);
   }
 
   /// Converts a {@link TensorBuffer} that represents an image to a Image with the color space type.
@@ -61,8 +61,8 @@ abstract class ColorSpaceType {
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   Image convertTensorBufferToImage(TensorBuffer buffer) {
     throw UnsupportedError(
-        "convertTensorBufferToImage() is unsupported for the color space type " +
-            this.toString());
+        'convertTensorBufferToImage() is unsupported for the color space type ' +
+            this.toString(),);
   }
 
   /// Returns the width of the given shape corresponding to the color space type.
@@ -70,7 +70,7 @@ abstract class ColorSpaceType {
   /// @throws ArgumentError if {@code shape} does not match the color space type
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   int getWidth(List<int> shape) {
-    assertRgbOrGrayScale("getWidth()");
+    assertRgbOrGrayScale('getWidth()');
     assertShape(shape);
     return getNormalizedShape(shape)[WIDTH_DIM];
   }
@@ -80,7 +80,7 @@ abstract class ColorSpaceType {
   /// @throws ArgumentError if {@code shape} does not match the color space type
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   int getHeight(List<int> shape) {
-    assertRgbOrGrayScale("getHeight()");
+    assertRgbOrGrayScale('getHeight()');
     assertShape(shape);
     return getNormalizedShape(shape)[HEIGHT_DIM];
   }
@@ -90,8 +90,8 @@ abstract class ColorSpaceType {
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   int getChannelValue() {
     throw UnsupportedError(
-        "getChannelValue() is unsupported for the color space type " +
-            this.toString());
+        'getChannelValue() is unsupported for the color space type ' +
+            this.toString(),);
   }
 
   /// Gets the normalized shape in the form of (1, h, w, c). Sometimes, a given shape may not have
@@ -100,8 +100,8 @@ abstract class ColorSpaceType {
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   List<int> getNormalizedShape(List<int> shape) {
     throw UnsupportedError(
-        "getNormalizedShape() is unsupported for the color space type " +
-            this.toString());
+        'getNormalizedShape() is unsupported for the color space type ' +
+            this.toString(),);
   }
 
   /// Returns the shape information corresponding to the color space type.
@@ -109,8 +109,8 @@ abstract class ColorSpaceType {
   /// @throws UnsupportedError if the color space type is not RGB or GRAYSCALE
   String getShapeInfoMessage() {
     throw UnsupportedError(
-        "getShapeInfoMessage() is unsupported for the color space type " +
-            this.toString());
+        'getShapeInfoMessage() is unsupported for the color space type ' +
+            this.toString(),);
   }
 
   /// Gets the number of elements given the height and width of an image. For example, the number of
@@ -148,8 +148,8 @@ abstract class ColorSpaceType {
   void assertRgbOrGrayScale(String unsupportedMethodName) {
     if (this != ColorSpaceType.RGB && this != ColorSpaceType.GRAYSCALE) {
       throw UnsupportedError(unsupportedMethodName +
-          " only supports RGB and GRAYSCALE formats, but not " +
-          this.toString());
+          ' only supports RGB and GRAYSCALE formats, but not ' +
+          this.toString(),);
     }
   }
 }
@@ -173,13 +173,13 @@ class _RGB extends ColorSpaceType {
       // The shape is in (h, w, c) format.
       case 3:
         return ColorSpaceType.insertValue(
-            shape, ColorSpaceType.BATCH_DIM, ColorSpaceType.BATCH_VALUE);
+            shape, ColorSpaceType.BATCH_DIM, ColorSpaceType.BATCH_VALUE,);
       case 4:
         return shape;
       default:
         throw ArgumentError(getShapeInfoMessage() +
-            "The provided image shape is " +
-            shape.toString());
+            'The provided image shape is ' +
+            shape.toString(),);
     }
   }
 
@@ -188,8 +188,8 @@ class _RGB extends ColorSpaceType {
   }
 
   String getShapeInfoMessage() {
-    return "The shape of a RGB image should be (h, w, c) or (1, h, w, c), and channels" +
-        " representing R, G, B in order. ";
+    return 'The shape of a RGB image should be (h, w, c) or (1, h, w, c), and channels' +
+        ' representing R, G, B in order. ';
   }
 }
 
@@ -213,9 +213,9 @@ class _GRAYSCALE extends ColorSpaceType {
       // The shape is in (h, w) format.
       case 2:
         List<int> shapeWithBatch = ColorSpaceType.insertValue(
-            shape, ColorSpaceType.BATCH_DIM, ColorSpaceType.BATCH_VALUE);
+            shape, ColorSpaceType.BATCH_DIM, ColorSpaceType.BATCH_VALUE,);
         return ColorSpaceType.insertValue(
-            shapeWithBatch, ColorSpaceType.CHANNEL_DIM, CHANNEL_VALUE);
+            shapeWithBatch, ColorSpaceType.CHANNEL_DIM, CHANNEL_VALUE,);
       case 4:
         return shape;
       default:
@@ -224,8 +224,8 @@ class _GRAYSCALE extends ColorSpaceType {
         // Since we haven't encountered real use cases of these two shapes, they are not supported
         // at this moment to avoid confusion. We may want to revisit it in the future.
         throw new ArgumentError(getShapeInfoMessage() +
-            "The provided image shape is " +
-            shape.toString());
+            'The provided image shape is ' +
+            shape.toString(),);
     }
   }
 
@@ -234,7 +234,7 @@ class _GRAYSCALE extends ColorSpaceType {
   }
 
   String getShapeInfoMessage() {
-    return "The shape of a grayscale image should be (h, w) or (1, h, w, 1). ";
+    return 'The shape of a grayscale image should be (h, w) or (1, h, w, 1). ';
   }
 }
 

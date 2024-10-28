@@ -44,7 +44,7 @@ class NeedLoginError extends StatelessWidget {
                   borderSide: const BorderSide(
                     color: ColorStyles.primary,
                   ),
-                )
+                ),
               ],
             ),
           );

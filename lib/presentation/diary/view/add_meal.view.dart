@@ -88,7 +88,7 @@ class _AddMealViewState extends State<_AddMealView> {
     MealTypeUIModel(
       name: LocaleKeys.meal_dinner.tr(),
       type: MealType.dinner,
-    )
+    ),
   ]);
 
   @override

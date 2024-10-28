@@ -39,8 +39,8 @@ class _MeasureNutritionResultView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async => false,
+    return PopScope(
+      canPop: false,
       child: Scaffold(
         body: AppSafeArea(
           paddingBottom: context.bottomSpacing,
@@ -113,9 +113,8 @@ class NutritionRichText extends StatelessWidget {
           ),
           TextSpan(
             text: '${value}g',
-            style:
-                TextStyles.s17BoldText.copyWith(color: ColorStyles.yellowGreen),
-          )
+            style: TextStyles.s17BoldText.copyWith(color: ColorStyles.yellowGreen),
+          ),
         ],
       ),
     );

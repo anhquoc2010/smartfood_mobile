@@ -45,7 +45,7 @@ class RecipeDetailInfo extends StatelessWidget {
                     AppSize.h20,
                     RatingBar(
                       recipe: recipe,
-                    )
+                    ),
                   ],
                 ),
               );

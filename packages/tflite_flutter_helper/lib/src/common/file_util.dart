@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:typed_data';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 
@@ -11,7 +10,7 @@ class FileUtil {
   /// For example: If file is located at <root-dir>/assets/filename.txt then fileAssetLocation is
   /// assets/filename.txt.
   Future<Uint8List> loadFileAsBytes(String fileAssetLocation) async {
-    final rawAssetFile = await rootBundle.load('$fileAssetLocation');
+    final rawAssetFile = await rootBundle.load(fileAssetLocation);
     final rawBytes = rawAssetFile.buffer.asUint8List();
     return rawBytes;
   }
@@ -26,7 +25,7 @@ class FileUtil {
   /// For example: If file is located at <root-dir>/assets/filename.txt then fileAssetLocation is
   /// assets/filename.txt.
   static Future<List<String>> loadLabels(String fileAssetLocation) async {
-    final fileString = await rootBundle.loadString('$fileAssetLocation');
+    final fileString = await rootBundle.loadString(fileAssetLocation);
     return labelListFromString(fileString);
   }
 
@@ -61,7 +60,7 @@ class FileUtil {
     final appPath = appDir.path;
     final fileName = fileAssetPath.split('/').last;
     final fileOnDevice = File('$appPath/$fileName');
-    final rawAssetFile = await rootBundle.load('$fileAssetPath');
+    final rawAssetFile = await rootBundle.load(fileAssetPath);
     final rawBytes = rawAssetFile.buffer.asUint8List();
     await fileOnDevice.writeAsBytes(rawBytes, flush: true);
     return fileOnDevice;

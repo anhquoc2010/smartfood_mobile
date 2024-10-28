@@ -12,7 +12,7 @@ part of 'pagination_meta.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PaginationMetaDTO _$PaginationMetaDTOFromJson(Map<String, dynamic> json) {
   return _PaginationMetaDTO.fromJson(json);
@@ -90,11 +90,11 @@ class _$PaginationMetaDTOCopyWithImpl<$Res, $Val extends PaginationMetaDTO>
 }
 
 /// @nodoc
-abstract class _$$_PaginationMetaDTOCopyWith<$Res>
+abstract class _$$PaginationMetaDTOImplCopyWith<$Res>
     implements $PaginationMetaDTOCopyWith<$Res> {
-  factory _$$_PaginationMetaDTOCopyWith(_$_PaginationMetaDTO value,
-          $Res Function(_$_PaginationMetaDTO) then) =
-      __$$_PaginationMetaDTOCopyWithImpl<$Res>;
+  factory _$$PaginationMetaDTOImplCopyWith(_$PaginationMetaDTOImpl value,
+          $Res Function(_$PaginationMetaDTOImpl) then) =
+      __$$PaginationMetaDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -106,11 +106,11 @@ abstract class _$$_PaginationMetaDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PaginationMetaDTOCopyWithImpl<$Res>
-    extends _$PaginationMetaDTOCopyWithImpl<$Res, _$_PaginationMetaDTO>
-    implements _$$_PaginationMetaDTOCopyWith<$Res> {
-  __$$_PaginationMetaDTOCopyWithImpl(
-      _$_PaginationMetaDTO _value, $Res Function(_$_PaginationMetaDTO) _then)
+class __$$PaginationMetaDTOImplCopyWithImpl<$Res>
+    extends _$PaginationMetaDTOCopyWithImpl<$Res, _$PaginationMetaDTOImpl>
+    implements _$$PaginationMetaDTOImplCopyWith<$Res> {
+  __$$PaginationMetaDTOImplCopyWithImpl(_$PaginationMetaDTOImpl _value,
+      $Res Function(_$PaginationMetaDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -122,7 +122,7 @@ class __$$_PaginationMetaDTOCopyWithImpl<$Res>
     Object? totalPages = null,
     Object? sortBy = freezed,
   }) {
-    return _then(_$_PaginationMetaDTO(
+    return _then(_$PaginationMetaDTOImpl(
       itemsPerPage: null == itemsPerPage
           ? _value.itemsPerPage
           : itemsPerPage // ignore: cast_nullable_to_non_nullable
@@ -149,8 +149,8 @@ class __$$_PaginationMetaDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_PaginationMetaDTO extends _PaginationMetaDTO {
-  _$_PaginationMetaDTO(
+class _$PaginationMetaDTOImpl extends _PaginationMetaDTO {
+  _$PaginationMetaDTOImpl(
       {required this.itemsPerPage,
       required this.totalItems,
       required this.currentPage,
@@ -159,8 +159,8 @@ class _$_PaginationMetaDTO extends _PaginationMetaDTO {
       : _sortBy = sortBy,
         super._();
 
-  factory _$_PaginationMetaDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_PaginationMetaDTOFromJson(json);
+  factory _$PaginationMetaDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PaginationMetaDTOImplFromJson(json);
 
   @override
   final int itemsPerPage;
@@ -186,10 +186,10 @@ class _$_PaginationMetaDTO extends _PaginationMetaDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaginationMetaDTO &&
+            other is _$PaginationMetaDTOImpl &&
             (identical(other.itemsPerPage, itemsPerPage) ||
                 other.itemsPerPage == itemsPerPage) &&
             (identical(other.totalItems, totalItems) ||
@@ -209,8 +209,8 @@ class _$_PaginationMetaDTO extends _PaginationMetaDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaginationMetaDTOCopyWith<_$_PaginationMetaDTO> get copyWith =>
-      __$$_PaginationMetaDTOCopyWithImpl<_$_PaginationMetaDTO>(
+  _$$PaginationMetaDTOImplCopyWith<_$PaginationMetaDTOImpl> get copyWith =>
+      __$$PaginationMetaDTOImplCopyWithImpl<_$PaginationMetaDTOImpl>(
           this, _$identity);
 }
 
@@ -220,11 +220,11 @@ abstract class _PaginationMetaDTO extends PaginationMetaDTO {
       required final int totalItems,
       required final int currentPage,
       required final int totalPages,
-      final List<List<String>>? sortBy}) = _$_PaginationMetaDTO;
+      final List<List<String>>? sortBy}) = _$PaginationMetaDTOImpl;
   _PaginationMetaDTO._() : super._();
 
   factory _PaginationMetaDTO.fromJson(Map<String, dynamic> json) =
-      _$_PaginationMetaDTO.fromJson;
+      _$PaginationMetaDTOImpl.fromJson;
 
   @override
   int get itemsPerPage;
@@ -238,6 +238,6 @@ abstract class _PaginationMetaDTO extends PaginationMetaDTO {
   List<List<String>>? get sortBy;
   @override
   @JsonKey(ignore: true)
-  _$$_PaginationMetaDTOCopyWith<_$_PaginationMetaDTO> get copyWith =>
+  _$$PaginationMetaDTOImplCopyWith<_$PaginationMetaDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

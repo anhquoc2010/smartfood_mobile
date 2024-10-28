@@ -6,8 +6,9 @@ part of 'ingredient.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_IngredientModel _$$_IngredientModelFromJson(Map<String, dynamic> json) =>
-    _$_IngredientModel(
+_$IngredientModelImpl _$$IngredientModelImplFromJson(
+        Map<String, dynamic> json) =>
+    _$IngredientModelImpl(
       id: json['id'] as String,
       name: json['name'] as String? ?? '',
       slug: json['slug'] as String? ?? '',

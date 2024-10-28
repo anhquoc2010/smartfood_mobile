@@ -7,7 +7,7 @@ library tflite_flutter;
 
 import 'package:ffi/ffi.dart';
 
-import 'src/bindings/bindings.dart';
+import 'package:tflite_flutter/src/bindings/bindings.dart';
 
 export 'src/bindings/types.dart';
 export 'src/delegate.dart';

@@ -100,14 +100,14 @@ class _CalorieMeasureBodyState extends State<CalorieMeasureBody> {
               PracticeFrequencyPage(
                 setPracticeIndex: _setPracticeIndex,
                 initIndex: _practiceIndex,
-              )
+              ),
             ],
           ),
         ),
         RowPageButton(
           pageNotifier: _pageNotifier,
           navigatePage: _navigatePage,
-        )
+        ),
       ],
     );
   }

@@ -36,7 +36,7 @@ class CalorieRadialGauge extends StatelessWidget {
                     fontSize: 24.sp,
                     color: ColorStyles.red400,
                   ),
-                )
+                ),
               ],
             ),
     );

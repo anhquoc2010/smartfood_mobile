@@ -6,8 +6,8 @@ part of 'register_request.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$$_RegisterRequestDTOToJson(
-        _$_RegisterRequestDTO instance) =>
+Map<String, dynamic> _$$RegisterRequestDTOImplToJson(
+        _$RegisterRequestDTOImpl instance) =>
     <String, dynamic>{
       'firstName': instance.firstName,
       'lastName': instance.lastName,

@@ -53,7 +53,7 @@ class _RecipeFilterView extends StatelessWidget {
                   .where((element) => element.isChosen)
                   .map((e) => e.name)
                   .toList(),
-            )
+            ),
           ]),
         );
   }

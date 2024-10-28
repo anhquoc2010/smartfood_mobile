@@ -6,8 +6,8 @@ part of 'user_nutrition.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$$_UpdateUserNutritionDTOToJson(
-        _$_UpdateUserNutritionDTO instance) =>
+Map<String, dynamic> _$$UpdateUserNutritionDTOImplToJson(
+        _$UpdateUserNutritionDTOImpl instance) =>
     <String, dynamic>{
       'age': instance.age,
       'gender': _$GenderTypeEnumMap[instance.gender]!,

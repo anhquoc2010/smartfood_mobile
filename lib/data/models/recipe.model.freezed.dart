@@ -12,7 +12,7 @@ part of 'recipe.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RecipeModel _$RecipeModelFromJson(Map<String, dynamic> json) {
   return _RecipeModel.fromJson(json);
@@ -166,11 +166,11 @@ class _$RecipeModelCopyWithImpl<$Res, $Val extends RecipeModel>
 }
 
 /// @nodoc
-abstract class _$$_RecipeModelCopyWith<$Res>
+abstract class _$$RecipeModelImplCopyWith<$Res>
     implements $RecipeModelCopyWith<$Res> {
-  factory _$$_RecipeModelCopyWith(
-          _$_RecipeModel value, $Res Function(_$_RecipeModel) then) =
-      __$$_RecipeModelCopyWithImpl<$Res>;
+  factory _$$RecipeModelImplCopyWith(
+          _$RecipeModelImpl value, $Res Function(_$RecipeModelImpl) then) =
+      __$$RecipeModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -194,11 +194,11 @@ abstract class _$$_RecipeModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RecipeModelCopyWithImpl<$Res>
-    extends _$RecipeModelCopyWithImpl<$Res, _$_RecipeModel>
-    implements _$$_RecipeModelCopyWith<$Res> {
-  __$$_RecipeModelCopyWithImpl(
-      _$_RecipeModel _value, $Res Function(_$_RecipeModel) _then)
+class __$$RecipeModelImplCopyWithImpl<$Res>
+    extends _$RecipeModelCopyWithImpl<$Res, _$RecipeModelImpl>
+    implements _$$RecipeModelImplCopyWith<$Res> {
+  __$$RecipeModelImplCopyWithImpl(
+      _$RecipeModelImpl _value, $Res Function(_$RecipeModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -215,7 +215,7 @@ class __$$_RecipeModelCopyWithImpl<$Res>
     Object? media = freezed,
     Object? rating = freezed,
   }) {
-    return _then(_$_RecipeModel(
+    return _then(_$RecipeModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -262,8 +262,8 @@ class __$$_RecipeModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_RecipeModel extends _RecipeModel {
-  _$_RecipeModel(
+class _$RecipeModelImpl extends _RecipeModel {
+  _$RecipeModelImpl(
       {required this.id,
       required this.name,
       this.description,
@@ -279,8 +279,8 @@ class _$_RecipeModel extends _RecipeModel {
         _media = media,
         super._();
 
-  factory _$_RecipeModel.fromJson(Map<String, dynamic> json) =>
-      _$$_RecipeModelFromJson(json);
+  factory _$RecipeModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RecipeModelImplFromJson(json);
 
   @override
   final String id;
@@ -333,10 +333,10 @@ class _$_RecipeModel extends _RecipeModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RecipeModel &&
+            other is _$RecipeModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.description, description) ||
@@ -371,8 +371,8 @@ class _$_RecipeModel extends _RecipeModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecipeModelCopyWith<_$_RecipeModel> get copyWith =>
-      __$$_RecipeModelCopyWithImpl<_$_RecipeModel>(this, _$identity);
+  _$$RecipeModelImplCopyWith<_$RecipeModelImpl> get copyWith =>
+      __$$RecipeModelImplCopyWithImpl<_$RecipeModelImpl>(this, _$identity);
 }
 
 abstract class _RecipeModel extends RecipeModel {
@@ -386,11 +386,11 @@ abstract class _RecipeModel extends RecipeModel {
       final List<QuantificationModel>? quantification,
       final List<RecipeStepModel>? recipeStep,
       final List<MediaModel>? media,
-      final double? rating}) = _$_RecipeModel;
+      final double? rating}) = _$RecipeModelImpl;
   _RecipeModel._() : super._();
 
   factory _RecipeModel.fromJson(Map<String, dynamic> json) =
-      _$_RecipeModel.fromJson;
+      _$RecipeModelImpl.fromJson;
 
   @override
   String get id;
@@ -414,6 +414,6 @@ abstract class _RecipeModel extends RecipeModel {
   double? get rating;
   @override
   @JsonKey(ignore: true)
-  _$$_RecipeModelCopyWith<_$_RecipeModel> get copyWith =>
+  _$$RecipeModelImplCopyWith<_$RecipeModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

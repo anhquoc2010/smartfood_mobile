@@ -56,7 +56,7 @@ class IngredientGridItem extends StatelessWidget {
                       style: TextStyles.s14RegularText,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           );

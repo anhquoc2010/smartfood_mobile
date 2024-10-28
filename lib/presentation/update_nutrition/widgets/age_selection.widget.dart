@@ -109,7 +109,7 @@ class AgeSelection extends StatelessWidget {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

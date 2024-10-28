@@ -2,9 +2,9 @@
 
 import 'dart:ffi';
 
-import '../dlib.dart';
+import 'package:tflite_flutter/src/bindings/dlib.dart';
 
-import '../types.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
 
 // Android GPU delegate bindings
 
@@ -18,20 +18,20 @@ import '../types.dart';
 Pointer<TfLiteDelegate> Function(Pointer<TfLiteGpuDelegateOptionsV2> options)
     tfLiteGpuDelegateV2Create = tflitelib
         .lookup<NativeFunction<_TfLiteGpuDelegateV2Create_native_t>>(
-            'TfLiteGpuDelegateV2Create')
+            'TfLiteGpuDelegateV2Create',)
         .asFunction();
 
 typedef _TfLiteGpuDelegateV2Create_native_t = Pointer<TfLiteDelegate> Function(
-    Pointer<TfLiteGpuDelegateOptionsV2> options);
+    Pointer<TfLiteGpuDelegateOptionsV2> options,);
 
 /// Destroys a delegate created with `TfLiteGpuDelegateV2Create` call.
 void Function(Pointer<TfLiteDelegate>) tfLiteGpuDelegateV2Delete = tflitelib
     .lookup<NativeFunction<_TFLGpuDelegateV2Delete_native_t>>(
-        'TfLiteGpuDelegateV2Delete')
+        'TfLiteGpuDelegateV2Delete',)
     .asFunction();
 
 typedef _TFLGpuDelegateV2Delete_native_t = Void Function(
-    Pointer<TfLiteDelegate> delegate);
+    Pointer<TfLiteDelegate> delegate,);
 
 /// Creates TfLiteGpuDelegateV2 with default options
 TfLiteGpuDelegateOptionsV2 Function() tfLiteGpuDelegateOptionsV2Default =
@@ -39,7 +39,7 @@ TfLiteGpuDelegateOptionsV2 Function() tfLiteGpuDelegateOptionsV2Default =
         .lookup<
                 NativeFunction<
                     _TfLiteTfLiteGpuDelegateOptionsV2Default_native_t>>(
-            'TfLiteGpuDelegateOptionsV2Default')
+            'TfLiteGpuDelegateOptionsV2Default',)
         .asFunction();
 
 typedef _TfLiteTfLiteGpuDelegateOptionsV2Default_native_t

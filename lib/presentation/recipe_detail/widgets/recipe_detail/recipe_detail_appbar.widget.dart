@@ -28,7 +28,7 @@ class RecipeDetailAppBar extends StatelessWidget {
           FilledRoundedButton(
             icon: Icons.favorite,
             onTap: () => Navigator.of(context).pop(),
-          )
+          ),
         ],
       ),
       bottom: PreferredSize(

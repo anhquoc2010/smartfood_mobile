@@ -2,9 +2,9 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
-import '../bindings/delegates/xnnpack_delegate.dart';
-import '../bindings/types.dart';
-import '../delegate.dart';
+import 'package:tflite_flutter/src/bindings/delegates/xnnpack_delegate.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
+import 'package:tflite_flutter/src/delegate.dart';
 
 /// XNNPack Delegate
 class XNNPackDelegate implements Delegate {
@@ -47,7 +47,7 @@ class XNNPackDelegateOptions {
   }) {
     return XNNPackDelegateOptions._(TfLiteXNNPackDelegateOptions.allocate(
       1,
-    ));
+    ),);
   }
 
   void delete() {

@@ -100,7 +100,7 @@ class _ChangePasswordBodyState extends State<ChangePasswordBody> {
             AppRoundedButton(
               onPressed: _submit,
               content: LocaleKeys.profile_change_password.tr(),
-            )
+            ),
           ],
         ),
       ),

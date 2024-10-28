@@ -46,7 +46,7 @@ class AddMealAppBar extends StatelessWidget implements PreferredSizeWidget {
             return Visibility(visible: value.isNotEmpty, child: child!);
           },
           child: CheckIconButton(onPressed: addDishes),
-        )
+        ),
       ],
     );
   }

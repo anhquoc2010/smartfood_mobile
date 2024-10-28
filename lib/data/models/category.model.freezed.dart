@@ -12,7 +12,7 @@ part of 'category.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CategoryModel _$CategoryModelFromJson(Map<String, dynamic> json) {
   return _CategoryModel.fromJson(json);
@@ -79,11 +79,11 @@ class _$CategoryModelCopyWithImpl<$Res, $Val extends CategoryModel>
 }
 
 /// @nodoc
-abstract class _$$_CategoryModelCopyWith<$Res>
+abstract class _$$CategoryModelImplCopyWith<$Res>
     implements $CategoryModelCopyWith<$Res> {
-  factory _$$_CategoryModelCopyWith(
-          _$_CategoryModel value, $Res Function(_$_CategoryModel) then) =
-      __$$_CategoryModelCopyWithImpl<$Res>;
+  factory _$$CategoryModelImplCopyWith(
+          _$CategoryModelImpl value, $Res Function(_$CategoryModelImpl) then) =
+      __$$CategoryModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,11 +93,11 @@ abstract class _$$_CategoryModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CategoryModelCopyWithImpl<$Res>
-    extends _$CategoryModelCopyWithImpl<$Res, _$_CategoryModel>
-    implements _$$_CategoryModelCopyWith<$Res> {
-  __$$_CategoryModelCopyWithImpl(
-      _$_CategoryModel _value, $Res Function(_$_CategoryModel) _then)
+class __$$CategoryModelImplCopyWithImpl<$Res>
+    extends _$CategoryModelCopyWithImpl<$Res, _$CategoryModelImpl>
+    implements _$$CategoryModelImplCopyWith<$Res> {
+  __$$CategoryModelImplCopyWithImpl(
+      _$CategoryModelImpl _value, $Res Function(_$CategoryModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +107,7 @@ class __$$_CategoryModelCopyWithImpl<$Res>
     Object? name = null,
     Object? isChosen = null,
   }) {
-    return _then(_$_CategoryModel(
+    return _then(_$CategoryModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -126,15 +126,15 @@ class __$$_CategoryModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_CategoryModel implements _CategoryModel {
-  _$_CategoryModel(
+class _$CategoryModelImpl implements _CategoryModel {
+  _$CategoryModelImpl(
       {required this.id,
       required this.name,
       @JsonKey(includeFromJson: false, includeToJson: false)
-          this.isChosen = false});
+      this.isChosen = false});
 
-  factory _$_CategoryModel.fromJson(Map<String, dynamic> json) =>
-      _$$_CategoryModelFromJson(json);
+  factory _$CategoryModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CategoryModelImplFromJson(json);
 
   @override
   final String id;
@@ -150,10 +150,10 @@ class _$_CategoryModel implements _CategoryModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CategoryModel &&
+            other is _$CategoryModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.isChosen, isChosen) ||
@@ -167,8 +167,8 @@ class _$_CategoryModel implements _CategoryModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CategoryModelCopyWith<_$_CategoryModel> get copyWith =>
-      __$$_CategoryModelCopyWithImpl<_$_CategoryModel>(this, _$identity);
+  _$$CategoryModelImplCopyWith<_$CategoryModelImpl> get copyWith =>
+      __$$CategoryModelImplCopyWithImpl<_$CategoryModelImpl>(this, _$identity);
 }
 
 abstract class _CategoryModel implements CategoryModel {
@@ -176,10 +176,10 @@ abstract class _CategoryModel implements CategoryModel {
       {required final String id,
       required final String name,
       @JsonKey(includeFromJson: false, includeToJson: false)
-          bool isChosen}) = _$_CategoryModel;
+      bool isChosen}) = _$CategoryModelImpl;
 
   factory _CategoryModel.fromJson(Map<String, dynamic> json) =
-      _$_CategoryModel.fromJson;
+      _$CategoryModelImpl.fromJson;
 
   @override
   String get id;
@@ -192,6 +192,6 @@ abstract class _CategoryModel implements CategoryModel {
   set isChosen(bool value);
   @override
   @JsonKey(ignore: true)
-  _$$_CategoryModelCopyWith<_$_CategoryModel> get copyWith =>
+  _$$CategoryModelImplCopyWith<_$CategoryModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

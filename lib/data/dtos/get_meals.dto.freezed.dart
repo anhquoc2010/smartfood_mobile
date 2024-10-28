@@ -12,7 +12,7 @@ part of 'get_meals.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 GetMealsDTO _$GetMealsDTOFromJson(Map<String, dynamic> json) {
   return _GetMealsDTO.fromJson(json);
@@ -77,11 +77,11 @@ class _$GetMealsDTOCopyWithImpl<$Res, $Val extends GetMealsDTO>
 }
 
 /// @nodoc
-abstract class _$$_GetMealsDTOCopyWith<$Res>
+abstract class _$$GetMealsDTOImplCopyWith<$Res>
     implements $GetMealsDTOCopyWith<$Res> {
-  factory _$$_GetMealsDTOCopyWith(
-          _$_GetMealsDTO value, $Res Function(_$_GetMealsDTO) then) =
-      __$$_GetMealsDTOCopyWithImpl<$Res>;
+  factory _$$GetMealsDTOImplCopyWith(
+          _$GetMealsDTOImpl value, $Res Function(_$GetMealsDTOImpl) then) =
+      __$$GetMealsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<MealModel> data, PaginationMetaDTO meta});
@@ -91,11 +91,11 @@ abstract class _$$_GetMealsDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetMealsDTOCopyWithImpl<$Res>
-    extends _$GetMealsDTOCopyWithImpl<$Res, _$_GetMealsDTO>
-    implements _$$_GetMealsDTOCopyWith<$Res> {
-  __$$_GetMealsDTOCopyWithImpl(
-      _$_GetMealsDTO _value, $Res Function(_$_GetMealsDTO) _then)
+class __$$GetMealsDTOImplCopyWithImpl<$Res>
+    extends _$GetMealsDTOCopyWithImpl<$Res, _$GetMealsDTOImpl>
+    implements _$$GetMealsDTOImplCopyWith<$Res> {
+  __$$GetMealsDTOImplCopyWithImpl(
+      _$GetMealsDTOImpl _value, $Res Function(_$GetMealsDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -104,7 +104,7 @@ class __$$_GetMealsDTOCopyWithImpl<$Res>
     Object? data = null,
     Object? meta = null,
   }) {
-    return _then(_$_GetMealsDTO(
+    return _then(_$GetMealsDTOImpl(
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -119,13 +119,13 @@ class __$$_GetMealsDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_GetMealsDTO implements _GetMealsDTO {
-  const _$_GetMealsDTO(
+class _$GetMealsDTOImpl implements _GetMealsDTO {
+  const _$GetMealsDTOImpl(
       {required final List<MealModel> data, required this.meta})
       : _data = data;
 
-  factory _$_GetMealsDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_GetMealsDTOFromJson(json);
+  factory _$GetMealsDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GetMealsDTOImplFromJson(json);
 
   final List<MealModel> _data;
   @override
@@ -144,10 +144,10 @@ class _$_GetMealsDTO implements _GetMealsDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetMealsDTO &&
+            other is _$GetMealsDTOImpl &&
             const DeepCollectionEquality().equals(other._data, _data) &&
             (identical(other.meta, meta) || other.meta == meta));
   }
@@ -160,17 +160,17 @@ class _$_GetMealsDTO implements _GetMealsDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetMealsDTOCopyWith<_$_GetMealsDTO> get copyWith =>
-      __$$_GetMealsDTOCopyWithImpl<_$_GetMealsDTO>(this, _$identity);
+  _$$GetMealsDTOImplCopyWith<_$GetMealsDTOImpl> get copyWith =>
+      __$$GetMealsDTOImplCopyWithImpl<_$GetMealsDTOImpl>(this, _$identity);
 }
 
 abstract class _GetMealsDTO implements GetMealsDTO {
   const factory _GetMealsDTO(
       {required final List<MealModel> data,
-      required final PaginationMetaDTO meta}) = _$_GetMealsDTO;
+      required final PaginationMetaDTO meta}) = _$GetMealsDTOImpl;
 
   factory _GetMealsDTO.fromJson(Map<String, dynamic> json) =
-      _$_GetMealsDTO.fromJson;
+      _$GetMealsDTOImpl.fromJson;
 
   @override
   List<MealModel> get data;
@@ -178,6 +178,6 @@ abstract class _GetMealsDTO implements GetMealsDTO {
   PaginationMetaDTO get meta;
   @override
   @JsonKey(ignore: true)
-  _$$_GetMealsDTOCopyWith<_$_GetMealsDTO> get copyWith =>
+  _$$GetMealsDTOImplCopyWith<_$GetMealsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

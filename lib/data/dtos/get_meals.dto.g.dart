@@ -6,8 +6,8 @@ part of 'get_meals.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetMealsDTO _$$_GetMealsDTOFromJson(Map<String, dynamic> json) =>
-    _$_GetMealsDTO(
+_$GetMealsDTOImpl _$$GetMealsDTOImplFromJson(Map<String, dynamic> json) =>
+    _$GetMealsDTOImpl(
       data: (json['data'] as List<dynamic>)
           .map((e) => MealModel.fromJson(e as Map<String, dynamic>))
           .toList(),

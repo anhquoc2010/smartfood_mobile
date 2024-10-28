@@ -12,7 +12,7 @@ part of 'ingredient.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 IngredientModel _$IngredientModelFromJson(Map<String, dynamic> json) {
   return _IngredientModel.fromJson(json);
@@ -85,11 +85,11 @@ class _$IngredientModelCopyWithImpl<$Res, $Val extends IngredientModel>
 }
 
 /// @nodoc
-abstract class _$$_IngredientModelCopyWith<$Res>
+abstract class _$$IngredientModelImplCopyWith<$Res>
     implements $IngredientModelCopyWith<$Res> {
-  factory _$$_IngredientModelCopyWith(
-          _$_IngredientModel value, $Res Function(_$_IngredientModel) then) =
-      __$$_IngredientModelCopyWithImpl<$Res>;
+  factory _$$IngredientModelImplCopyWith(_$IngredientModelImpl value,
+          $Res Function(_$IngredientModelImpl) then) =
+      __$$IngredientModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -100,11 +100,11 @@ abstract class _$$_IngredientModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IngredientModelCopyWithImpl<$Res>
-    extends _$IngredientModelCopyWithImpl<$Res, _$_IngredientModel>
-    implements _$$_IngredientModelCopyWith<$Res> {
-  __$$_IngredientModelCopyWithImpl(
-      _$_IngredientModel _value, $Res Function(_$_IngredientModel) _then)
+class __$$IngredientModelImplCopyWithImpl<$Res>
+    extends _$IngredientModelCopyWithImpl<$Res, _$IngredientModelImpl>
+    implements _$$IngredientModelImplCopyWith<$Res> {
+  __$$IngredientModelImplCopyWithImpl(
+      _$IngredientModelImpl _value, $Res Function(_$IngredientModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_IngredientModelCopyWithImpl<$Res>
     Object? slug = null,
     Object? media = freezed,
   }) {
-    return _then(_$_IngredientModel(
+    return _then(_$IngredientModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -139,8 +139,8 @@ class __$$_IngredientModelCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(createToJson: false)
-class _$_IngredientModel extends _IngredientModel {
-  const _$_IngredientModel(
+class _$IngredientModelImpl extends _IngredientModel {
+  const _$IngredientModelImpl(
       {required this.id,
       @JsonKey(defaultValue: '') required this.name,
       @JsonKey(defaultValue: '') required this.slug,
@@ -148,8 +148,8 @@ class _$_IngredientModel extends _IngredientModel {
       : _media = media,
         super._();
 
-  factory _$_IngredientModel.fromJson(Map<String, dynamic> json) =>
-      _$$_IngredientModelFromJson(json);
+  factory _$IngredientModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$IngredientModelImplFromJson(json);
 
   @override
   final String id;
@@ -175,10 +175,10 @@ class _$_IngredientModel extends _IngredientModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IngredientModel &&
+            other is _$IngredientModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.slug, slug) || other.slug == slug) &&
@@ -193,8 +193,9 @@ class _$_IngredientModel extends _IngredientModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IngredientModelCopyWith<_$_IngredientModel> get copyWith =>
-      __$$_IngredientModelCopyWithImpl<_$_IngredientModel>(this, _$identity);
+  _$$IngredientModelImplCopyWith<_$IngredientModelImpl> get copyWith =>
+      __$$IngredientModelImplCopyWithImpl<_$IngredientModelImpl>(
+          this, _$identity);
 }
 
 abstract class _IngredientModel extends IngredientModel {
@@ -202,11 +203,11 @@ abstract class _IngredientModel extends IngredientModel {
       {required final String id,
       @JsonKey(defaultValue: '') required final String name,
       @JsonKey(defaultValue: '') required final String slug,
-      final List<MediaModel>? media}) = _$_IngredientModel;
+      final List<MediaModel>? media}) = _$IngredientModelImpl;
   const _IngredientModel._() : super._();
 
   factory _IngredientModel.fromJson(Map<String, dynamic> json) =
-      _$_IngredientModel.fromJson;
+      _$IngredientModelImpl.fromJson;
 
   @override
   String get id;
@@ -220,6 +221,6 @@ abstract class _IngredientModel extends IngredientModel {
   List<MediaModel>? get media;
   @override
   @JsonKey(ignore: true)
-  _$$_IngredientModelCopyWith<_$_IngredientModel> get copyWith =>
+  _$$IngredientModelImplCopyWith<_$IngredientModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

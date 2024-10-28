@@ -42,7 +42,7 @@ class DishCard extends StatelessWidget {
         FocusedMenuItem(
           title: Text(LocaleKeys.texts_delete.tr()),
           onPressed: () => onDelete?.call(),
-        )
+        ),
       ],
       onPressed: () {
         if (enabled) {
@@ -97,9 +97,9 @@ class DishCard extends StatelessWidget {
                         ),
                         NutritionColumn(
                           values: [meal.fatString, meal.proteinString],
-                        )
+                        ),
                       ],
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -109,7 +109,7 @@ class DishCard extends StatelessWidget {
                   onTap: () => onAdd!(meal),
                   backgroundColor: ColorStyles.yellowGreen,
                   padding: 6,
-                )
+                ),
             ],
           ),
         ),

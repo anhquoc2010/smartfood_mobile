@@ -40,7 +40,7 @@ class LeftConsumedTotalCalorie extends StatelessWidget {
                   CalorieStatisticItem(
                     value: diaryInfo.consumedCalorie,
                     title: LocaleKeys.diary_consume.tr(),
-                  )
+                  ),
                 ],
               ),
       ),

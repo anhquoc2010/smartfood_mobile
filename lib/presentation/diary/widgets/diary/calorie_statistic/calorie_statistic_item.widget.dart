@@ -28,7 +28,7 @@ class CalorieStatisticItem extends StatelessWidget {
               TextSpan(
                 text: 'kcal',
                 style: TextStyles.s17BoldText,
-              )
+              ),
             ],
           ),
         ),
@@ -36,7 +36,7 @@ class CalorieStatisticItem extends StatelessWidget {
           title,
           style: TextStyles.regularText
               .copyWith(color: ColorStyles.gray400, fontSize: 14.sp),
-        )
+        ),
       ],
     );
   }

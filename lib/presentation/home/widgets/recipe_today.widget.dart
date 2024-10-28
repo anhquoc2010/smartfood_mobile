@@ -32,7 +32,7 @@ class RecipeToday extends StatelessWidget {
               return RecipeCard(recipe: item);
             },
           ).toList(),
-        )
+        ),
       ],
     );
   }

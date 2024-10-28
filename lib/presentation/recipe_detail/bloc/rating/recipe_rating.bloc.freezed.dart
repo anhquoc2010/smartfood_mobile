@@ -12,7 +12,7 @@ part of 'recipe_rating.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RecipeRatingEvent {
@@ -99,10 +99,11 @@ class _$RecipeRatingEventCopyWithImpl<$Res, $Val extends RecipeRatingEvent>
 }
 
 /// @nodoc
-abstract class _$$_SubmitCopyWith<$Res>
+abstract class _$$SubmitImplCopyWith<$Res>
     implements $RecipeRatingEventCopyWith<$Res> {
-  factory _$$_SubmitCopyWith(_$_Submit value, $Res Function(_$_Submit) then) =
-      __$$_SubmitCopyWithImpl<$Res>;
+  factory _$$SubmitImplCopyWith(
+          _$SubmitImpl value, $Res Function(_$SubmitImpl) then) =
+      __$$SubmitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SubmitRecipeRatingDTO dto});
@@ -112,10 +113,11 @@ abstract class _$$_SubmitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SubmitCopyWithImpl<$Res>
-    extends _$RecipeRatingEventCopyWithImpl<$Res, _$_Submit>
-    implements _$$_SubmitCopyWith<$Res> {
-  __$$_SubmitCopyWithImpl(_$_Submit _value, $Res Function(_$_Submit) _then)
+class __$$SubmitImplCopyWithImpl<$Res>
+    extends _$RecipeRatingEventCopyWithImpl<$Res, _$SubmitImpl>
+    implements _$$SubmitImplCopyWith<$Res> {
+  __$$SubmitImplCopyWithImpl(
+      _$SubmitImpl _value, $Res Function(_$SubmitImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +125,7 @@ class __$$_SubmitCopyWithImpl<$Res>
   $Res call({
     Object? dto = null,
   }) {
-    return _then(_$_Submit(
+    return _then(_$SubmitImpl(
       null == dto
           ? _value.dto
           : dto // ignore: cast_nullable_to_non_nullable
@@ -134,8 +136,8 @@ class __$$_SubmitCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Submit implements _Submit {
-  const _$_Submit(this.dto);
+class _$SubmitImpl implements _Submit {
+  const _$SubmitImpl(this.dto);
 
   @override
   final SubmitRecipeRatingDTO dto;
@@ -146,10 +148,10 @@ class _$_Submit implements _Submit {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Submit &&
+            other is _$SubmitImpl &&
             (identical(other.dto, dto) || other.dto == dto));
   }
 
@@ -159,8 +161,8 @@ class _$_Submit implements _Submit {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SubmitCopyWith<_$_Submit> get copyWith =>
-      __$$_SubmitCopyWithImpl<_$_Submit>(this, _$identity);
+  _$$SubmitImplCopyWith<_$SubmitImpl> get copyWith =>
+      __$$SubmitImplCopyWithImpl<_$SubmitImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -220,13 +222,13 @@ class _$_Submit implements _Submit {
 }
 
 abstract class _Submit implements RecipeRatingEvent {
-  const factory _Submit(final SubmitRecipeRatingDTO dto) = _$_Submit;
+  const factory _Submit(final SubmitRecipeRatingDTO dto) = _$SubmitImpl;
 
   @override
   SubmitRecipeRatingDTO get dto;
   @override
   @JsonKey(ignore: true)
-  _$$_SubmitCopyWith<_$_Submit> get copyWith =>
+  _$$SubmitImplCopyWith<_$SubmitImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -279,22 +281,22 @@ class _$RecipeRatingStateCopyWithImpl<$Res, $Val extends RecipeRatingState>
 }
 
 /// @nodoc
-abstract class _$$_RecipeRatingStateCopyWith<$Res>
+abstract class _$$RecipeRatingStateImplCopyWith<$Res>
     implements $RecipeRatingStateCopyWith<$Res> {
-  factory _$$_RecipeRatingStateCopyWith(_$_RecipeRatingState value,
-          $Res Function(_$_RecipeRatingState) then) =
-      __$$_RecipeRatingStateCopyWithImpl<$Res>;
+  factory _$$RecipeRatingStateImplCopyWith(_$RecipeRatingStateImpl value,
+          $Res Function(_$RecipeRatingStateImpl) then) =
+      __$$RecipeRatingStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({QueryStatus status, int rating});
 }
 
 /// @nodoc
-class __$$_RecipeRatingStateCopyWithImpl<$Res>
-    extends _$RecipeRatingStateCopyWithImpl<$Res, _$_RecipeRatingState>
-    implements _$$_RecipeRatingStateCopyWith<$Res> {
-  __$$_RecipeRatingStateCopyWithImpl(
-      _$_RecipeRatingState _value, $Res Function(_$_RecipeRatingState) _then)
+class __$$RecipeRatingStateImplCopyWithImpl<$Res>
+    extends _$RecipeRatingStateCopyWithImpl<$Res, _$RecipeRatingStateImpl>
+    implements _$$RecipeRatingStateImplCopyWith<$Res> {
+  __$$RecipeRatingStateImplCopyWithImpl(_$RecipeRatingStateImpl _value,
+      $Res Function(_$RecipeRatingStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -303,7 +305,7 @@ class __$$_RecipeRatingStateCopyWithImpl<$Res>
     Object? status = null,
     Object? rating = null,
   }) {
-    return _then(_$_RecipeRatingState(
+    return _then(_$RecipeRatingStateImpl(
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -318,8 +320,8 @@ class __$$_RecipeRatingStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RecipeRatingState implements _RecipeRatingState {
-  const _$_RecipeRatingState(
+class _$RecipeRatingStateImpl implements _RecipeRatingState {
+  const _$RecipeRatingStateImpl(
       {this.status = QueryStatus.loading, this.rating = 0});
 
   @override
@@ -335,10 +337,10 @@ class _$_RecipeRatingState implements _RecipeRatingState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RecipeRatingState &&
+            other is _$RecipeRatingStateImpl &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.rating, rating) || other.rating == rating));
   }
@@ -349,14 +351,14 @@ class _$_RecipeRatingState implements _RecipeRatingState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecipeRatingStateCopyWith<_$_RecipeRatingState> get copyWith =>
-      __$$_RecipeRatingStateCopyWithImpl<_$_RecipeRatingState>(
+  _$$RecipeRatingStateImplCopyWith<_$RecipeRatingStateImpl> get copyWith =>
+      __$$RecipeRatingStateImplCopyWithImpl<_$RecipeRatingStateImpl>(
           this, _$identity);
 }
 
 abstract class _RecipeRatingState implements RecipeRatingState {
   const factory _RecipeRatingState(
-      {final QueryStatus status, final int rating}) = _$_RecipeRatingState;
+      {final QueryStatus status, final int rating}) = _$RecipeRatingStateImpl;
 
   @override
   QueryStatus get status;
@@ -364,6 +366,6 @@ abstract class _RecipeRatingState implements RecipeRatingState {
   int get rating;
   @override
   @JsonKey(ignore: true)
-  _$$_RecipeRatingStateCopyWith<_$_RecipeRatingState> get copyWith =>
+  _$$RecipeRatingStateImplCopyWith<_$RecipeRatingStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -2,7 +2,7 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
-import 'dlib.dart';
+import 'package:tflite_flutter/src/bindings/dlib.dart';
 
 /// Version information for the TensorFlowLite library.
 final Pointer<Utf8> Function() tfLiteVersion = tflitelib

@@ -12,7 +12,7 @@ part of 'search_practice_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SearchPracticeState {
@@ -91,11 +91,11 @@ class _$SearchPracticeStateCopyWithImpl<$Res, $Val extends SearchPracticeState>
 }
 
 /// @nodoc
-abstract class _$$_SearchPracticeStateCopyWith<$Res>
+abstract class _$$SearchPracticeStateImplCopyWith<$Res>
     implements $SearchPracticeStateCopyWith<$Res> {
-  factory _$$_SearchPracticeStateCopyWith(_$_SearchPracticeState value,
-          $Res Function(_$_SearchPracticeState) then) =
-      __$$_SearchPracticeStateCopyWithImpl<$Res>;
+  factory _$$SearchPracticeStateImplCopyWith(_$SearchPracticeStateImpl value,
+          $Res Function(_$SearchPracticeStateImpl) then) =
+      __$$SearchPracticeStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -110,11 +110,11 @@ abstract class _$$_SearchPracticeStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SearchPracticeStateCopyWithImpl<$Res>
-    extends _$SearchPracticeStateCopyWithImpl<$Res, _$_SearchPracticeState>
-    implements _$$_SearchPracticeStateCopyWith<$Res> {
-  __$$_SearchPracticeStateCopyWithImpl(_$_SearchPracticeState _value,
-      $Res Function(_$_SearchPracticeState) _then)
+class __$$SearchPracticeStateImplCopyWithImpl<$Res>
+    extends _$SearchPracticeStateCopyWithImpl<$Res, _$SearchPracticeStateImpl>
+    implements _$$SearchPracticeStateImplCopyWith<$Res> {
+  __$$SearchPracticeStateImplCopyWithImpl(_$SearchPracticeStateImpl _value,
+      $Res Function(_$SearchPracticeStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +124,7 @@ class __$$_SearchPracticeStateCopyWithImpl<$Res>
     Object? practices = null,
     Object? dto = null,
   }) {
-    return _then(_$_SearchPracticeState(
+    return _then(_$SearchPracticeStateImpl(
       info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
@@ -143,8 +143,8 @@ class __$$_SearchPracticeStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SearchPracticeState implements _SearchPracticeState {
-  const _$_SearchPracticeState(
+class _$SearchPracticeStateImpl implements _SearchPracticeState {
+  const _$SearchPracticeStateImpl(
       {required this.info,
       final List<PracticeModel> practices = const [],
       required this.dto})
@@ -170,10 +170,10 @@ class _$_SearchPracticeState implements _SearchPracticeState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchPracticeState &&
+            other is _$SearchPracticeStateImpl &&
             (identical(other.info, info) || other.info == info) &&
             const DeepCollectionEquality()
                 .equals(other._practices, _practices) &&
@@ -187,16 +187,17 @@ class _$_SearchPracticeState implements _SearchPracticeState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchPracticeStateCopyWith<_$_SearchPracticeState> get copyWith =>
-      __$$_SearchPracticeStateCopyWithImpl<_$_SearchPracticeState>(
+  _$$SearchPracticeStateImplCopyWith<_$SearchPracticeStateImpl> get copyWith =>
+      __$$SearchPracticeStateImplCopyWithImpl<_$SearchPracticeStateImpl>(
           this, _$identity);
 }
 
 abstract class _SearchPracticeState implements SearchPracticeState {
   const factory _SearchPracticeState(
-      {required final QueryDataInfo info,
-      final List<PracticeModel> practices,
-      required final PaginationQueryDTO<dynamic> dto}) = _$_SearchPracticeState;
+          {required final QueryDataInfo info,
+          final List<PracticeModel> practices,
+          required final PaginationQueryDTO<dynamic> dto}) =
+      _$SearchPracticeStateImpl;
 
   @override
   QueryDataInfo get info;
@@ -206,6 +207,6 @@ abstract class _SearchPracticeState implements SearchPracticeState {
   PaginationQueryDTO<dynamic> get dto;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchPracticeStateCopyWith<_$_SearchPracticeState> get copyWith =>
+  _$$SearchPracticeStateImplCopyWith<_$SearchPracticeStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

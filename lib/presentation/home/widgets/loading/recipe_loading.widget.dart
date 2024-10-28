@@ -31,7 +31,7 @@ class RecipeTodayLoading extends StatelessWidget {
               borderRadius: AppSize.cardRadius,
             ),
           ),
-        )
+        ),
       ],
     );
   }

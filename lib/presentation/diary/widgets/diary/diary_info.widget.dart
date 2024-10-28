@@ -28,7 +28,7 @@ class DiaryInfo extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          MealAndWorkoutPlan()
+          MealAndWorkoutPlan(),
         ],
       ),
     );

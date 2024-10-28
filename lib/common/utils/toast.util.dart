@@ -121,7 +121,7 @@ class _ToastView {
             const SizedBox(
               width: 6,
             ),
-            trailing ?? const SizedBox.shrink()
+            trailing ?? const SizedBox.shrink(),
           ],
         ),
       ),

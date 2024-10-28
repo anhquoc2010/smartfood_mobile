@@ -44,7 +44,7 @@ class GenderSelection extends StatelessWidget {
                   height: size / 1.2,
                 ),
               ),
-            )
+            ),
           ],
         );
       },

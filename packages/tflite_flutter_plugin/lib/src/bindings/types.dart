@@ -86,7 +86,7 @@ class TfLiteGpuDelegateOptionsV2 extends Struct {
       TfLiteGpuInferencePriority inferencePriority2,
       TfLiteGpuInferencePriority inferencePriority3,
       int experimentalFlagsBitmask,
-      int maxDelegatePartitions) {
+      int maxDelegatePartitions,) {
     final result = calloc<TfLiteGpuDelegateOptionsV2>();
     result.ref
       ..isPrecisionLossAllowed = isPrecisionLossAllowed ? 1 : 0
@@ -130,7 +130,7 @@ class TfLiteCoreMlDelegateOptions extends Struct {
       TfLiteCoreMlDelegateEnabledDevices enabledDevices,
       int coremlVersion,
       int maxDelegatedPartitions,
-      int minNodesPerPartition) {
+      int minNodesPerPartition,) {
     final result = calloc<TfLiteCoreMlDelegateOptions>();
     result.ref
       ..enabledDevices = enabledDevices.index

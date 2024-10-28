@@ -36,7 +36,7 @@ class CommonRadialGauge extends StatelessWidget {
               enableAnimation: true,
               animationDuration: 1500,
               color: ColorStyles.red400,
-            )
+            ),
           ],
         ),
       ],

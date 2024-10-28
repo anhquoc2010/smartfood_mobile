@@ -44,7 +44,7 @@ class RecipeSearchBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           iconSize: 22,
           iconColor: ColorStyles.primary,
-        )
+        ),
       ],
     );
   }

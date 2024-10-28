@@ -2,9 +2,9 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
-import '../bindings/delegates/gpu_delegate.dart';
-import '../bindings/types.dart';
-import '../delegate.dart';
+import 'package:tflite_flutter/src/bindings/delegates/gpu_delegate.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
+import 'package:tflite_flutter/src/delegate.dart';
 
 /// GPU delegate for Android
 class GpuDelegateV2 implements Delegate {
@@ -100,7 +100,7 @@ class GpuDelegateOptionsV2 {
     TfLiteGpuInferencePriority inferencePriority3 =
         TfLiteGpuInferencePriority.auto,
     List<TfLiteGpuExperimentalFlags> experimentalFlags = const [
-      TfLiteGpuExperimentalFlags.enableQuant
+      TfLiteGpuExperimentalFlags.enableQuant,
     ],
     int maxDelegatePartitions = 1,
   }) {
@@ -112,7 +112,7 @@ class GpuDelegateOptionsV2 {
       inferencePriority3,
       _TfLiteGpuExperimentalFlagsUtil.getBitmask(experimentalFlags),
       maxDelegatePartitions,
-    ));
+    ),);
   }
 
   void delete() {

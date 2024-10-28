@@ -6,7 +6,7 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
 
 class TensorAudio {
-  static const String TAG = "TensorAudioDart";
+  static const String TAG = 'TensorAudioDart';
   late final FloatRingBuffer buffer;
   late final TensorAudioFormat format;
 
@@ -23,12 +23,12 @@ class TensorAudio {
   }
 
   void loadDoubleListOffset(List<double> src, int offsetInFloat,
-      int sizeInFloat) {
+      int sizeInFloat,) {
     checkArgument(
       sizeInFloat % format.channelCount == 0,
       message:
-      "Size ($sizeInFloat) needs to be a multiplier of the number of channels (${format
-          .channelCount})",
+      'Size ($sizeInFloat) needs to be a multiplier of the number of channels (${format
+          .channelCount})',
     );
     buffer.loadOffset(src, offsetInFloat, sizeInFloat);
   }
@@ -58,8 +58,8 @@ class TensorAudio {
   void loadListOffset(List<int> src, int offsetInShort, int sizeInShort) {
     checkArgument(
         offsetInShort + sizeInShort <= src.length,
-        message: "Index out of range. offset ($offsetInShort) + size ($sizeInShort) should <= newData.length (${src
-            .length})");
+        message: 'Index out of range. offset ($offsetInShort) + size ($sizeInShort) should <= newData.length (${src
+            .length})',);
     List<double> floatData = List.filled(sizeInShort, 0.0);
     for (int i = offsetInShort; i < sizeInShort; i++) {
       // Convert the data to PCM Float encoding i.e. values between -1 and 1
@@ -78,9 +78,9 @@ class TensorAudio {
     TensorBuffer.createFixedSize(
         [1, byteBuffer
             .asFloat32List()
-            .length
+            .length,
         ],
-        TfLiteType.float32);
+        TfLiteType.float32,);
     tensorBuffer.loadBuffer(byteBuffer);
     return tensorBuffer;
   }
@@ -104,9 +104,9 @@ class TensorAudioFormat {
 
   static TensorAudioFormat create(int channelCount, int sampleRate) {
     checkArgument(channelCount > 0,
-        message: "Number of channels should be greater than 0");
+        message: 'Number of channels should be greater than 0',);
     checkArgument(
-        sampleRate > 0, message: "Sample rate should be greater than 0");
+        sampleRate > 0, message: 'Sample rate should be greater than 0',);
     return TensorAudioFormat._(channelCount, sampleRate);
   }
 
@@ -136,8 +136,8 @@ class FloatRingBuffer {
     checkArgument(
       offset + size <= newData.length,
       message:
-      "Index out of range. offset ($offset) + size ($size) should <= newData.length (${newData
-          .length})",
+      'Index out of range. offset ($offset) + size ($size) should <= newData.length (${newData
+          .length})',
     );
     // If buffer can't hold all the data, only keep the most recent data of size buffer.length
     if (size > _buffer.length) {
@@ -153,10 +153,10 @@ class FloatRingBuffer {
       int firstChunkSize = _buffer.length - _nextIndex;
       // First copy newData[offset:offset+firstChunkSize] to buffer[nextIndex:buffer.length]
       List.copyRange(
-          _buffer, _nextIndex, newData, offset, offset + firstChunkSize);
+          _buffer, _nextIndex, newData, offset, offset + firstChunkSize,);
       // Then copy newData[offset+firstChunkSize:offset+size] to buffer[0:size-firstChunkSize]
       List.copyRange(
-          _buffer, 0, newData, offset + firstChunkSize, offset + size);
+          _buffer, 0, newData, offset + firstChunkSize, offset + size,);
     }
 
     _nextIndex = (_nextIndex + size) % _buffer.length;
