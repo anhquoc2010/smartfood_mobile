@@ -32,10 +32,10 @@ class DatePickerTimeline extends StatefulWidget {
   });
 
   @override
-  State<StatefulWidget> createState() => _DatePickerTimelineState();
+  State<StatefulWidget> createState() => DatePickerTimelineState();
 }
 
-class _DatePickerTimelineState extends State<DatePickerTimeline> {
+class DatePickerTimelineState extends State<DatePickerTimeline> {
   late DateTime _currentDate;
 
   final ScrollController _controller = ScrollController();
@@ -98,9 +98,9 @@ class _DatePickerTimelineState extends State<DatePickerTimeline> {
 }
 
 class DatePickerController {
-  _DatePickerTimelineState? _datePickerState;
+  DatePickerTimelineState? _datePickerState;
 
-  void setDatePickerState(_DatePickerTimelineState state) {
+  void setDatePickerState(DatePickerTimelineState state) {
     _datePickerState = state;
   }
 
@@ -115,8 +115,7 @@ class DatePickerController {
     );
 
     // jump to the current Date
-    _datePickerState!._controller
-        .jumpTo(_calculateDateOffset(_datePickerState!._currentDate));
+    _datePickerState!._controller.jumpTo(_calculateDateOffset(_datePickerState!._currentDate));
   }
 
   /// This function will animate the Timeline to the currently selected Date

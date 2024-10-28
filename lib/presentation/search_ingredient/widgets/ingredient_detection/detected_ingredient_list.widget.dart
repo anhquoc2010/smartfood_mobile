@@ -73,7 +73,7 @@ class DetectedIngredientList extends StatelessWidget {
                       ).toList(),
                     );
                   },
-                )
+                ),
               ],
             );
           },

@@ -18,7 +18,7 @@ class LabelAxisOp {
 
   TensorLabel apply(TensorBuffer buffer) {
     SupportPreconditions.checkNotNull(buffer,
-        message: "Tensor buffer cannot be null.");
+        message: 'Tensor buffer cannot be null.',);
     return TensorLabel(_axisLabels, buffer);
   }
 }
@@ -33,9 +33,9 @@ class LabelAxisOpBuilder {
   }
 
   Future<LabelAxisOpBuilder> addAxisLabelFromFile(
-      int axis, String fileAssetLocation) async {
+      int axis, String fileAssetLocation,) async {
     SupportPreconditions.checkNotNull(fileAssetLocation,
-        message: "File path cannot be null.");
+        message: 'File path cannot be null.',);
     List<String> labels = await FileUtil.loadLabels(fileAssetLocation);
     _axisLabels[axis] = labels;
     return this;

@@ -63,7 +63,7 @@ class _DishListSectionState extends State<DishListSection> {
                     FilteringTextInputFormatter.deny(
                       RegExp(r'^0{1}'),
                       replacementString: '1',
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -71,7 +71,7 @@ class _DishListSectionState extends State<DishListSection> {
               Text(
                 'người',
                 style: TextStyles.s17MediumText,
-              )
+              ),
             ],
           ),
           AppSize.h20,
@@ -90,7 +90,7 @@ class _DishListSectionState extends State<DishListSection> {
       confirmAction: () {
         widget.dishesNotifier.value = [
           ...widget.dishesNotifier.value,
-          meal.copyWith(totalPeople: int.parse(personTextController.text))
+          meal.copyWith(totalPeople: int.parse(personTextController.text)),
         ];
         Navigator.of(context).pop();
       },
@@ -120,7 +120,7 @@ class _DishListSectionState extends State<DishListSection> {
         ),
         SelectedDishList(
           dishesNotifier: widget.dishesNotifier,
-        )
+        ),
       ],
     );
   }

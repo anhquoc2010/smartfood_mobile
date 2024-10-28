@@ -31,11 +31,11 @@ class NLClassifierOptions {
   Pointer<TfLiteNLClassifierOptions> get base => _options;
   NLClassifierOptions._(this._options);
 
-  static const DEFAULT_INPUT_TENSOR_NAME = "INPUT";
-  static const DEFAULT_OUTPUT_SCORE_TENSOR_NAME = "OUTPUT_SCORE";
+  static const DEFAULT_INPUT_TENSOR_NAME = 'INPUT';
+  static const DEFAULT_OUTPUT_SCORE_TENSOR_NAME = 'OUTPUT_SCORE';
   // By default there is no output label tensor. The label file can be attached
   // to the output score tensor metadata.
-  static const DEFAULT_OUTPUT_LABEL_TENSOR_NAME = "OUTPUT_LABEL";
+  static const DEFAULT_OUTPUT_LABEL_TENSOR_NAME = 'OUTPUT_LABEL';
   static const DEFAULT_INPUT_TENSOR_INDEX = 0;
   static const DEFAULT_OUTPUT_SCORE_TENSOR_INDEX = 0;
   static const DEFAULT_OUTPUT_LABEL_TENSOR_INDEX = -1;
@@ -48,7 +48,7 @@ class NLClassifierOptions {
         DEFAULT_OUTPUT_LABEL_TENSOR_INDEX,
         DEFAULT_INPUT_TENSOR_NAME,
         DEFAULT_OUTPUT_SCORE_TENSOR_NAME,
-        DEFAULT_OUTPUT_LABEL_TENSOR_NAME);
+        DEFAULT_OUTPUT_LABEL_TENSOR_NAME,);
     return NLClassifierOptions._(optionsPtr);
   }
 

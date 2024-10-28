@@ -6,7 +6,8 @@ part of 'user.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserModel _$$_UserModelFromJson(Map<String, dynamic> json) => _$_UserModel(
+_$UserModelImpl _$$UserModelImplFromJson(Map<String, dynamic> json) =>
+    _$UserModelImpl(
       id: json['id'] as String,
       firstName: json['firstName'] as String,
       lastName: json['lastName'] as String,
@@ -14,7 +15,7 @@ _$_UserModel _$$_UserModelFromJson(Map<String, dynamic> json) => _$_UserModel(
       avatar: json['avatar'] as String?,
       height: (json['height'] as num?)?.toDouble(),
       weight: (json['weight'] as num?)?.toDouble(),
-      age: json['age'] as int?,
+      age: (json['age'] as num?)?.toInt(),
       gender: $enumDecodeNullable(_$GenderTypeEnumMap, json['gender']),
       startNutritionDate: _$JsonConverterFromJson<String, DateTime>(
           json['startNutritionDate'], const JsonTimeConverter().fromJson),

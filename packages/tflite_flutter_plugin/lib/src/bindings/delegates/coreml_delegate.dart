@@ -1,9 +1,9 @@
 
 import 'dart:ffi';
 
-import '../dlib.dart';
+import 'package:tflite_flutter/src/bindings/dlib.dart';
 
-import '../types.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
 
 // CoreMl Delegate bindings
 
@@ -12,17 +12,17 @@ import '../types.dart';
 Pointer<TfLiteDelegate> Function(Pointer<TfLiteCoreMlDelegateOptions> options)
     tfliteCoreMlDelegateCreate = tflitelib
         .lookup<NativeFunction<_TfLiteCoreMlDelegateCreate_native_t>>(
-            'TfLiteCoreMlDelegateCreate')
+            'TfLiteCoreMlDelegateCreate',)
         .asFunction();
 
 typedef _TfLiteCoreMlDelegateCreate_native_t = Pointer<TfLiteDelegate> Function(
-    Pointer<TfLiteCoreMlDelegateOptions> options);
+    Pointer<TfLiteCoreMlDelegateOptions> options,);
 
 // Do any needed cleanup and delete 'delegate'.
 void Function(Pointer<TfLiteDelegate>) tfliteCoreMlDelegateDelete = tflitelib
     .lookup<NativeFunction<_TfLiteCoreMlDelegateDelete_native_t>>(
-        'TfLiteCoreMlDelegateDelete')
+        'TfLiteCoreMlDelegateDelete',)
     .asFunction();
 
 typedef _TfLiteCoreMlDelegateDelete_native_t = Void Function(
-    Pointer<TfLiteDelegate> delegate);
+    Pointer<TfLiteDelegate> delegate,);

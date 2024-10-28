@@ -114,7 +114,7 @@ class _UpdateProfileViewState extends State<_UpdateProfileView> {
                   child: CheckIconButton(onPressed: _submit),
                 );
               },
-            )
+            ),
           ],
         ),
         body: UpdateProfileBody(

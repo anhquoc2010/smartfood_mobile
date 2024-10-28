@@ -12,7 +12,7 @@ part of 'query_data_info.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$QueryDataInfo {
@@ -79,11 +79,11 @@ class _$QueryDataInfoCopyWithImpl<$Res, $Val extends QueryDataInfo>
 }
 
 /// @nodoc
-abstract class _$$_QueryDataInfoCopyWith<$Res>
+abstract class _$$QueryDataInfoImplCopyWith<$Res>
     implements $QueryDataInfoCopyWith<$Res> {
-  factory _$$_QueryDataInfoCopyWith(
-          _$_QueryDataInfo value, $Res Function(_$_QueryDataInfo) then) =
-      __$$_QueryDataInfoCopyWithImpl<$Res>;
+  factory _$$QueryDataInfoImplCopyWith(
+          _$QueryDataInfoImpl value, $Res Function(_$QueryDataInfoImpl) then) =
+      __$$QueryDataInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -94,11 +94,11 @@ abstract class _$$_QueryDataInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QueryDataInfoCopyWithImpl<$Res>
-    extends _$QueryDataInfoCopyWithImpl<$Res, _$_QueryDataInfo>
-    implements _$$_QueryDataInfoCopyWith<$Res> {
-  __$$_QueryDataInfoCopyWithImpl(
-      _$_QueryDataInfo _value, $Res Function(_$_QueryDataInfo) _then)
+class __$$QueryDataInfoImplCopyWithImpl<$Res>
+    extends _$QueryDataInfoCopyWithImpl<$Res, _$QueryDataInfoImpl>
+    implements _$$QueryDataInfoImplCopyWith<$Res> {
+  __$$QueryDataInfoImplCopyWithImpl(
+      _$QueryDataInfoImpl _value, $Res Function(_$QueryDataInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +109,7 @@ class __$$_QueryDataInfoCopyWithImpl<$Res>
     Object? errorType = freezed,
     Object? canLoadMore = null,
   }) {
-    return _then(_$_QueryDataInfo(
+    return _then(_$QueryDataInfoImpl(
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -132,8 +132,8 @@ class __$$_QueryDataInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_QueryDataInfo implements _QueryDataInfo {
-  const _$_QueryDataInfo(
+class _$QueryDataInfoImpl implements _QueryDataInfo {
+  const _$QueryDataInfoImpl(
       {required this.status,
       this.type = QueryType.initial,
       this.errorType,
@@ -156,10 +156,10 @@ class _$_QueryDataInfo implements _QueryDataInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QueryDataInfo &&
+            other is _$QueryDataInfoImpl &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.errorType, errorType) ||
@@ -175,8 +175,8 @@ class _$_QueryDataInfo implements _QueryDataInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QueryDataInfoCopyWith<_$_QueryDataInfo> get copyWith =>
-      __$$_QueryDataInfoCopyWithImpl<_$_QueryDataInfo>(this, _$identity);
+  _$$QueryDataInfoImplCopyWith<_$QueryDataInfoImpl> get copyWith =>
+      __$$QueryDataInfoImplCopyWithImpl<_$QueryDataInfoImpl>(this, _$identity);
 }
 
 abstract class _QueryDataInfo implements QueryDataInfo {
@@ -184,7 +184,7 @@ abstract class _QueryDataInfo implements QueryDataInfo {
       {required final QueryStatus status,
       final QueryType type,
       final QueryErrorType? errorType,
-      final bool canLoadMore}) = _$_QueryDataInfo;
+      final bool canLoadMore}) = _$QueryDataInfoImpl;
 
   @override
   QueryStatus get status;
@@ -196,6 +196,6 @@ abstract class _QueryDataInfo implements QueryDataInfo {
   bool get canLoadMore;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryDataInfoCopyWith<_$_QueryDataInfo> get copyWith =>
+  _$$QueryDataInfoImplCopyWith<_$QueryDataInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

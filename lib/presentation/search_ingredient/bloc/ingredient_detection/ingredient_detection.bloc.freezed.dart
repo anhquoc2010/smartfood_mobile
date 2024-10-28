@@ -12,7 +12,7 @@ part of 'ingredient_detection.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$IngredientDetectionEvent {
@@ -90,25 +90,25 @@ class _$IngredientDetectionEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_IngredientDetectionStartedCopyWith<$Res>
+abstract class _$$IngredientDetectionStartedImplCopyWith<$Res>
     implements $IngredientDetectionEventCopyWith<$Res> {
-  factory _$$_IngredientDetectionStartedCopyWith(
-          _$_IngredientDetectionStarted value,
-          $Res Function(_$_IngredientDetectionStarted) then) =
-      __$$_IngredientDetectionStartedCopyWithImpl<$Res>;
+  factory _$$IngredientDetectionStartedImplCopyWith(
+          _$IngredientDetectionStartedImpl value,
+          $Res Function(_$IngredientDetectionStartedImpl) then) =
+      __$$IngredientDetectionStartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String> imagePaths});
 }
 
 /// @nodoc
-class __$$_IngredientDetectionStartedCopyWithImpl<$Res>
+class __$$IngredientDetectionStartedImplCopyWithImpl<$Res>
     extends _$IngredientDetectionEventCopyWithImpl<$Res,
-        _$_IngredientDetectionStarted>
-    implements _$$_IngredientDetectionStartedCopyWith<$Res> {
-  __$$_IngredientDetectionStartedCopyWithImpl(
-      _$_IngredientDetectionStarted _value,
-      $Res Function(_$_IngredientDetectionStarted) _then)
+        _$IngredientDetectionStartedImpl>
+    implements _$$IngredientDetectionStartedImplCopyWith<$Res> {
+  __$$IngredientDetectionStartedImplCopyWithImpl(
+      _$IngredientDetectionStartedImpl _value,
+      $Res Function(_$IngredientDetectionStartedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +116,7 @@ class __$$_IngredientDetectionStartedCopyWithImpl<$Res>
   $Res call({
     Object? imagePaths = null,
   }) {
-    return _then(_$_IngredientDetectionStarted(
+    return _then(_$IngredientDetectionStartedImpl(
       null == imagePaths
           ? _value._imagePaths
           : imagePaths // ignore: cast_nullable_to_non_nullable
@@ -127,8 +127,8 @@ class __$$_IngredientDetectionStartedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_IngredientDetectionStarted implements _IngredientDetectionStarted {
-  const _$_IngredientDetectionStarted(final List<String> imagePaths)
+class _$IngredientDetectionStartedImpl implements _IngredientDetectionStarted {
+  const _$IngredientDetectionStartedImpl(final List<String> imagePaths)
       : _imagePaths = imagePaths;
 
   final List<String> _imagePaths;
@@ -145,10 +145,10 @@ class _$_IngredientDetectionStarted implements _IngredientDetectionStarted {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IngredientDetectionStarted &&
+            other is _$IngredientDetectionStartedImpl &&
             const DeepCollectionEquality()
                 .equals(other._imagePaths, _imagePaths));
   }
@@ -160,9 +160,9 @@ class _$_IngredientDetectionStarted implements _IngredientDetectionStarted {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IngredientDetectionStartedCopyWith<_$_IngredientDetectionStarted>
-      get copyWith => __$$_IngredientDetectionStartedCopyWithImpl<
-          _$_IngredientDetectionStarted>(this, _$identity);
+  _$$IngredientDetectionStartedImplCopyWith<_$IngredientDetectionStartedImpl>
+      get copyWith => __$$IngredientDetectionStartedImplCopyWithImpl<
+          _$IngredientDetectionStartedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -223,13 +223,13 @@ class _$_IngredientDetectionStarted implements _IngredientDetectionStarted {
 
 abstract class _IngredientDetectionStarted implements IngredientDetectionEvent {
   const factory _IngredientDetectionStarted(final List<String> imagePaths) =
-      _$_IngredientDetectionStarted;
+      _$IngredientDetectionStartedImpl;
 
   @override
   List<String> get imagePaths;
   @override
   @JsonKey(ignore: true)
-  _$$_IngredientDetectionStartedCopyWith<_$_IngredientDetectionStarted>
+  _$$IngredientDetectionStartedImplCopyWith<_$IngredientDetectionStartedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -285,12 +285,12 @@ class _$IngredientDetectionStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_IngredientDetectionStateCopyWith<$Res>
+abstract class _$$IngredientDetectionStateImplCopyWith<$Res>
     implements $IngredientDetectionStateCopyWith<$Res> {
-  factory _$$_IngredientDetectionStateCopyWith(
-          _$_IngredientDetectionState value,
-          $Res Function(_$_IngredientDetectionState) then) =
-      __$$_IngredientDetectionStateCopyWithImpl<$Res>;
+  factory _$$IngredientDetectionStateImplCopyWith(
+          _$IngredientDetectionStateImpl value,
+          $Res Function(_$IngredientDetectionStateImpl) then) =
+      __$$IngredientDetectionStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -298,12 +298,13 @@ abstract class _$$_IngredientDetectionStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_IngredientDetectionStateCopyWithImpl<$Res>
+class __$$IngredientDetectionStateImplCopyWithImpl<$Res>
     extends _$IngredientDetectionStateCopyWithImpl<$Res,
-        _$_IngredientDetectionState>
-    implements _$$_IngredientDetectionStateCopyWith<$Res> {
-  __$$_IngredientDetectionStateCopyWithImpl(_$_IngredientDetectionState _value,
-      $Res Function(_$_IngredientDetectionState) _then)
+        _$IngredientDetectionStateImpl>
+    implements _$$IngredientDetectionStateImplCopyWith<$Res> {
+  __$$IngredientDetectionStateImplCopyWithImpl(
+      _$IngredientDetectionStateImpl _value,
+      $Res Function(_$IngredientDetectionStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -312,7 +313,7 @@ class __$$_IngredientDetectionStateCopyWithImpl<$Res>
     Object? status = null,
     Object? recognitionResult = null,
   }) {
-    return _then(_$_IngredientDetectionState(
+    return _then(_$IngredientDetectionStateImpl(
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -327,8 +328,8 @@ class __$$_IngredientDetectionStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_IngredientDetectionState implements _IngredientDetectionState {
-  const _$_IngredientDetectionState(
+class _$IngredientDetectionStateImpl implements _IngredientDetectionState {
+  const _$IngredientDetectionStateImpl(
       {this.status = QueryStatus.loading,
       final Map<String, RecognitionWrapper> recognitionResult = const {}})
       : _recognitionResult = recognitionResult;
@@ -352,10 +353,10 @@ class _$_IngredientDetectionState implements _IngredientDetectionState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_IngredientDetectionState &&
+            other is _$IngredientDetectionStateImpl &&
             (identical(other.status, status) || other.status == status) &&
             const DeepCollectionEquality()
                 .equals(other._recognitionResult, _recognitionResult));
@@ -368,16 +369,16 @@ class _$_IngredientDetectionState implements _IngredientDetectionState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_IngredientDetectionStateCopyWith<_$_IngredientDetectionState>
-      get copyWith => __$$_IngredientDetectionStateCopyWithImpl<
-          _$_IngredientDetectionState>(this, _$identity);
+  _$$IngredientDetectionStateImplCopyWith<_$IngredientDetectionStateImpl>
+      get copyWith => __$$IngredientDetectionStateImplCopyWithImpl<
+          _$IngredientDetectionStateImpl>(this, _$identity);
 }
 
 abstract class _IngredientDetectionState implements IngredientDetectionState {
   const factory _IngredientDetectionState(
           {final QueryStatus status,
           final Map<String, RecognitionWrapper> recognitionResult}) =
-      _$_IngredientDetectionState;
+      _$IngredientDetectionStateImpl;
 
   @override
   QueryStatus get status;
@@ -385,6 +386,6 @@ abstract class _IngredientDetectionState implements IngredientDetectionState {
   Map<String, RecognitionWrapper> get recognitionResult;
   @override
   @JsonKey(ignore: true)
-  _$$_IngredientDetectionStateCopyWith<_$_IngredientDetectionState>
+  _$$IngredientDetectionStateImplCopyWith<_$IngredientDetectionStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

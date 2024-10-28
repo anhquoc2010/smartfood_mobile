@@ -4,12 +4,11 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:smarthealthy/data/dtos/change_password.dto.dart';
 import 'package:smarthealthy/data/repositories/user.repository.dart';
 
+part 'change_password.bloc.freezed.dart';
 part 'change_password.event.dart';
 part 'change_password.state.dart';
-part 'change_password.bloc.freezed.dart';
 
-class ChangePasswordBloc
-    extends Bloc<ChangePasswordEvent, ChangePasswordState> {
+class ChangePasswordBloc extends Bloc<ChangePasswordEvent, ChangePasswordState> {
   final UserRepository _userRepository;
 
   ChangePasswordBloc({required UserRepository userRepository})
@@ -30,7 +29,7 @@ class ChangePasswordBloc
       await _userRepository.changePassword(event.dto);
 
       emit(const _Success());
-    } on DioError catch (dioError) {
+    } on DioException catch (dioError) {
       if (dioError.response?.statusCode == 401) {
         return emit(
           const _Error(ChangePasswordErrorStatus.currentPasswordNotCorrect),

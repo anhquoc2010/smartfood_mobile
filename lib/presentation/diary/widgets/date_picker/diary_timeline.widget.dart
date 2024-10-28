@@ -76,7 +76,7 @@ class _DiaryTimelineState extends State<DiaryTimeline> {
                 onDateChange: _onDateChange,
               );
             },
-          )
+          ),
         ],
       ),
     );

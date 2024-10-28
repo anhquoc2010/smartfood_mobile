@@ -12,7 +12,7 @@ part of 'search_meal_cubit.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SearchMealState {
@@ -88,11 +88,11 @@ class _$SearchMealStateCopyWithImpl<$Res, $Val extends SearchMealState>
 }
 
 /// @nodoc
-abstract class _$$_SearchMealStateCopyWith<$Res>
+abstract class _$$SearchMealStateImplCopyWith<$Res>
     implements $SearchMealStateCopyWith<$Res> {
-  factory _$$_SearchMealStateCopyWith(
-          _$_SearchMealState value, $Res Function(_$_SearchMealState) then) =
-      __$$_SearchMealStateCopyWithImpl<$Res>;
+  factory _$$SearchMealStateImplCopyWith(_$SearchMealStateImpl value,
+          $Res Function(_$SearchMealStateImpl) then) =
+      __$$SearchMealStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({QueryDataInfo info, List<MealModel> meals, QueryMealsDTO dto});
@@ -104,11 +104,11 @@ abstract class _$$_SearchMealStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SearchMealStateCopyWithImpl<$Res>
-    extends _$SearchMealStateCopyWithImpl<$Res, _$_SearchMealState>
-    implements _$$_SearchMealStateCopyWith<$Res> {
-  __$$_SearchMealStateCopyWithImpl(
-      _$_SearchMealState _value, $Res Function(_$_SearchMealState) _then)
+class __$$SearchMealStateImplCopyWithImpl<$Res>
+    extends _$SearchMealStateCopyWithImpl<$Res, _$SearchMealStateImpl>
+    implements _$$SearchMealStateImplCopyWith<$Res> {
+  __$$SearchMealStateImplCopyWithImpl(
+      _$SearchMealStateImpl _value, $Res Function(_$SearchMealStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$_SearchMealStateCopyWithImpl<$Res>
     Object? meals = null,
     Object? dto = null,
   }) {
-    return _then(_$_SearchMealState(
+    return _then(_$SearchMealStateImpl(
       info: null == info
           ? _value.info
           : info // ignore: cast_nullable_to_non_nullable
@@ -137,8 +137,8 @@ class __$$_SearchMealStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SearchMealState implements _SearchMealState {
-  const _$_SearchMealState(
+class _$SearchMealStateImpl implements _SearchMealState {
+  const _$SearchMealStateImpl(
       {required this.info,
       final List<MealModel> meals = const [],
       required this.dto})
@@ -164,10 +164,10 @@ class _$_SearchMealState implements _SearchMealState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchMealState &&
+            other is _$SearchMealStateImpl &&
             (identical(other.info, info) || other.info == info) &&
             const DeepCollectionEquality().equals(other._meals, _meals) &&
             (identical(other.dto, dto) || other.dto == dto));
@@ -180,15 +180,16 @@ class _$_SearchMealState implements _SearchMealState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchMealStateCopyWith<_$_SearchMealState> get copyWith =>
-      __$$_SearchMealStateCopyWithImpl<_$_SearchMealState>(this, _$identity);
+  _$$SearchMealStateImplCopyWith<_$SearchMealStateImpl> get copyWith =>
+      __$$SearchMealStateImplCopyWithImpl<_$SearchMealStateImpl>(
+          this, _$identity);
 }
 
 abstract class _SearchMealState implements SearchMealState {
   const factory _SearchMealState(
       {required final QueryDataInfo info,
       final List<MealModel> meals,
-      required final QueryMealsDTO dto}) = _$_SearchMealState;
+      required final QueryMealsDTO dto}) = _$SearchMealStateImpl;
 
   @override
   QueryDataInfo get info;
@@ -198,6 +199,6 @@ abstract class _SearchMealState implements SearchMealState {
   QueryMealsDTO get dto;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchMealStateCopyWith<_$_SearchMealState> get copyWith =>
+  _$$SearchMealStateImplCopyWith<_$SearchMealStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

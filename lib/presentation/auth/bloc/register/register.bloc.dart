@@ -5,9 +5,9 @@ import 'package:smarthealthy/common/enums/auth_error_type.enum.dart';
 import 'package:smarthealthy/data/dtos/auth/register_request.dto.dart';
 import 'package:smarthealthy/data/repositories/user.repository.dart';
 
+part 'register.bloc.freezed.dart';
 part 'register.event.dart';
 part 'register.state.dart';
-part 'register.bloc.freezed.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final UserRepository _userRepository;
@@ -27,7 +27,7 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
       await _userRepository.register(event.registerDto);
 
       emit(const RegisterState.success());
-    } on DioError catch (dioError) {
+    } on DioException catch (dioError) {
       if (dioError.response?.statusCode == 403) {
         emit(
           const RegisterState.failure(errorType: AuthErrorType.existEmail),

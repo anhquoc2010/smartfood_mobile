@@ -12,7 +12,7 @@ part of 'meal.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MealModel _$MealModelFromJson(Map<String, dynamic> json) {
   return _MealModel.fromJson(json);
@@ -113,10 +113,11 @@ class _$MealModelCopyWithImpl<$Res, $Val extends MealModel>
 }
 
 /// @nodoc
-abstract class _$$_MealModelCopyWith<$Res> implements $MealModelCopyWith<$Res> {
-  factory _$$_MealModelCopyWith(
-          _$_MealModel value, $Res Function(_$_MealModel) then) =
-      __$$_MealModelCopyWithImpl<$Res>;
+abstract class _$$MealModelImplCopyWith<$Res>
+    implements $MealModelCopyWith<$Res> {
+  factory _$$MealModelImplCopyWith(
+          _$MealModelImpl value, $Res Function(_$MealModelImpl) then) =
+      __$$MealModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -133,11 +134,11 @@ abstract class _$$_MealModelCopyWith<$Res> implements $MealModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MealModelCopyWithImpl<$Res>
-    extends _$MealModelCopyWithImpl<$Res, _$_MealModel>
-    implements _$$_MealModelCopyWith<$Res> {
-  __$$_MealModelCopyWithImpl(
-      _$_MealModel _value, $Res Function(_$_MealModel) _then)
+class __$$MealModelImplCopyWithImpl<$Res>
+    extends _$MealModelCopyWithImpl<$Res, _$MealModelImpl>
+    implements _$$MealModelImplCopyWith<$Res> {
+  __$$MealModelImplCopyWithImpl(
+      _$MealModelImpl _value, $Res Function(_$MealModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -151,7 +152,7 @@ class __$$_MealModelCopyWithImpl<$Res>
     Object? protein = null,
     Object? totalPeople = null,
   }) {
-    return _then(_$_MealModel(
+    return _then(_$MealModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -186,8 +187,8 @@ class __$$_MealModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_MealModel extends _MealModel {
-  _$_MealModel(
+class _$MealModelImpl extends _MealModel {
+  _$MealModelImpl(
       {this.id,
       required this.recipe,
       required this.kcal,
@@ -197,8 +198,8 @@ class _$_MealModel extends _MealModel {
       this.totalPeople = 1})
       : super._();
 
-  factory _$_MealModel.fromJson(Map<String, dynamic> json) =>
-      _$$_MealModelFromJson(json);
+  factory _$MealModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MealModelImplFromJson(json);
 
   @override
   final String? id;
@@ -222,10 +223,10 @@ class _$_MealModel extends _MealModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MealModel &&
+            other is _$MealModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.recipe, recipe) || other.recipe == recipe) &&
             (identical(other.kcal, kcal) || other.kcal == kcal) &&
@@ -244,8 +245,8 @@ class _$_MealModel extends _MealModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MealModelCopyWith<_$_MealModel> get copyWith =>
-      __$$_MealModelCopyWithImpl<_$_MealModel>(this, _$identity);
+  _$$MealModelImplCopyWith<_$MealModelImpl> get copyWith =>
+      __$$MealModelImplCopyWithImpl<_$MealModelImpl>(this, _$identity);
 }
 
 abstract class _MealModel extends MealModel {
@@ -256,11 +257,11 @@ abstract class _MealModel extends MealModel {
       required final double fat,
       required final double carbs,
       required final double protein,
-      final int totalPeople}) = _$_MealModel;
+      final int totalPeople}) = _$MealModelImpl;
   _MealModel._() : super._();
 
   factory _MealModel.fromJson(Map<String, dynamic> json) =
-      _$_MealModel.fromJson;
+      _$MealModelImpl.fromJson;
 
   @override
   String? get id;
@@ -278,6 +279,6 @@ abstract class _MealModel extends MealModel {
   int get totalPeople;
   @override
   @JsonKey(ignore: true)
-  _$$_MealModelCopyWith<_$_MealModel> get copyWith =>
+  _$$MealModelImplCopyWith<_$MealModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

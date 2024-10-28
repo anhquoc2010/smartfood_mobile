@@ -20,7 +20,7 @@ class BaseIndicator extends StatelessWidget {
   final Color? activeBorderColor;
 
   /// The border width of this indicator when it is selected.
-  final activeBorderWidth;
+  final double activeBorderWidth;
 
   /// Radius of this indicator.
   final double radius;
@@ -65,8 +65,7 @@ class BaseIndicator extends StatelessWidget {
           width: radius * 2,
           padding: EdgeInsets.all(padding),
           decoration: BoxDecoration(
-            color:
-                isSelected ? activeColor ?? Colors.green : color ?? Colors.grey,
+            color: isSelected ? activeColor ?? Colors.green : color ?? Colors.grey,
             shape: BoxShape.circle,
           ),
           child: Center(

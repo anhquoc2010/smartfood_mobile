@@ -57,7 +57,7 @@ abstract class TensorBuffer {
         return TensorBufferUint8(shape);
       default:
         throw ArgumentError(
-            'TensorBuffer does not support data type: \" +$dataType');
+            'TensorBuffer does not support data type: \" +$dataType',);
     }
   }
 
@@ -76,7 +76,7 @@ abstract class TensorBuffer {
         return TensorBufferUint8.dynamic();
       default:
         throw ArgumentError(
-            'TensorBuffer does not support data type: \" +$dataType');
+            'TensorBuffer does not support data type: \" +$dataType',);
     }
   }
 
@@ -85,7 +85,7 @@ abstract class TensorBuffer {
   /// Throws [ArgumentError.notNull] if [buffer] is null.
   static TensorBuffer createFrom(TensorBuffer buffer, TfLiteType dataType) {
     SupportPreconditions.checkNotNull(buffer,
-        message: "Cannot create a buffer from null");
+        message: 'Cannot create a buffer from null',);
     TensorBuffer result;
     if (buffer.isDynamic) {
       result = createDynamic(dataType);
@@ -179,19 +179,19 @@ abstract class TensorBuffer {
   /// match.
   void loadBuffer(ByteBuffer buffer, {List<int>? shape}) {
     SupportPreconditions.checkNotNull(buffer,
-        message: "Byte Buffer cannot be null");
+        message: 'Byte Buffer cannot be null',);
 
     int flatSize = computeFlatSize(shape ?? this.shape);
 
     SupportPreconditions.checkArgument(
         (ByteData.view(buffer).lengthInBytes == getTypeSize() * flatSize),
         errorMessage:
-            "The size of byte buffer and the shape do not match. buffer: ${ByteData.view(buffer).lengthInBytes} shape: ${getTypeSize() * flatSize}");
+            'The size of byte buffer and the shape do not match. buffer: ${ByteData.view(buffer).lengthInBytes} shape: ${getTypeSize() * flatSize}',);
 
     if (!_isDynamic) {
       SupportPreconditions.checkArgument(flatSize == this.flatSize,
           errorMessage:
-              "The size of byte buffer and the size of the tensor buffer do not match.");
+              'The size of byte buffer and the size of the tensor buffer do not match.',);
     } else {
       this.flatSize = flatSize;
     }
@@ -216,9 +216,9 @@ abstract class TensorBuffer {
 
   void _allocateMemory(List<int> shape) {
     SupportPreconditions.checkNotNull(shape,
-        message: 'TensorBuffer shape cannot be null.');
+        message: 'TensorBuffer shape cannot be null.',);
     SupportPreconditions.checkArgument(_isShapeValid(shape),
-        errorMessage: 'TensorBuffer shape cannot be null.');
+        errorMessage: 'TensorBuffer shape cannot be null.',);
 
     int newFlatSize = computeFlatSize(shape);
     this.shape = List<int>.from(shape);
@@ -240,7 +240,7 @@ abstract class TensorBuffer {
     } else {
       // Make sure the new shape fits the buffer size when TensorBuffer has fixed size.
       SupportPreconditions.checkArgument(
-          (computeFlatSize(shape) == computeFlatSize(this.shape)));
+          (computeFlatSize(shape) == computeFlatSize(this.shape)),);
       this.shape = List<int>.from(shape);
     }
   }
@@ -265,7 +265,7 @@ abstract class TensorBuffer {
 
   /// Calculates number of elements in the buffer.
   static int computeFlatSize(List<int> shape) {
-    SupportPreconditions.checkNotNull(shape, message: "Shape cannot be null.");
+    SupportPreconditions.checkNotNull(shape, message: 'Shape cannot be null.');
     int prod = 1;
     for (int s in shape) {
       prod = prod * s;

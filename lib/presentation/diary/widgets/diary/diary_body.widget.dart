@@ -31,7 +31,7 @@ class _DiaryBodyState extends State<DiaryBody> {
             const Column(
               children: [DiaryTimeline(), AppSize.h20, NutritionInDay()],
             ),
-            DiaryBackdrop(animatingNotifier: widget.animatingNotifier)
+            DiaryBackdrop(animatingNotifier: widget.animatingNotifier),
           ],
         );
       },

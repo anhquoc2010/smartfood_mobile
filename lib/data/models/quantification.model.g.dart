@@ -6,9 +6,9 @@ part of 'quantification.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_QuantificationModel _$$_QuantificationModelFromJson(
+_$QuantificationModelImpl _$$QuantificationModelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_QuantificationModel(
+    _$QuantificationModelImpl(
       id: json['id'] as String,
       value: json['value'] as String,
       unit: json['unit'] as String,

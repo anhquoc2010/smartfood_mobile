@@ -1,9 +1,9 @@
 
 import 'dart:ffi';
 
-import '../dlib.dart';
+import 'package:tflite_flutter/src/bindings/dlib.dart';
 
-import '../types.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
 
 // XNNPack Delegate bindings
 
@@ -13,25 +13,25 @@ import '../types.dart';
 Pointer<TfLiteDelegate> Function(Pointer<TfLiteXNNPackDelegateOptions> options)
     tfliteXNNPackDelegateCreate = tflitelib
         .lookup<NativeFunction<_TfLiteXNNPackDelegateCreate_native_t>>(
-            'TfLiteXNNPackDelegateCreate')
+            'TfLiteXNNPackDelegateCreate',)
         .asFunction();
 
 typedef _TfLiteXNNPackDelegateCreate_native_t = Pointer<TfLiteDelegate> Function(
-    Pointer<TfLiteXNNPackDelegateOptions> options);
+    Pointer<TfLiteXNNPackDelegateOptions> options,);
 
 // Destroys a delegate created with `TfLiteXNNPackDelegateCreate` call.
 void Function(Pointer<TfLiteDelegate>) tfliteXNNPackDelegateDelete = tflitelib
     .lookup<NativeFunction<_TfLiteXNNPackDelegateDelete_native_t>>(
-        'TfLiteXNNPackDelegateDelete')
+        'TfLiteXNNPackDelegateDelete',)
     .asFunction();
 
 typedef _TfLiteXNNPackDelegateDelete_native_t = Void Function(
-    Pointer<TfLiteDelegate> delegate);
+    Pointer<TfLiteDelegate> delegate,);
 
 /// Default Options
 TfLiteXNNPackDelegateOptions Function() tfLiteXNNPackDelegateOptionsDefault = tflitelib
     .lookup<NativeFunction<_TfLiteXNNPackDelegateOptions_native_t>>(
-        'TfLiteXNNPackDelegateOptionsDefault')
+        'TfLiteXNNPackDelegateOptionsDefault',)
     .asFunction();
 
 typedef _TfLiteXNNPackDelegateOptions_native_t = TfLiteXNNPackDelegateOptions Function();

@@ -6,8 +6,8 @@ part of 'macros.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MacrosModel _$$_MacrosModelFromJson(Map<String, dynamic> json) =>
-    _$_MacrosModel(
+_$MacrosModelImpl _$$MacrosModelImplFromJson(Map<String, dynamic> json) =>
+    _$MacrosModelImpl(
       type: $enumDecode(_$MacrosTypeEnumMap, json['type']),
       value: (json['value'] as num).toDouble(),
     );

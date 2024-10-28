@@ -161,7 +161,7 @@ void main() {
         late TensorImage tensorImage = TensorImage();
 
         tensorImage.loadRgbPixels(
-            image.getBytes(format: Format.rgb), [inputHeight, inputWidth, 3]);
+            image.getBytes(format: Format.rgb), [inputHeight, inputWidth, 3],);
 
         expect(tensorImage.image.height, inputHeight);
         expect(tensorImage.image.width, inputWidth);
@@ -181,9 +181,9 @@ void main() {
         tensorbuffer = tensorImage.tensorBuffer;
         expect(tensorbuffer, isNotNull);
         expect(tensorbuffer.getFlatSize(),
-            image.getBytes(format: Format.rgb).length);
+            image.getBytes(format: Format.rgb).length,);
         expect(tensorbuffer.getIntList().length,
-            image.getBytes(format: Format.rgb).length);
+            image.getBytes(format: Format.rgb).length,);
       });
 
       test('fromTensorBuffer', () {
@@ -257,18 +257,18 @@ void main() {
 
         TensorImage sourceImage = TensorImage.fromImage(image);
         expect(() => imageProcessor.process(sourceImage),
-            throwsA(isA<ArgumentError>()));
+            throwsA(isA<ArgumentError>()),);
       });
 
       test('resize with custom crop and one null argument', () {
         ImageProcessor imageProcessor = ImageProcessorBuilder()
             // the be sure we are outside we took the input size of the image and add 1 pixel
-            .add(ResizeWithCropOrPadOp(h, w, 0, null))
+            .add(ResizeWithCropOrPadOp(h, w, 0))
             .build();
 
         TensorImage sourceImage = TensorImage.fromImage(image);
         expect(() => imageProcessor.process(sourceImage),
-            throwsA(isA<ArgumentError>()));
+            throwsA(isA<ArgumentError>()),);
       });
 
       test(
@@ -277,12 +277,12 @@ void main() {
         ImageProcessor imageProcessor = ImageProcessorBuilder()
             // the be sure that a part of the crop is outside the iamge we took the input size and substract crop size / 2
             .add(ResizeWithCropOrPadOp(
-                h, w, inputWidth - (w ~/ 2), inputHeight - (h ~/ 2)))
+                h, w, inputWidth - (w ~/ 2), inputHeight - (h ~/ 2),),)
             .build();
 
         TensorImage sourceImage = TensorImage.fromImage(image);
         expect(() => imageProcessor.process(sourceImage),
-            throwsA(isA<ArgumentError>()));
+            throwsA(isA<ArgumentError>()),);
       });
 
       test('resize with a negative a crop position', () {
@@ -293,7 +293,7 @@ void main() {
 
         TensorImage sourceImage = TensorImage.fromImage(image);
         expect(() => imageProcessor.process(sourceImage),
-            throwsA(isA<ArgumentError>()));
+            throwsA(isA<ArgumentError>()),);
       });
 
       test('resize with pad', () {
@@ -316,7 +316,7 @@ void main() {
         final p = imageProcessor.inverseTransform(
             m.Point(image.width / 2, image.height / 2),
             image.height,
-            image.width);
+            image.width,);
 
         expect(p == m.Point(image.width / 2, image.height / 2), true);
       });

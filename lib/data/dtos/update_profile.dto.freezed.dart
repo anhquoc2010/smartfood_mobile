@@ -12,7 +12,7 @@ part of 'update_profile.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UpdateProfileDTO {
@@ -64,22 +64,22 @@ class _$UpdateProfileDTOCopyWithImpl<$Res, $Val extends UpdateProfileDTO>
 }
 
 /// @nodoc
-abstract class _$$_UpdateProfileDTOCopyWith<$Res>
+abstract class _$$UpdateProfileDTOImplCopyWith<$Res>
     implements $UpdateProfileDTOCopyWith<$Res> {
-  factory _$$_UpdateProfileDTOCopyWith(
-          _$_UpdateProfileDTO value, $Res Function(_$_UpdateProfileDTO) then) =
-      __$$_UpdateProfileDTOCopyWithImpl<$Res>;
+  factory _$$UpdateProfileDTOImplCopyWith(_$UpdateProfileDTOImpl value,
+          $Res Function(_$UpdateProfileDTOImpl) then) =
+      __$$UpdateProfileDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String firstName, String lastName});
 }
 
 /// @nodoc
-class __$$_UpdateProfileDTOCopyWithImpl<$Res>
-    extends _$UpdateProfileDTOCopyWithImpl<$Res, _$_UpdateProfileDTO>
-    implements _$$_UpdateProfileDTOCopyWith<$Res> {
-  __$$_UpdateProfileDTOCopyWithImpl(
-      _$_UpdateProfileDTO _value, $Res Function(_$_UpdateProfileDTO) _then)
+class __$$UpdateProfileDTOImplCopyWithImpl<$Res>
+    extends _$UpdateProfileDTOCopyWithImpl<$Res, _$UpdateProfileDTOImpl>
+    implements _$$UpdateProfileDTOImplCopyWith<$Res> {
+  __$$UpdateProfileDTOImplCopyWithImpl(_$UpdateProfileDTOImpl _value,
+      $Res Function(_$UpdateProfileDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -88,7 +88,7 @@ class __$$_UpdateProfileDTOCopyWithImpl<$Res>
     Object? firstName = null,
     Object? lastName = null,
   }) {
-    return _then(_$_UpdateProfileDTO(
+    return _then(_$UpdateProfileDTOImpl(
       firstName: null == firstName
           ? _value.firstName
           : firstName // ignore: cast_nullable_to_non_nullable
@@ -103,8 +103,8 @@ class __$$_UpdateProfileDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createFactory: false)
-class _$_UpdateProfileDTO implements _UpdateProfileDTO {
-  _$_UpdateProfileDTO({required this.firstName, required this.lastName});
+class _$UpdateProfileDTOImpl implements _UpdateProfileDTO {
+  _$UpdateProfileDTOImpl({required this.firstName, required this.lastName});
 
   @override
   final String firstName;
@@ -117,10 +117,10 @@ class _$_UpdateProfileDTO implements _UpdateProfileDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateProfileDTO &&
+            other is _$UpdateProfileDTOImpl &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
@@ -134,12 +134,13 @@ class _$_UpdateProfileDTO implements _UpdateProfileDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateProfileDTOCopyWith<_$_UpdateProfileDTO> get copyWith =>
-      __$$_UpdateProfileDTOCopyWithImpl<_$_UpdateProfileDTO>(this, _$identity);
+  _$$UpdateProfileDTOImplCopyWith<_$UpdateProfileDTOImpl> get copyWith =>
+      __$$UpdateProfileDTOImplCopyWithImpl<_$UpdateProfileDTOImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UpdateProfileDTOToJson(
+    return _$$UpdateProfileDTOImplToJson(
       this,
     );
   }
@@ -148,7 +149,7 @@ class _$_UpdateProfileDTO implements _UpdateProfileDTO {
 abstract class _UpdateProfileDTO implements UpdateProfileDTO {
   factory _UpdateProfileDTO(
       {required final String firstName,
-      required final String lastName}) = _$_UpdateProfileDTO;
+      required final String lastName}) = _$UpdateProfileDTOImpl;
 
   @override
   String get firstName;
@@ -156,6 +157,6 @@ abstract class _UpdateProfileDTO implements UpdateProfileDTO {
   String get lastName;
   @override
   @JsonKey(ignore: true)
-  _$$_UpdateProfileDTOCopyWith<_$_UpdateProfileDTO> get copyWith =>
+  _$$UpdateProfileDTOImplCopyWith<_$UpdateProfileDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

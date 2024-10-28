@@ -17,5 +17,5 @@ abstract class ImageOperator extends Operator<TensorImage> {
   /// Transforms a [point] from coordinates system of the result image back to the one of the input
   /// image.
   Point inverseTransform(
-      Point point, int inputImageHeight, int inputImageWidth);
+      Point point, int inputImageHeight, int inputImageWidth,);
 }

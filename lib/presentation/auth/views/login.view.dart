@@ -124,14 +124,14 @@ class _LoginViewState extends State<_LoginView> {
                           ),
                           const SocialLogin(),
                           const Spacer(),
-                          const AuthNavigationAction()
+                          const AuthNavigationAction(),
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

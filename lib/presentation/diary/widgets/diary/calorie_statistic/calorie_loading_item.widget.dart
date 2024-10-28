@@ -19,7 +19,7 @@ class CalorieLoadingItem extends StatelessWidget {
         CommonShimmer(
           width: 55.sp,
           height: 14.sp,
-        )
+        ),
       ],
     );
   }

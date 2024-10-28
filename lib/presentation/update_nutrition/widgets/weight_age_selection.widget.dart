@@ -39,7 +39,7 @@ class WeightAgeSelection extends StatelessWidget {
         AgeSelection(
           size: size,
           ageNotifier: ageNotifier,
-        )
+        ),
       ],
     );
   }

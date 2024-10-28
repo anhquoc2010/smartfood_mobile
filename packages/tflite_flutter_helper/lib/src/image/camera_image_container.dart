@@ -11,7 +11,7 @@ class CameraImageContainer extends BaseImageContainer {
 
   CameraImageContainer._(CameraImage cameraImage) {
     checkArgument(cameraImage.format.group == ImageFormatGroup.yuv420,
-        message: "Only supports loading YUV_420_888 Image.");
+        message: 'Only supports loading YUV_420_888 Image.',);
     this.cameraImage = cameraImage;
   }
 
@@ -21,7 +21,7 @@ class CameraImageContainer extends BaseImageContainer {
 
   @override
   BaseImageContainer clone() {
-    throw UnsupportedError("CameraImage cannot be cloned");
+    throw UnsupportedError('CameraImage cannot be cloned');
   }
 
   @override
@@ -32,7 +32,7 @@ class CameraImageContainer extends BaseImageContainer {
   @override
   TensorBuffer getTensorBuffer(TfLiteType dataType) {
     throw UnsupportedError(
-        'Converting CameraImage to TensorBuffer is not supported.');
+        'Converting CameraImage to TensorBuffer is not supported.',);
   }
 
   @override
@@ -40,7 +40,7 @@ class CameraImageContainer extends BaseImageContainer {
 
   @override
   Image get image => throw UnsupportedError(
-      'Converting CameraImage to Image is not supported.');
+      'Converting CameraImage to Image is not supported.',);
 
   @override
   CameraImage get mediaImage => cameraImage;

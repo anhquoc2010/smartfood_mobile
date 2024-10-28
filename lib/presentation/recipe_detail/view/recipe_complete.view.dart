@@ -42,7 +42,7 @@ class RecipeCompleteView extends StatelessWidget {
                     borderSide: const BorderSide(color: ColorStyles.primary),
                     textStyle: TextStyles.s14MediumText
                         .copyWith(color: ColorStyles.primary),
-                  )
+                  ),
                 ],
               ),
             );

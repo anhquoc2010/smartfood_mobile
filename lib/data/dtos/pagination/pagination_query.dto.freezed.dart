@@ -12,7 +12,7 @@ part of 'pagination_query.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PaginationQueryDTO<T> {
@@ -87,11 +87,11 @@ class _$PaginationQueryDTOCopyWithImpl<T, $Res,
 }
 
 /// @nodoc
-abstract class _$$_PaginationQueryDTOCopyWith<T, $Res>
+abstract class _$$PaginationQueryDTOImplCopyWith<T, $Res>
     implements $PaginationQueryDTOCopyWith<T, $Res> {
-  factory _$$_PaginationQueryDTOCopyWith(_$_PaginationQueryDTO<T> value,
-          $Res Function(_$_PaginationQueryDTO<T>) then) =
-      __$$_PaginationQueryDTOCopyWithImpl<T, $Res>;
+  factory _$$PaginationQueryDTOImplCopyWith(_$PaginationQueryDTOImpl<T> value,
+          $Res Function(_$PaginationQueryDTOImpl<T>) then) =
+      __$$PaginationQueryDTOImplCopyWithImpl<T, $Res>;
   @override
   @useResult
   $Res call(
@@ -103,11 +103,12 @@ abstract class _$$_PaginationQueryDTOCopyWith<T, $Res>
 }
 
 /// @nodoc
-class __$$_PaginationQueryDTOCopyWithImpl<T, $Res>
-    extends _$PaginationQueryDTOCopyWithImpl<T, $Res, _$_PaginationQueryDTO<T>>
-    implements _$$_PaginationQueryDTOCopyWith<T, $Res> {
-  __$$_PaginationQueryDTOCopyWithImpl(_$_PaginationQueryDTO<T> _value,
-      $Res Function(_$_PaginationQueryDTO<T>) _then)
+class __$$PaginationQueryDTOImplCopyWithImpl<T, $Res>
+    extends _$PaginationQueryDTOCopyWithImpl<T, $Res,
+        _$PaginationQueryDTOImpl<T>>
+    implements _$$PaginationQueryDTOImplCopyWith<T, $Res> {
+  __$$PaginationQueryDTOImplCopyWithImpl(_$PaginationQueryDTOImpl<T> _value,
+      $Res Function(_$PaginationQueryDTOImpl<T>) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +120,7 @@ class __$$_PaginationQueryDTOCopyWithImpl<T, $Res>
     Object? filter = freezed,
     Object? search = freezed,
   }) {
-    return _then(_$_PaginationQueryDTO<T>(
+    return _then(_$PaginationQueryDTOImpl<T>(
       page: null == page
           ? _value.page
           : page // ignore: cast_nullable_to_non_nullable
@@ -146,8 +147,8 @@ class __$$_PaginationQueryDTOCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$_PaginationQueryDTO<T> extends _PaginationQueryDTO<T> {
-  const _$_PaginationQueryDTO(
+class _$PaginationQueryDTOImpl<T> extends _PaginationQueryDTO<T> {
+  const _$PaginationQueryDTOImpl(
       {this.page = 1,
       this.limit = 50,
       final List<SortDTO>? sortBy,
@@ -194,10 +195,10 @@ class _$_PaginationQueryDTO<T> extends _PaginationQueryDTO<T> {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaginationQueryDTO<T> &&
+            other is _$PaginationQueryDTOImpl<T> &&
             (identical(other.page, page) || other.page == page) &&
             (identical(other.limit, limit) || other.limit == limit) &&
             const DeepCollectionEquality().equals(other._sortBy, _sortBy) &&
@@ -217,9 +218,9 @@ class _$_PaginationQueryDTO<T> extends _PaginationQueryDTO<T> {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaginationQueryDTOCopyWith<T, _$_PaginationQueryDTO<T>> get copyWith =>
-      __$$_PaginationQueryDTOCopyWithImpl<T, _$_PaginationQueryDTO<T>>(
-          this, _$identity);
+  _$$PaginationQueryDTOImplCopyWith<T, _$PaginationQueryDTOImpl<T>>
+      get copyWith => __$$PaginationQueryDTOImplCopyWithImpl<T,
+          _$PaginationQueryDTOImpl<T>>(this, _$identity);
 }
 
 abstract class _PaginationQueryDTO<T> extends PaginationQueryDTO<T> {
@@ -228,7 +229,7 @@ abstract class _PaginationQueryDTO<T> extends PaginationQueryDTO<T> {
       final int limit,
       final List<SortDTO>? sortBy,
       final List<T>? filter,
-      final String? search}) = _$_PaginationQueryDTO<T>;
+      final String? search}) = _$PaginationQueryDTOImpl<T>;
   const _PaginationQueryDTO._() : super._();
 
   @override
@@ -243,6 +244,6 @@ abstract class _PaginationQueryDTO<T> extends PaginationQueryDTO<T> {
   String? get search;
   @override
   @JsonKey(ignore: true)
-  _$$_PaginationQueryDTOCopyWith<T, _$_PaginationQueryDTO<T>> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PaginationQueryDTOImplCopyWith<T, _$PaginationQueryDTOImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
 }

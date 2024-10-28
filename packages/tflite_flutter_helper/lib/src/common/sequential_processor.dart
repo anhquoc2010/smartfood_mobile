@@ -1,7 +1,7 @@
 import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
 import 'package:tflite_flutter_helper/src/image/image_processor.dart';
-import 'operator.dart';
-import 'processor.dart';
+import 'package:tflite_flutter_helper/src/common/operator.dart';
+import 'package:tflite_flutter_helper/src/common/processor.dart';
 import 'package:meta/meta.dart';
 
 /// A processor base class that chains a serial of [Operator] of type [T]
@@ -46,7 +46,7 @@ class SequentialProcessorBuilder<T> {
 
   SequentialProcessorBuilder<T> add(Operator<T> op) {
     SupportPreconditions.checkNotNull(op,
-        message: 'Adding null Op is illegal.');
+        message: 'Adding null Op is illegal.',);
     _operatorList.add(op);
 
     String operatorName = op.runtimeType.toString();

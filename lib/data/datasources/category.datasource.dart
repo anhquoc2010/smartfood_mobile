@@ -13,7 +13,7 @@ class CategoryDataSource {
   Future<List<CategoryModel>> getCategories() async {
     final response = await _dioHelper.get(
       Endpoints.category,
-      queryParameters: PaginationQueryDTO().toJson(),
+      queryParameters: const PaginationQueryDTO().toJson(),
     );
 
     final result = (response.data['data'] as List<dynamic>)

@@ -20,7 +20,7 @@ class CommonNotFound extends StatelessWidget {
           text,
           style: TextStyles.mediumText.copyWith(fontSize: 15),
           textAlign: TextAlign.center,
-        )
+        ),
       ],
     );
   }

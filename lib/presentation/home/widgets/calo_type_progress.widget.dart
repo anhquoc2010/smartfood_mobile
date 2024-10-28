@@ -51,7 +51,7 @@ class CalorieTypeTile extends StatelessWidget {
         Text(
           '14/32 g',
           style: TextStyles.s14MediumText.copyWith(color: Colors.white),
-        )
+        ),
       ],
     );
   }

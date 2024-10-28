@@ -13,7 +13,7 @@ class CuisineDataSource {
   Future<List<CuisineModel>> getCuisines() async {
     final response = await _dioHelper.get(
       Endpoints.cuisine,
-      queryParameters: PaginationQueryDTO().toJson(),
+      queryParameters: const PaginationQueryDTO().toJson(),
     );
 
     final result = (response.data['data'] as List<dynamic>)

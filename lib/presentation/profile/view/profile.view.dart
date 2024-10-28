@@ -41,7 +41,7 @@ class _ProfileView extends StatelessWidget {
               },
             ),
             const SettingAndHandbook(),
-            const SignOut()
+            const SignOut(),
           ],
         ),
       ),

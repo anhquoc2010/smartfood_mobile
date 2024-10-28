@@ -47,7 +47,7 @@ class DateWidget extends StatelessWidget {
               style: TextStyles.s14MediumText.copyWith(
                 color: isSelected ? Colors.white : ColorStyles.zodiacBlue,
               ),
-            )
+            ),
           ],
         ),
       ),

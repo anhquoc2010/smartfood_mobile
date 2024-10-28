@@ -37,7 +37,7 @@ class _RootView extends StatelessWidget {
               HomePage(),
               SearchIngredientPage(),
               DiaryPage(),
-              ProfilePage()
+              ProfilePage(),
             ],
           );
         },

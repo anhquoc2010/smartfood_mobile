@@ -30,10 +30,10 @@ class Category {
 
   @override
   String toString() {
-    return "<Category \"" +
+    return '<Category \"' +
         label +
-        "\" (score=" +
+        '\" (score=' +
         score.toStringAsFixed(3) +
-        ")>";
+        ')>';
   }
 }

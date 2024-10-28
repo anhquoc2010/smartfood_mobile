@@ -12,7 +12,7 @@ part of 'macros.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MacrosModel _$MacrosModelFromJson(Map<String, dynamic> json) {
   return _MacrosModel.fromJson(json);
@@ -67,22 +67,22 @@ class _$MacrosModelCopyWithImpl<$Res, $Val extends MacrosModel>
 }
 
 /// @nodoc
-abstract class _$$_MacrosModelCopyWith<$Res>
+abstract class _$$MacrosModelImplCopyWith<$Res>
     implements $MacrosModelCopyWith<$Res> {
-  factory _$$_MacrosModelCopyWith(
-          _$_MacrosModel value, $Res Function(_$_MacrosModel) then) =
-      __$$_MacrosModelCopyWithImpl<$Res>;
+  factory _$$MacrosModelImplCopyWith(
+          _$MacrosModelImpl value, $Res Function(_$MacrosModelImpl) then) =
+      __$$MacrosModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({MacrosType type, double value});
 }
 
 /// @nodoc
-class __$$_MacrosModelCopyWithImpl<$Res>
-    extends _$MacrosModelCopyWithImpl<$Res, _$_MacrosModel>
-    implements _$$_MacrosModelCopyWith<$Res> {
-  __$$_MacrosModelCopyWithImpl(
-      _$_MacrosModel _value, $Res Function(_$_MacrosModel) _then)
+class __$$MacrosModelImplCopyWithImpl<$Res>
+    extends _$MacrosModelCopyWithImpl<$Res, _$MacrosModelImpl>
+    implements _$$MacrosModelImplCopyWith<$Res> {
+  __$$MacrosModelImplCopyWithImpl(
+      _$MacrosModelImpl _value, $Res Function(_$MacrosModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -91,7 +91,7 @@ class __$$_MacrosModelCopyWithImpl<$Res>
     Object? type = null,
     Object? value = null,
   }) {
-    return _then(_$_MacrosModel(
+    return _then(_$MacrosModelImpl(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -106,11 +106,11 @@ class __$$_MacrosModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_MacrosModel implements _MacrosModel {
-  _$_MacrosModel({required this.type, required this.value});
+class _$MacrosModelImpl implements _MacrosModel {
+  _$MacrosModelImpl({required this.type, required this.value});
 
-  factory _$_MacrosModel.fromJson(Map<String, dynamic> json) =>
-      _$$_MacrosModelFromJson(json);
+  factory _$MacrosModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MacrosModelImplFromJson(json);
 
   @override
   final MacrosType type;
@@ -123,10 +123,10 @@ class _$_MacrosModel implements _MacrosModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MacrosModel &&
+            other is _$MacrosModelImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.value, value) || other.value == value));
   }
@@ -138,17 +138,17 @@ class _$_MacrosModel implements _MacrosModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MacrosModelCopyWith<_$_MacrosModel> get copyWith =>
-      __$$_MacrosModelCopyWithImpl<_$_MacrosModel>(this, _$identity);
+  _$$MacrosModelImplCopyWith<_$MacrosModelImpl> get copyWith =>
+      __$$MacrosModelImplCopyWithImpl<_$MacrosModelImpl>(this, _$identity);
 }
 
 abstract class _MacrosModel implements MacrosModel {
   factory _MacrosModel(
       {required final MacrosType type,
-      required final double value}) = _$_MacrosModel;
+      required final double value}) = _$MacrosModelImpl;
 
   factory _MacrosModel.fromJson(Map<String, dynamic> json) =
-      _$_MacrosModel.fromJson;
+      _$MacrosModelImpl.fromJson;
 
   @override
   MacrosType get type;
@@ -156,6 +156,6 @@ abstract class _MacrosModel implements MacrosModel {
   double get value;
   @override
   @JsonKey(ignore: true)
-  _$$_MacrosModelCopyWith<_$_MacrosModel> get copyWith =>
+  _$$MacrosModelImplCopyWith<_$MacrosModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

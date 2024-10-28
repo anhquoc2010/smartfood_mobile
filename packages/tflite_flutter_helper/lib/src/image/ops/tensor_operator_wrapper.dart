@@ -23,7 +23,7 @@ class TensorOperatorWrapper implements ImageOperator {
   @override
   TensorImage apply(TensorImage image) {
     SupportPreconditions.checkNotNull(image,
-        message: "Op cannot apply on null image.");
+        message: 'Op cannot apply on null image.',);
 
     TensorBuffer initial = image.tensorBuffer;
     TensorBuffer processed = _tensorOp.apply(initial);
@@ -44,7 +44,7 @@ class TensorOperatorWrapper implements ImageOperator {
 
   @override
   Point<num> inverseTransform(
-      Point<num> point, int inputImageHeight, int inputImageWidth) {
+      Point<num> point, int inputImageHeight, int inputImageWidth,) {
     return point;
   }
 }

@@ -5,12 +5,12 @@ import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
 import 'package:tflite_flutter/src/util/byte_conversion_utils.dart';
 
-import 'bindings/tensor.dart';
-import 'bindings/types.dart';
+import 'package:tflite_flutter/src/bindings/tensor.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
 
-import 'ffi/helper.dart';
-import 'quanitzation_params.dart';
-import 'util/list_shape_extension.dart';
+import 'package:tflite_flutter/src/ffi/helper.dart';
+import 'package:tflite_flutter/src/quanitzation_params.dart';
+import 'package:tflite_flutter/src/util/list_shape_extension.dart';
 
 export 'bindings/types.dart' show TfLiteType;
 
@@ -30,13 +30,13 @@ class Tensor {
 
   /// Dimensions of the tensor.
   List<int> get shape => List.generate(
-      tfLiteTensorNumDims(_tensor), (i) => tfLiteTensorDim(_tensor, i));
+      tfLiteTensorNumDims(_tensor), (i) => tfLiteTensorDim(_tensor, i),);
 
   /// Underlying data buffer as bytes.
   Uint8List get data {
     final data = cast<Uint8>(tfLiteTensorData(_tensor));
     return UnmodifiableUint8ListView(
-        data.asTypedList(tfLiteTensorByteSize(_tensor)));
+        data.asTypedList(tfLiteTensorByteSize(_tensor)),);
   }
 
   /// Quantization Params associated with the model, [only Android]
@@ -84,7 +84,7 @@ class Tensor {
   /// Returns shape of an object as an int list
   static List<int> computeShapeOf(Object o) {
     int size = computeNumDimensions(o);
-    List<int> dimensions = List.filled(size, 0, growable: false);
+    List<int> dimensions = List.filled(size, 0);
     fillShape(o, 0, dimensions);
     return dimensions;
   }
@@ -110,7 +110,7 @@ class Tensor {
       shape[dim] = len;
     } else if (shape[dim] != len) {
       throw ArgumentError(
-          'Mismatched lengths ${shape[dim]} and $len in dimension $dim');
+          'Mismatched lengths ${shape[dim]} and $len in dimension $dim',);
     }
     for (var i = 0; i < len; ++i) {
       fillShape(o.elementAt(0), dim + 1, shape);
@@ -133,7 +133,7 @@ class Tensor {
       return TfLiteType.bool;
     }
     throw ArgumentError(
-        'DataType error: cannot resolve DataType of ${o.runtimeType}');
+        'DataType error: cannot resolve DataType of ${o.runtimeType}',);
   }
 
   void setTo(Object src) {
@@ -144,7 +144,7 @@ class Tensor {
     final externalTypedData = ptr.asTypedList(size);
     externalTypedData.setRange(0, bytes.length, bytes);
     checkState(tfLiteTensorCopyFromBuffer(_tensor, ptr.cast(), bytes.length) ==
-        TfLiteStatus.ok);
+        TfLiteStatus.ok,);
     calloc.free(ptr);
   }
 
@@ -154,7 +154,7 @@ class Tensor {
     checkState(isNotNull(ptr), message: 'unallocated');
     final externalTypedData = ptr.asTypedList(size);
     checkState(
-        tfLiteTensorCopyToBuffer(_tensor, ptr.cast(), size) == TfLiteStatus.ok);
+        tfLiteTensorCopyToBuffer(_tensor, ptr.cast(), size) == TfLiteStatus.ok,);
     // Clone the data, because once `free(ptr)`, `externalTypedData` will be
     // volatile
     final bytes = externalTypedData.sublist(0);
@@ -204,7 +204,7 @@ class Tensor {
     }
     if (equal == false) {
       throw ArgumentError(
-          'Output object shape mismatch, interpreter returned output of shape: ${obj.shape} while shape of output provided as argument in run is: ${dst.shape}');
+          'Output object shape mismatch, interpreter returned output of shape: ${obj.shape} while shape of output provided as argument in run is: ${dst.shape}',);
     }
     for (var i = 0; i < obj.length; i++) {
       dst[i] = obj[i];

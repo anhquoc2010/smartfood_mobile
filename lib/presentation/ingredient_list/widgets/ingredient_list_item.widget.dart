@@ -55,7 +55,7 @@ class IngredientListItem extends StatelessWidget {
                   ingredient.name,
                   style: TextStyles.s14MediumText,
                 ),
-              )
+              ),
             ],
           ),
         ),

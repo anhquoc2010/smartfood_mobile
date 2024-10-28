@@ -67,7 +67,7 @@ class DiaryModeItem extends StatelessWidget {
                       child: mode.icon,
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

@@ -64,8 +64,8 @@ class BoundingBoxUtils {
     SupportPreconditions.checkArgument(
       boundingBoxAxis >= -shape.length && boundingBoxAxis < shape.length,
       errorMessage:
-          "Axis $boundingBoxAxis is not in range (-(D+1), D), where D is the number of dimensions of input" +
-              " tensor (shape=$shape)",
+          'Axis $boundingBoxAxis is not in range (-(D+1), D), where D is the number of dimensions of input' +
+              ' tensor (shape=$shape)',
     );
 
     if (boundingBoxAxis < 0) {
@@ -74,17 +74,17 @@ class BoundingBoxUtils {
     SupportPreconditions.checkArgument(
       shape[boundingBoxAxis] == 4,
       errorMessage:
-          "Size of bounding box dimBouBoxension $boundingBoxAxis is not 4. Got ${shape[boundingBoxAxis]} in shape $shape",
+          'Size of bounding box dimBouBoxension $boundingBoxAxis is not 4. Got ${shape[boundingBoxAxis]} in shape $shape',
     );
     SupportPreconditions.checkArgument(
       valueIndex.length == 4,
       errorMessage:
-          "Bounding box index list length ${valueIndex.length} is not 4. Got index list $valueIndex",
+          'Bounding box index list length ${valueIndex.length} is not 4. Got index list $valueIndex',
     );
     SupportPreconditions.checkArgument(
         tensor.getDataType() == TfLiteType.float32,
         errorMessage:
-            "Bounding Boxes only create from FLOAT32 buffers. Got: ${tensor.getDataType()}");
+            'Bounding Boxes only create from FLOAT32 buffers. Got: ${tensor.getDataType()}',);
 
     // From Android Library
     // Collapse dimensions to {a, 4, b}. So each bounding box could be represent as (i, j), and its
@@ -110,7 +110,7 @@ class BoundingBoxUtils {
           values[k] = doubleList.elementAt((i * 4 + k) * b + j);
         }
         boundingBoxList.add(_convertOneBoundingBox(values, boundingBoxType,
-            coordinateType, height, width, valueIndex));
+            coordinateType, height, width, valueIndex,),);
       }
     }
 
@@ -119,7 +119,7 @@ class BoundingBoxUtils {
 
   static Rect _convertOneBoundingBox(List<double> values, BoundingBoxType type,
       CoordinateType coordinateType, int height, int width,
-      [List<int> valueIndex = const [0, 1, 2, 3]]) {
+      [List<int> valueIndex = const [0, 1, 2, 3],]) {
     List<double> orderedValues = List.filled(4, 0);
     for (int i = 0; i < 4; i++) {
       orderedValues[i] = values[valueIndex[i]];
@@ -128,37 +128,37 @@ class BoundingBoxUtils {
     switch (type) {
       case BoundingBoxType.BOUNDARIES:
         return _convertFromBoundaries(
-            orderedValues, coordinateType, height, width);
+            orderedValues, coordinateType, height, width,);
       case BoundingBoxType.UPPER_LEFT:
         return _convertFromUpperLeft(
-            orderedValues, coordinateType, height, width);
+            orderedValues, coordinateType, height, width,);
       case BoundingBoxType.CENTER:
         return _convertFromCenter(orderedValues, coordinateType, height, width);
     }
   }
 
   static Rect _convertFromBoundaries(List<double> values,
-      CoordinateType coordinateType, int imageHeight, int imageWidth) {
+      CoordinateType coordinateType, int imageHeight, int imageWidth,) {
     double left = values[0];
     double top = values[1];
     double right = values[2];
     double bottom = values[3];
     return _getRectF(
-        left, top, right, bottom, imageHeight, imageWidth, coordinateType);
+        left, top, right, bottom, imageHeight, imageWidth, coordinateType,);
   }
 
   static Rect _convertFromUpperLeft(List<double> values,
-      CoordinateType coordinateType, int imageHeight, int imageWidth) {
+      CoordinateType coordinateType, int imageHeight, int imageWidth,) {
     double left = values[0];
     double top = values[1];
     double right = values[0] + values[2];
     double bottom = values[1] + values[3];
     return _getRectF(
-        left, top, right, bottom, imageHeight, imageWidth, coordinateType);
+        left, top, right, bottom, imageHeight, imageWidth, coordinateType,);
   }
 
   static Rect _convertFromCenter(List<double> values,
-      CoordinateType coordinateType, int imageHeight, int imageWidth) {
+      CoordinateType coordinateType, int imageHeight, int imageWidth,) {
     double centerX = values[0];
     double centerY = values[1];
     double w = values[2];
@@ -169,19 +169,19 @@ class BoundingBoxUtils {
     double right = centerX + w / 2;
     double bottom = centerY + h / 2;
     return _getRectF(
-        left, top, right, bottom, imageHeight, imageWidth, coordinateType);
+        left, top, right, bottom, imageHeight, imageWidth, coordinateType,);
   }
 
   static Rect _getRectF(double left, double top, double right, double bottom,
-      int imageHeight, int imageWidth, CoordinateType coordinateType) {
+      int imageHeight, int imageWidth, CoordinateType coordinateType,) {
     if (coordinateType == CoordinateType.PIXEL) {
       return new Rect.fromLTRB(left, top, right, bottom);
     } else if (coordinateType == CoordinateType.RATIO) {
       return new Rect.fromLTRB(left * imageWidth, top * imageHeight,
-          right * imageWidth, bottom * imageHeight);
+          right * imageWidth, bottom * imageHeight,);
     } else {
       throw new ArgumentError(
-          "Cannot convert coordinate type " + coordinateType.toString());
+          'Cannot convert coordinate type ' + coordinateType.toString(),);
     }
   }
 }

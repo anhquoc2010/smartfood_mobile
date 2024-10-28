@@ -54,7 +54,7 @@ class ImageContainer extends BaseImageContainer {
 
   @override
   CameraImage get mediaImage => throw UnsupportedError(
-      'Converting from Image to CameraImage is unsupported');
+      'Converting from Image to CameraImage is unsupported',);
 
   @override
   int get width => _image.width;

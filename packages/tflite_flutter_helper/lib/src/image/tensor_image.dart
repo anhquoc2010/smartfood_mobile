@@ -92,8 +92,8 @@ class TensorImage {
         colorSpaceType == ColorSpaceType.RGB ||
             colorSpaceType == ColorSpaceType.GRAYSCALE,
         message:
-            "Only ColorSpaceType.RGB and ColorSpaceType.GRAYSCALE are supported. Use" +
-                " `load(TensorBuffer, ImageProperties)` for other color space types.");
+            'Only ColorSpaceType.RGB and ColorSpaceType.GRAYSCALE are supported. Use' +
+                ' `load(TensorBuffer, ImageProperties)` for other color space types.',);
     _container = TensorBufferContainer.create(buffer, colorSpaceType);
   }
 
@@ -103,7 +103,7 @@ class TensorImage {
   /// and [ArgumentError] if the container data is corrupted.
   int get width {
     if (_container == null) {
-      throw new StateError("No image has been loaded yet.");
+      throw new StateError('No image has been loaded yet.');
     }
     return _container!.width;
   }
@@ -114,7 +114,7 @@ class TensorImage {
   /// and [ArgumentError] if the container data is corrupted.
   int get height {
     if (_container == null) {
-      throw new StateError("No image has been loaded yet.");
+      throw new StateError('No image has been loaded yet.');
     }
     return _container!.height;
   }
@@ -158,7 +158,7 @@ class TensorImage {
   /// Throws [StateError] if the TensorImage never loads data.
   Image get image {
     if (_container == null) {
-      throw new StateError("No image has been loaded yet.");
+      throw new StateError('No image has been loaded yet.');
     }
     return _container!.image;
   }
@@ -193,7 +193,7 @@ class TensorImage {
   /// Throws [ArgumentError] if this TensorImage never loads data.
   TensorBuffer get tensorBuffer {
     if (_container == null) {
-      throw new StateError("No image has been loaded yet.");
+      throw new StateError('No image has been loaded yet.');
     }
     return _container!.getTensorBuffer(_tfLiteType);
   }

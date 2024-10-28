@@ -1,7 +1,7 @@
 import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
 
-import 'tensorbuffer.dart';
+import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
 
 /// Represents data buffer with float(double) values.
 class TensorBufferFloat extends TensorBuffer {
@@ -56,11 +56,11 @@ class TensorBufferFloat extends TensorBuffer {
   @override
   void loadList(List src, {required List<int> shape}) {
     SupportPreconditions.checkNotNull(src,
-        message: "The array to be loaded cannot be null.");
+        message: 'The array to be loaded cannot be null.',);
     SupportPreconditions.checkArgument(
         src.length == TensorBuffer.computeFlatSize(shape),
         errorMessage:
-            "The size of the array to be loaded does not match the specified shape.");
+            'The size of the array to be loaded does not match the specified shape.',);
     resize(shape);
 
     if (src is List<double>) {
@@ -73,7 +73,7 @@ class TensorBufferFloat extends TensorBuffer {
       }
     } else {
       throw ArgumentError(
-          'Only List<double> and List<int> are supported but src is: ${src.runtimeType}');
+          'Only List<double> and List<int> are supported but src is: ${src.runtimeType}',);
     }
   }
 }

@@ -6,9 +6,9 @@ part of 'get_practice_result.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetPracticeResultDTO _$$_GetPracticeResultDTOFromJson(
+_$GetPracticeResultDTOImpl _$$GetPracticeResultDTOImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetPracticeResultDTO(
+    _$GetPracticeResultDTOImpl(
       data: (json['data'] as List<dynamic>)
           .map((e) => PracticeModel.fromJson(e as Map<String, dynamic>))
           .toList(),

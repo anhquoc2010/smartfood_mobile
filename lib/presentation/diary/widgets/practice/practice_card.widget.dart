@@ -51,7 +51,7 @@ class PracticeCard extends StatelessWidget {
               Text(
                 'phút',
                 style: TextStyles.s17MediumText,
-              )
+              ),
             ],
           ),
         ],
@@ -85,7 +85,7 @@ class PracticeCard extends StatelessWidget {
           onPressed: () {
             context.read<DeletePracticeCubit>().submit(practice.id);
           },
-        )
+        ),
       ],
       onPressed: () {
         if (!enableFocus) {
@@ -109,7 +109,7 @@ class PracticeCard extends StatelessWidget {
                 '${practice.totalCalories} kcal - ${practice.totalDuration} phút',
                 style: TextStyles.s14MediumText
                     .copyWith(color: ColorStyles.red400),
-              )
+              ),
             ],
           ),
         ),

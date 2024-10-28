@@ -55,7 +55,10 @@ dependencies:
     path: ./packages/tflite_flutter_helper
   collection: ^1.17.0
   percent_indicator: ^4.2.3
-  advance_image_picker: ^0.1.7+1
+  advance_image_picker:
+    git:
+      url: https://github.com/anhquoc2010/advance_image_picker
+      ref: fix/migrate-to-stable-flutter3.19.0
   freezed_annotation: ^2.2.0
   carousel_slider: ^4.2.1
   shimmer: ^2.0.0
@@ -71,6 +74,7 @@ dependencies:
   syncfusion_flutter_gauges: ^22.1.37
   syncfusion_flutter_charts: ^22.1.37
   flutter_rating_bar: ^4.0.1
+  image: ^3.3.0
 
 dev_dependencies:
   flutter_test:

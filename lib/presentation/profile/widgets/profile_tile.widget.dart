@@ -48,7 +48,7 @@ class ProfileTile extends StatelessWidget {
             style: TextStyles.s14BoldText,
           ),
           const Spacer(),
-          const Icon(Icons.chevron_right_rounded)
+          const Icon(Icons.chevron_right_rounded),
         ],
       ),
     );

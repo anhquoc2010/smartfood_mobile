@@ -46,8 +46,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
       _authBloc.add(AuthUserSet(user));
     } catch (err) {
-      bool isUnauthorizedError =
-          err is DioError && err.response?.statusCode == 401;
+      bool isUnauthorizedError = err is DioException && err.response?.statusCode == 401;
 
       if (isUnauthorizedError) {
         emit(

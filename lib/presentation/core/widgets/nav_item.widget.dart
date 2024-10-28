@@ -33,4 +33,7 @@ class NavItem implements BottomNavigationBarItem {
 
   @override
   String? get tooltip => null;
+
+  @override
+  Key? get key => null;
 }

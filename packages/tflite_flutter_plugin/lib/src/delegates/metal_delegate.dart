@@ -2,9 +2,9 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
-import '../bindings/delegates/metal_delegate.dart';
-import '../bindings/types.dart';
-import '../delegate.dart';
+import 'package:tflite_flutter/src/bindings/delegates/metal_delegate.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
+import 'package:tflite_flutter/src/delegate.dart';
 
 /// Metal Delegate for iOS
 class GpuDelegate implements Delegate {
@@ -51,7 +51,7 @@ class GpuDelegateOptions {
       allowPrecisionLoss,
       waitType,
       enableQuantization,
-    ));
+    ),);
   }
 
   void delete() {

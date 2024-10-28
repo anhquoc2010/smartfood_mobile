@@ -69,7 +69,7 @@ class _FilterSheetState extends State<FilterSheet> {
               const Divider(
                 height: 0,
                 color: ColorStyles.gray200,
-              )
+              ),
             ],
           ),
           Expanded(
@@ -135,7 +135,7 @@ class _FilterSheetState extends State<FilterSheet> {
                           ),
                         ),
                       ],
-                    )
+                    ),
                   ],
                 ),
                 currentPage == 1
@@ -144,10 +144,10 @@ class _FilterSheetState extends State<FilterSheet> {
                       )
                     : const Center(
                         child: Text('check 2'),
-                      )
+                      ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );

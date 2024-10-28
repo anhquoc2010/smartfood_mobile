@@ -58,7 +58,7 @@ class NLClassifier {
     final nativePtr =
         NLClassifierFromFileAndOptions(modelPath.toNativeUtf8(), options.base);
     if (nativePtr == nullptr) {
-      throw FileSystemException("Failed to create NLClassifier.", modelPath);
+      throw FileSystemException('Failed to create NLClassifier.', modelPath);
     }
     return NLClassifier._(nativePtr);
   }
@@ -74,7 +74,7 @@ class NLClassifier {
   ///
   /// throws [FileSystemException] If model file fails to load.
   static NLClassifier createFromFileAndOptions(
-      File modelFile, NLClassifierOptions options) {
+      File modelFile, NLClassifierOptions options,) {
     return create(modelFile.path, options: options);
   }
 
@@ -84,7 +84,7 @@ class NLClassifier {
   ///
   /// throws [FileSystemException] If model file fails to load.
   static Future<NLClassifier> createFromAsset(String assetPath,
-      {NLClassifierOptions? options}) async {
+      {NLClassifierOptions? options,}) async {
     final modelFile = await FileUtil.loadFileOnDevice(assetPath);
     return create(modelFile.path, options: options);
   }
@@ -97,7 +97,7 @@ class NLClassifier {
     final categoryList = List.generate(
       ref.size,
       (i) => Category(
-          ref.categories[i].text.toDartString(), ref.categories[i].score),
+          ref.categories[i].text.toDartString(), ref.categories[i].score,),
     );
     return categoryList;
   }

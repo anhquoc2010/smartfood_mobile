@@ -12,7 +12,7 @@ part of 'recipe_detail.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RecipeDetailEvent {
@@ -95,21 +95,22 @@ class _$RecipeDetailEventCopyWithImpl<$Res, $Val extends RecipeDetailEvent>
 }
 
 /// @nodoc
-abstract class _$$_StartedCopyWith<$Res>
+abstract class _$$StartedImplCopyWith<$Res>
     implements $RecipeDetailEventCopyWith<$Res> {
-  factory _$$_StartedCopyWith(
-          _$_Started value, $Res Function(_$_Started) then) =
-      __$$_StartedCopyWithImpl<$Res>;
+  factory _$$StartedImplCopyWith(
+          _$StartedImpl value, $Res Function(_$StartedImpl) then) =
+      __$$StartedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
 }
 
 /// @nodoc
-class __$$_StartedCopyWithImpl<$Res>
-    extends _$RecipeDetailEventCopyWithImpl<$Res, _$_Started>
-    implements _$$_StartedCopyWith<$Res> {
-  __$$_StartedCopyWithImpl(_$_Started _value, $Res Function(_$_Started) _then)
+class __$$StartedImplCopyWithImpl<$Res>
+    extends _$RecipeDetailEventCopyWithImpl<$Res, _$StartedImpl>
+    implements _$$StartedImplCopyWith<$Res> {
+  __$$StartedImplCopyWithImpl(
+      _$StartedImpl _value, $Res Function(_$StartedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -117,7 +118,7 @@ class __$$_StartedCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_Started(
+    return _then(_$StartedImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -128,8 +129,8 @@ class __$$_StartedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Started implements _Started {
-  const _$_Started({required this.id});
+class _$StartedImpl implements _Started {
+  const _$StartedImpl({required this.id});
 
   @override
   final String id;
@@ -140,10 +141,10 @@ class _$_Started implements _Started {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Started &&
+            other is _$StartedImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
@@ -153,8 +154,8 @@ class _$_Started implements _Started {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
-      __$$_StartedCopyWithImpl<_$_Started>(this, _$identity);
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
+      __$$StartedImplCopyWithImpl<_$StartedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -220,33 +221,33 @@ class _$_Started implements _Started {
 }
 
 abstract class _Started implements RecipeDetailEvent {
-  const factory _Started({required final String id}) = _$_Started;
+  const factory _Started({required final String id}) = _$StartedImpl;
 
   @override
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_StartedCopyWith<_$_Started> get copyWith =>
+  _$$StartedImplCopyWith<_$StartedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SendCookCopyWith<$Res>
+abstract class _$$SendCookImplCopyWith<$Res>
     implements $RecipeDetailEventCopyWith<$Res> {
-  factory _$$_SendCookCopyWith(
-          _$_SendCook value, $Res Function(_$_SendCook) then) =
-      __$$_SendCookCopyWithImpl<$Res>;
+  factory _$$SendCookImplCopyWith(
+          _$SendCookImpl value, $Res Function(_$SendCookImpl) then) =
+      __$$SendCookImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id});
 }
 
 /// @nodoc
-class __$$_SendCookCopyWithImpl<$Res>
-    extends _$RecipeDetailEventCopyWithImpl<$Res, _$_SendCook>
-    implements _$$_SendCookCopyWith<$Res> {
-  __$$_SendCookCopyWithImpl(
-      _$_SendCook _value, $Res Function(_$_SendCook) _then)
+class __$$SendCookImplCopyWithImpl<$Res>
+    extends _$RecipeDetailEventCopyWithImpl<$Res, _$SendCookImpl>
+    implements _$$SendCookImplCopyWith<$Res> {
+  __$$SendCookImplCopyWithImpl(
+      _$SendCookImpl _value, $Res Function(_$SendCookImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -254,7 +255,7 @@ class __$$_SendCookCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
   }) {
-    return _then(_$_SendCook(
+    return _then(_$SendCookImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -265,8 +266,8 @@ class __$$_SendCookCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SendCook implements _SendCook {
-  const _$_SendCook({required this.id});
+class _$SendCookImpl implements _SendCook {
+  const _$SendCookImpl({required this.id});
 
   @override
   final String id;
@@ -277,10 +278,10 @@ class _$_SendCook implements _SendCook {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SendCook &&
+            other is _$SendCookImpl &&
             (identical(other.id, id) || other.id == id));
   }
 
@@ -290,8 +291,8 @@ class _$_SendCook implements _SendCook {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SendCookCopyWith<_$_SendCook> get copyWith =>
-      __$$_SendCookCopyWithImpl<_$_SendCook>(this, _$identity);
+  _$$SendCookImplCopyWith<_$SendCookImpl> get copyWith =>
+      __$$SendCookImplCopyWithImpl<_$SendCookImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -357,13 +358,13 @@ class _$_SendCook implements _SendCook {
 }
 
 abstract class _SendCook implements RecipeDetailEvent {
-  const factory _SendCook({required final String id}) = _$_SendCook;
+  const factory _SendCook({required final String id}) = _$SendCookImpl;
 
   @override
   String get id;
   @override
   @JsonKey(ignore: true)
-  _$$_SendCookCopyWith<_$_SendCook> get copyWith =>
+  _$$SendCookImplCopyWith<_$SendCookImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -434,24 +435,25 @@ class _$RecipeDetailStateCopyWithImpl<$Res, $Val extends RecipeDetailState>
 }
 
 /// @nodoc
-abstract class _$$_LoadingCopyWith<$Res> {
-  factory _$$_LoadingCopyWith(
-          _$_Loading value, $Res Function(_$_Loading) then) =
-      __$$_LoadingCopyWithImpl<$Res>;
+abstract class _$$LoadingImplCopyWith<$Res> {
+  factory _$$LoadingImplCopyWith(
+          _$LoadingImpl value, $Res Function(_$LoadingImpl) then) =
+      __$$LoadingImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadingCopyWithImpl<$Res>
-    extends _$RecipeDetailStateCopyWithImpl<$Res, _$_Loading>
-    implements _$$_LoadingCopyWith<$Res> {
-  __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
+class __$$LoadingImplCopyWithImpl<$Res>
+    extends _$RecipeDetailStateCopyWithImpl<$Res, _$LoadingImpl>
+    implements _$$LoadingImplCopyWith<$Res> {
+  __$$LoadingImplCopyWithImpl(
+      _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Loading implements _Loading {
-  const _$_Loading();
+class _$LoadingImpl implements _Loading {
+  const _$LoadingImpl();
 
   @override
   String toString() {
@@ -459,9 +461,9 @@ class _$_Loading implements _Loading {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Loading);
+        (other.runtimeType == runtimeType && other is _$LoadingImpl);
   }
 
   @override
@@ -537,14 +539,14 @@ class _$_Loading implements _Loading {
 }
 
 abstract class _Loading implements RecipeDetailState {
-  const factory _Loading() = _$_Loading;
+  const factory _Loading() = _$LoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$_SuccessCopyWith<$Res> {
-  factory _$$_SuccessCopyWith(
-          _$_Success value, $Res Function(_$_Success) then) =
-      __$$_SuccessCopyWithImpl<$Res>;
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({RecipeModel recipe});
 
@@ -552,10 +554,11 @@ abstract class _$$_SuccessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SuccessCopyWithImpl<$Res>
-    extends _$RecipeDetailStateCopyWithImpl<$Res, _$_Success>
-    implements _$$_SuccessCopyWith<$Res> {
-  __$$_SuccessCopyWithImpl(_$_Success _value, $Res Function(_$_Success) _then)
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$RecipeDetailStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -563,7 +566,7 @@ class __$$_SuccessCopyWithImpl<$Res>
   $Res call({
     Object? recipe = null,
   }) {
-    return _then(_$_Success(
+    return _then(_$SuccessImpl(
       recipe: null == recipe
           ? _value.recipe
           : recipe // ignore: cast_nullable_to_non_nullable
@@ -582,8 +585,8 @@ class __$$_SuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Success implements _Success {
-  const _$_Success({required this.recipe});
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl({required this.recipe});
 
   @override
   final RecipeModel recipe;
@@ -594,10 +597,10 @@ class _$_Success implements _Success {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Success &&
+            other is _$SuccessImpl &&
             (identical(other.recipe, recipe) || other.recipe == recipe));
   }
 
@@ -607,8 +610,8 @@ class _$_Success implements _Success {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SuccessCopyWith<_$_Success> get copyWith =>
-      __$$_SuccessCopyWithImpl<_$_Success>(this, _$identity);
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -680,33 +683,34 @@ class _$_Success implements _Success {
 }
 
 abstract class _Success implements RecipeDetailState {
-  const factory _Success({required final RecipeModel recipe}) = _$_Success;
+  const factory _Success({required final RecipeModel recipe}) = _$SuccessImpl;
 
   RecipeModel get recipe;
   @JsonKey(ignore: true)
-  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_FailureCopyWith<$Res> {
-  factory _$$_FailureCopyWith(
-          _$_Failure value, $Res Function(_$_Failure) then) =
-      __$$_FailureCopyWithImpl<$Res>;
+abstract class _$$FailureImplCopyWith<$Res> {
+  factory _$$FailureImplCopyWith(
+          _$FailureImpl value, $Res Function(_$FailureImpl) then) =
+      __$$FailureImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_FailureCopyWithImpl<$Res>
-    extends _$RecipeDetailStateCopyWithImpl<$Res, _$_Failure>
-    implements _$$_FailureCopyWith<$Res> {
-  __$$_FailureCopyWithImpl(_$_Failure _value, $Res Function(_$_Failure) _then)
+class __$$FailureImplCopyWithImpl<$Res>
+    extends _$RecipeDetailStateCopyWithImpl<$Res, _$FailureImpl>
+    implements _$$FailureImplCopyWith<$Res> {
+  __$$FailureImplCopyWithImpl(
+      _$FailureImpl _value, $Res Function(_$FailureImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Failure implements _Failure {
-  const _$_Failure();
+class _$FailureImpl implements _Failure {
+  const _$FailureImpl();
 
   @override
   String toString() {
@@ -714,9 +718,9 @@ class _$_Failure implements _Failure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Failure);
+        (other.runtimeType == runtimeType && other is _$FailureImpl);
   }
 
   @override
@@ -792,5 +796,5 @@ class _$_Failure implements _Failure {
 }
 
 abstract class _Failure implements RecipeDetailState {
-  const factory _Failure() = _$_Failure;
+  const factory _Failure() = _$FailureImpl;
 }

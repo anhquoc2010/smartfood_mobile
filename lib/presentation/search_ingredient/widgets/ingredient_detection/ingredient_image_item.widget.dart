@@ -78,7 +78,7 @@ class IngredientImageItem extends StatelessWidget {
                     ),
                   );
                 }).toList(),
-              )
+              ),
             ],
           );
         },

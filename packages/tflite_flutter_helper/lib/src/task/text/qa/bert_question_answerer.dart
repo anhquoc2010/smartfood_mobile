@@ -9,7 +9,7 @@ import 'package:tflite_flutter_helper/src/task/bindings/text/qa/types.dart';
 import 'package:ffi/ffi.dart';
 import 'package:tflite_flutter_helper/src/task/text/qa/question_answerer.dart';
 
-import 'qa_answer.dart';
+import 'package:tflite_flutter_helper/src/task/text/qa/qa_answer.dart';
 
 /// Task API for BertQA models. */
 class BertQuestionAnswerer implements QuestionAnswerer {
@@ -42,7 +42,7 @@ class BertQuestionAnswerer implements QuestionAnswerer {
     final nativePtr = BertQuestionAnswererFromFile(modelPath.toNativeUtf8());
     if (nativePtr == nullptr) {
       throw FileSystemException(
-          "Failed to create BertQuestionAnswerer.", modelPath);
+          'Failed to create BertQuestionAnswerer.', modelPath,);
     }
     return BertQuestionAnswerer._(nativePtr);
   }
@@ -81,7 +81,7 @@ class BertQuestionAnswerer implements QuestionAnswerer {
   @override
   List<QaAnswer> answer(String context, String question) {
     final ref = BertQuestionAnswererAnswer(
-            base, context.toNativeUtf8(), question.toNativeUtf8())
+            base, context.toNativeUtf8(), question.toNativeUtf8(),)
         .ref;
     final qaList = List.generate(
       ref.size,

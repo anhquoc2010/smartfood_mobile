@@ -12,7 +12,7 @@ part of 'diary.bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DiaryEvent {
@@ -99,20 +99,20 @@ class _$DiaryEventCopyWithImpl<$Res, $Val extends DiaryEvent>
 }
 
 /// @nodoc
-abstract class _$$_GetByDayCopyWith<$Res> {
-  factory _$$_GetByDayCopyWith(
-          _$_GetByDay value, $Res Function(_$_GetByDay) then) =
-      __$$_GetByDayCopyWithImpl<$Res>;
+abstract class _$$GetByDayImplCopyWith<$Res> {
+  factory _$$GetByDayImplCopyWith(
+          _$GetByDayImpl value, $Res Function(_$GetByDayImpl) then) =
+      __$$GetByDayImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DateTime? date});
 }
 
 /// @nodoc
-class __$$_GetByDayCopyWithImpl<$Res>
-    extends _$DiaryEventCopyWithImpl<$Res, _$_GetByDay>
-    implements _$$_GetByDayCopyWith<$Res> {
-  __$$_GetByDayCopyWithImpl(
-      _$_GetByDay _value, $Res Function(_$_GetByDay) _then)
+class __$$GetByDayImplCopyWithImpl<$Res>
+    extends _$DiaryEventCopyWithImpl<$Res, _$GetByDayImpl>
+    implements _$$GetByDayImplCopyWith<$Res> {
+  __$$GetByDayImplCopyWithImpl(
+      _$GetByDayImpl _value, $Res Function(_$GetByDayImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -120,7 +120,7 @@ class __$$_GetByDayCopyWithImpl<$Res>
   $Res call({
     Object? date = freezed,
   }) {
-    return _then(_$_GetByDay(
+    return _then(_$GetByDayImpl(
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -131,8 +131,8 @@ class __$$_GetByDayCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetByDay implements _GetByDay {
-  const _$_GetByDay({this.date});
+class _$GetByDayImpl implements _GetByDay {
+  const _$GetByDayImpl({this.date});
 
   @override
   final DateTime? date;
@@ -143,10 +143,10 @@ class _$_GetByDay implements _GetByDay {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetByDay &&
+            other is _$GetByDayImpl &&
             (identical(other.date, date) || other.date == date));
   }
 
@@ -156,8 +156,8 @@ class _$_GetByDay implements _GetByDay {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetByDayCopyWith<_$_GetByDay> get copyWith =>
-      __$$_GetByDayCopyWithImpl<_$_GetByDay>(this, _$identity);
+  _$$GetByDayImplCopyWith<_$GetByDayImpl> get copyWith =>
+      __$$GetByDayImplCopyWithImpl<_$GetByDayImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -247,29 +247,29 @@ class _$_GetByDay implements _GetByDay {
 }
 
 abstract class _GetByDay implements DiaryEvent {
-  const factory _GetByDay({final DateTime? date}) = _$_GetByDay;
+  const factory _GetByDay({final DateTime? date}) = _$GetByDayImpl;
 
   DateTime? get date;
   @JsonKey(ignore: true)
-  _$$_GetByDayCopyWith<_$_GetByDay> get copyWith =>
+  _$$GetByDayImplCopyWith<_$GetByDayImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_AddMealsCopyWith<$Res> {
-  factory _$$_AddMealsCopyWith(
-          _$_AddMeals value, $Res Function(_$_AddMeals) then) =
-      __$$_AddMealsCopyWithImpl<$Res>;
+abstract class _$$AddMealsImplCopyWith<$Res> {
+  factory _$$AddMealsImplCopyWith(
+          _$AddMealsImpl value, $Res Function(_$AddMealsImpl) then) =
+      __$$AddMealsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<MealModel> meals, MealType type});
 }
 
 /// @nodoc
-class __$$_AddMealsCopyWithImpl<$Res>
-    extends _$DiaryEventCopyWithImpl<$Res, _$_AddMeals>
-    implements _$$_AddMealsCopyWith<$Res> {
-  __$$_AddMealsCopyWithImpl(
-      _$_AddMeals _value, $Res Function(_$_AddMeals) _then)
+class __$$AddMealsImplCopyWithImpl<$Res>
+    extends _$DiaryEventCopyWithImpl<$Res, _$AddMealsImpl>
+    implements _$$AddMealsImplCopyWith<$Res> {
+  __$$AddMealsImplCopyWithImpl(
+      _$AddMealsImpl _value, $Res Function(_$AddMealsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -278,7 +278,7 @@ class __$$_AddMealsCopyWithImpl<$Res>
     Object? meals = null,
     Object? type = null,
   }) {
-    return _then(_$_AddMeals(
+    return _then(_$AddMealsImpl(
       null == meals
           ? _value._meals
           : meals // ignore: cast_nullable_to_non_nullable
@@ -293,8 +293,8 @@ class __$$_AddMealsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AddMeals implements _AddMeals {
-  const _$_AddMeals(final List<MealModel> meals, this.type) : _meals = meals;
+class _$AddMealsImpl implements _AddMeals {
+  const _$AddMealsImpl(final List<MealModel> meals, this.type) : _meals = meals;
 
   final List<MealModel> _meals;
   @override
@@ -313,10 +313,10 @@ class _$_AddMeals implements _AddMeals {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddMeals &&
+            other is _$AddMealsImpl &&
             const DeepCollectionEquality().equals(other._meals, _meals) &&
             (identical(other.type, type) || other.type == type));
   }
@@ -328,8 +328,8 @@ class _$_AddMeals implements _AddMeals {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddMealsCopyWith<_$_AddMeals> get copyWith =>
-      __$$_AddMealsCopyWithImpl<_$_AddMeals>(this, _$identity);
+  _$$AddMealsImplCopyWith<_$AddMealsImpl> get copyWith =>
+      __$$AddMealsImplCopyWithImpl<_$AddMealsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -420,30 +420,30 @@ class _$_AddMeals implements _AddMeals {
 
 abstract class _AddMeals implements DiaryEvent {
   const factory _AddMeals(final List<MealModel> meals, final MealType type) =
-      _$_AddMeals;
+      _$AddMealsImpl;
 
   List<MealModel> get meals;
   MealType get type;
   @JsonKey(ignore: true)
-  _$$_AddMealsCopyWith<_$_AddMeals> get copyWith =>
+  _$$AddMealsImplCopyWith<_$AddMealsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteMealCopyWith<$Res> {
-  factory _$$_DeleteMealCopyWith(
-          _$_DeleteMeal value, $Res Function(_$_DeleteMeal) then) =
-      __$$_DeleteMealCopyWithImpl<$Res>;
+abstract class _$$DeleteMealImplCopyWith<$Res> {
+  factory _$$DeleteMealImplCopyWith(
+          _$DeleteMealImpl value, $Res Function(_$DeleteMealImpl) then) =
+      __$$DeleteMealImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String mealId, MealType type});
 }
 
 /// @nodoc
-class __$$_DeleteMealCopyWithImpl<$Res>
-    extends _$DiaryEventCopyWithImpl<$Res, _$_DeleteMeal>
-    implements _$$_DeleteMealCopyWith<$Res> {
-  __$$_DeleteMealCopyWithImpl(
-      _$_DeleteMeal _value, $Res Function(_$_DeleteMeal) _then)
+class __$$DeleteMealImplCopyWithImpl<$Res>
+    extends _$DiaryEventCopyWithImpl<$Res, _$DeleteMealImpl>
+    implements _$$DeleteMealImplCopyWith<$Res> {
+  __$$DeleteMealImplCopyWithImpl(
+      _$DeleteMealImpl _value, $Res Function(_$DeleteMealImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -452,7 +452,7 @@ class __$$_DeleteMealCopyWithImpl<$Res>
     Object? mealId = null,
     Object? type = null,
   }) {
-    return _then(_$_DeleteMeal(
+    return _then(_$DeleteMealImpl(
       null == mealId
           ? _value.mealId
           : mealId // ignore: cast_nullable_to_non_nullable
@@ -467,8 +467,8 @@ class __$$_DeleteMealCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteMeal implements _DeleteMeal {
-  const _$_DeleteMeal(this.mealId, this.type);
+class _$DeleteMealImpl implements _DeleteMeal {
+  const _$DeleteMealImpl(this.mealId, this.type);
 
   @override
   final String mealId;
@@ -481,10 +481,10 @@ class _$_DeleteMeal implements _DeleteMeal {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteMeal &&
+            other is _$DeleteMealImpl &&
             (identical(other.mealId, mealId) || other.mealId == mealId) &&
             (identical(other.type, type) || other.type == type));
   }
@@ -495,8 +495,8 @@ class _$_DeleteMeal implements _DeleteMeal {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteMealCopyWith<_$_DeleteMeal> get copyWith =>
-      __$$_DeleteMealCopyWithImpl<_$_DeleteMeal>(this, _$identity);
+  _$$DeleteMealImplCopyWith<_$DeleteMealImpl> get copyWith =>
+      __$$DeleteMealImplCopyWithImpl<_$DeleteMealImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -587,20 +587,20 @@ class _$_DeleteMeal implements _DeleteMeal {
 
 abstract class _DeleteMeal implements DiaryEvent {
   const factory _DeleteMeal(final String mealId, final MealType type) =
-      _$_DeleteMeal;
+      _$DeleteMealImpl;
 
   String get mealId;
   MealType get type;
   @JsonKey(ignore: true)
-  _$$_DeleteMealCopyWith<_$_DeleteMeal> get copyWith =>
+  _$$DeleteMealImplCopyWith<_$DeleteMealImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_AddPracticeCopyWith<$Res> {
-  factory _$$_AddPracticeCopyWith(
-          _$_AddPractice value, $Res Function(_$_AddPractice) then) =
-      __$$_AddPracticeCopyWithImpl<$Res>;
+abstract class _$$AddPracticeImplCopyWith<$Res> {
+  factory _$$AddPracticeImplCopyWith(
+          _$AddPracticeImpl value, $Res Function(_$AddPracticeImpl) then) =
+      __$$AddPracticeImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DiaryModel newDiary});
 
@@ -608,11 +608,11 @@ abstract class _$$_AddPracticeCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_AddPracticeCopyWithImpl<$Res>
-    extends _$DiaryEventCopyWithImpl<$Res, _$_AddPractice>
-    implements _$$_AddPracticeCopyWith<$Res> {
-  __$$_AddPracticeCopyWithImpl(
-      _$_AddPractice _value, $Res Function(_$_AddPractice) _then)
+class __$$AddPracticeImplCopyWithImpl<$Res>
+    extends _$DiaryEventCopyWithImpl<$Res, _$AddPracticeImpl>
+    implements _$$AddPracticeImplCopyWith<$Res> {
+  __$$AddPracticeImplCopyWithImpl(
+      _$AddPracticeImpl _value, $Res Function(_$AddPracticeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -620,7 +620,7 @@ class __$$_AddPracticeCopyWithImpl<$Res>
   $Res call({
     Object? newDiary = null,
   }) {
-    return _then(_$_AddPractice(
+    return _then(_$AddPracticeImpl(
       null == newDiary
           ? _value.newDiary
           : newDiary // ignore: cast_nullable_to_non_nullable
@@ -639,8 +639,8 @@ class __$$_AddPracticeCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AddPractice implements _AddPractice {
-  const _$_AddPractice(this.newDiary);
+class _$AddPracticeImpl implements _AddPractice {
+  const _$AddPracticeImpl(this.newDiary);
 
   @override
   final DiaryModel newDiary;
@@ -651,10 +651,10 @@ class _$_AddPractice implements _AddPractice {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddPractice &&
+            other is _$AddPracticeImpl &&
             (identical(other.newDiary, newDiary) ||
                 other.newDiary == newDiary));
   }
@@ -665,8 +665,8 @@ class _$_AddPractice implements _AddPractice {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddPracticeCopyWith<_$_AddPractice> get copyWith =>
-      __$$_AddPracticeCopyWithImpl<_$_AddPractice>(this, _$identity);
+  _$$AddPracticeImplCopyWith<_$AddPracticeImpl> get copyWith =>
+      __$$AddPracticeImplCopyWithImpl<_$AddPracticeImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -756,29 +756,29 @@ class _$_AddPractice implements _AddPractice {
 }
 
 abstract class _AddPractice implements DiaryEvent {
-  const factory _AddPractice(final DiaryModel newDiary) = _$_AddPractice;
+  const factory _AddPractice(final DiaryModel newDiary) = _$AddPracticeImpl;
 
   DiaryModel get newDiary;
   @JsonKey(ignore: true)
-  _$$_AddPracticeCopyWith<_$_AddPractice> get copyWith =>
+  _$$AddPracticeImplCopyWith<_$AddPracticeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeletePracticeCopyWith<$Res> {
-  factory _$$_DeletePracticeCopyWith(
-          _$_DeletePractice value, $Res Function(_$_DeletePractice) then) =
-      __$$_DeletePracticeCopyWithImpl<$Res>;
+abstract class _$$DeletePracticeImplCopyWith<$Res> {
+  factory _$$DeletePracticeImplCopyWith(_$DeletePracticeImpl value,
+          $Res Function(_$DeletePracticeImpl) then) =
+      __$$DeletePracticeImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String practiceId});
 }
 
 /// @nodoc
-class __$$_DeletePracticeCopyWithImpl<$Res>
-    extends _$DiaryEventCopyWithImpl<$Res, _$_DeletePractice>
-    implements _$$_DeletePracticeCopyWith<$Res> {
-  __$$_DeletePracticeCopyWithImpl(
-      _$_DeletePractice _value, $Res Function(_$_DeletePractice) _then)
+class __$$DeletePracticeImplCopyWithImpl<$Res>
+    extends _$DiaryEventCopyWithImpl<$Res, _$DeletePracticeImpl>
+    implements _$$DeletePracticeImplCopyWith<$Res> {
+  __$$DeletePracticeImplCopyWithImpl(
+      _$DeletePracticeImpl _value, $Res Function(_$DeletePracticeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -786,7 +786,7 @@ class __$$_DeletePracticeCopyWithImpl<$Res>
   $Res call({
     Object? practiceId = null,
   }) {
-    return _then(_$_DeletePractice(
+    return _then(_$DeletePracticeImpl(
       null == practiceId
           ? _value.practiceId
           : practiceId // ignore: cast_nullable_to_non_nullable
@@ -797,8 +797,8 @@ class __$$_DeletePracticeCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeletePractice implements _DeletePractice {
-  const _$_DeletePractice(this.practiceId);
+class _$DeletePracticeImpl implements _DeletePractice {
+  const _$DeletePracticeImpl(this.practiceId);
 
   @override
   final String practiceId;
@@ -809,10 +809,10 @@ class _$_DeletePractice implements _DeletePractice {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeletePractice &&
+            other is _$DeletePracticeImpl &&
             (identical(other.practiceId, practiceId) ||
                 other.practiceId == practiceId));
   }
@@ -823,8 +823,9 @@ class _$_DeletePractice implements _DeletePractice {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeletePracticeCopyWith<_$_DeletePractice> get copyWith =>
-      __$$_DeletePracticeCopyWithImpl<_$_DeletePractice>(this, _$identity);
+  _$$DeletePracticeImplCopyWith<_$DeletePracticeImpl> get copyWith =>
+      __$$DeletePracticeImplCopyWithImpl<_$DeletePracticeImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -914,33 +915,34 @@ class _$_DeletePractice implements _DeletePractice {
 }
 
 abstract class _DeletePractice implements DiaryEvent {
-  const factory _DeletePractice(final String practiceId) = _$_DeletePractice;
+  const factory _DeletePractice(final String practiceId) = _$DeletePracticeImpl;
 
   String get practiceId;
   @JsonKey(ignore: true)
-  _$$_DeletePracticeCopyWith<_$_DeletePractice> get copyWith =>
+  _$$DeletePracticeImplCopyWith<_$DeletePracticeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_RefreshCopyWith<$Res> {
-  factory _$$_RefreshCopyWith(
-          _$_Refresh value, $Res Function(_$_Refresh) then) =
-      __$$_RefreshCopyWithImpl<$Res>;
+abstract class _$$RefreshImplCopyWith<$Res> {
+  factory _$$RefreshImplCopyWith(
+          _$RefreshImpl value, $Res Function(_$RefreshImpl) then) =
+      __$$RefreshImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_RefreshCopyWithImpl<$Res>
-    extends _$DiaryEventCopyWithImpl<$Res, _$_Refresh>
-    implements _$$_RefreshCopyWith<$Res> {
-  __$$_RefreshCopyWithImpl(_$_Refresh _value, $Res Function(_$_Refresh) _then)
+class __$$RefreshImplCopyWithImpl<$Res>
+    extends _$DiaryEventCopyWithImpl<$Res, _$RefreshImpl>
+    implements _$$RefreshImplCopyWith<$Res> {
+  __$$RefreshImplCopyWithImpl(
+      _$RefreshImpl _value, $Res Function(_$RefreshImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Refresh implements _Refresh {
-  const _$_Refresh();
+class _$RefreshImpl implements _Refresh {
+  const _$RefreshImpl();
 
   @override
   String toString() {
@@ -948,9 +950,9 @@ class _$_Refresh implements _Refresh {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Refresh);
+        (other.runtimeType == runtimeType && other is _$RefreshImpl);
   }
 
   @override
@@ -1044,7 +1046,7 @@ class _$_Refresh implements _Refresh {
 }
 
 abstract class _Refresh implements DiaryEvent {
-  const factory _Refresh() = _$_Refresh;
+  const factory _Refresh() = _$RefreshImpl;
 }
 
 /// @nodoc
@@ -1103,11 +1105,11 @@ class _$DiaryStateCopyWithImpl<$Res, $Val extends DiaryState>
 }
 
 /// @nodoc
-abstract class _$$_DiaryStateCopyWith<$Res>
+abstract class _$$DiaryStateImplCopyWith<$Res>
     implements $DiaryStateCopyWith<$Res> {
-  factory _$$_DiaryStateCopyWith(
-          _$_DiaryState value, $Res Function(_$_DiaryState) then) =
-      __$$_DiaryStateCopyWithImpl<$Res>;
+  factory _$$DiaryStateImplCopyWith(
+          _$DiaryStateImpl value, $Res Function(_$DiaryStateImpl) then) =
+      __$$DiaryStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1115,11 +1117,11 @@ abstract class _$$_DiaryStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DiaryStateCopyWithImpl<$Res>
-    extends _$DiaryStateCopyWithImpl<$Res, _$_DiaryState>
-    implements _$$_DiaryStateCopyWith<$Res> {
-  __$$_DiaryStateCopyWithImpl(
-      _$_DiaryState _value, $Res Function(_$_DiaryState) _then)
+class __$$DiaryStateImplCopyWithImpl<$Res>
+    extends _$DiaryStateCopyWithImpl<$Res, _$DiaryStateImpl>
+    implements _$$DiaryStateImplCopyWith<$Res> {
+  __$$DiaryStateImplCopyWithImpl(
+      _$DiaryStateImpl _value, $Res Function(_$DiaryStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1129,7 +1131,7 @@ class __$$_DiaryStateCopyWithImpl<$Res>
     Object? diaries = null,
     Object? currentDate = null,
   }) {
-    return _then(_$_DiaryState(
+    return _then(_$DiaryStateImpl(
       status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -1148,8 +1150,8 @@ class __$$_DiaryStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DiaryState extends _DiaryState {
-  const _$_DiaryState(
+class _$DiaryStateImpl extends _DiaryState {
+  const _$DiaryStateImpl(
       {this.status = QueryStatus.loading,
       this.diaries = const [],
       required this.currentDate})
@@ -1170,10 +1172,10 @@ class _$_DiaryState extends _DiaryState {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DiaryState &&
+            other is _$DiaryStateImpl &&
             (identical(other.status, status) || other.status == status) &&
             const DeepCollectionEquality().equals(other.diaries, diaries) &&
             (identical(other.currentDate, currentDate) ||
@@ -1187,15 +1189,15 @@ class _$_DiaryState extends _DiaryState {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DiaryStateCopyWith<_$_DiaryState> get copyWith =>
-      __$$_DiaryStateCopyWithImpl<_$_DiaryState>(this, _$identity);
+  _$$DiaryStateImplCopyWith<_$DiaryStateImpl> get copyWith =>
+      __$$DiaryStateImplCopyWithImpl<_$DiaryStateImpl>(this, _$identity);
 }
 
 abstract class _DiaryState extends DiaryState {
   const factory _DiaryState(
       {final QueryStatus status,
       final List<DiaryModel> diaries,
-      required final DateTime currentDate}) = _$_DiaryState;
+      required final DateTime currentDate}) = _$DiaryStateImpl;
   const _DiaryState._() : super._();
 
   @override
@@ -1206,6 +1208,6 @@ abstract class _DiaryState extends DiaryState {
   DateTime get currentDate;
   @override
   @JsonKey(ignore: true)
-  _$$_DiaryStateCopyWith<_$_DiaryState> get copyWith =>
+  _$$DiaryStateImplCopyWith<_$DiaryStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

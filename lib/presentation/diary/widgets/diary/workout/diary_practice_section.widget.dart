@@ -32,7 +32,7 @@ class DiaryPracticeSection extends StatelessWidget {
             ? const PracticeLoadingList()
             : DiaryPracticeList(
                 practices: practices!,
-              )
+              ),
       ],
     );
   }

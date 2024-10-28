@@ -23,8 +23,8 @@ abstract class DialogUtil {
 
     Navigator.of(context).push(
       CustomPopupRoute(
-        child: WillPopScope(
-          onWillPop: () async => false,
+        child: PopScope(
+          canPop: false,
           child: Center(
             child: Container(
               height: 60,
@@ -102,13 +102,11 @@ abstract class DialogUtil {
               height: 40,
             ),
           ],
-          contentPadding:
-              const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           actionsPadding: const EdgeInsets.fromLTRB(20, 10, 20, 20),
           titlePadding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
           buttonPadding: EdgeInsets.zero,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         );
       },
     );

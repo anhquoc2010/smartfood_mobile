@@ -4,9 +4,9 @@ import 'dart:typed_data';
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
 
-import 'bindings/model.dart';
-import 'bindings/types.dart';
-import 'ffi/helper.dart';
+import 'package:tflite_flutter/src/bindings/model.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
+import 'package:tflite_flutter/src/ffi/helper.dart';
 
 /// TensorFlowLite model.
 class Model {
@@ -23,7 +23,7 @@ class Model {
     final model = tfLiteModelCreateFromFile(cpath);
     calloc.free(cpath);
     checkArgument(isNotNull(model),
-        message: 'Unable to create model from file');
+        message: 'Unable to create model from file',);
     return Model._(model);
   }
 
@@ -35,7 +35,7 @@ class Model {
     externalTypedData.setRange(0, buffer.length, buffer);
     final model = tfLiteModelCreateFromBuffer(ptr.cast(), buffer.length);
     checkArgument(isNotNull(model),
-        message: 'Unable to create model from buffer');
+        message: 'Unable to create model from buffer',);
     return Model._(model);
   }
 

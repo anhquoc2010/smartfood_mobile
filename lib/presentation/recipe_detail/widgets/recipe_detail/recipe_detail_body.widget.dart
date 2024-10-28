@@ -17,10 +17,10 @@ class RecipeDetailBody extends StatelessWidget {
         CustomScrollView(
           slivers: [
             RecipeDetailAppBar(recipe: recipe),
-            const RecipeDetailInfo()
+            const RecipeDetailInfo(),
           ],
         ),
-        const StartCookingButton()
+        const StartCookingButton(),
       ],
     );
   }

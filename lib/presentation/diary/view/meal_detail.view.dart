@@ -92,14 +92,11 @@ class _DishDetailViewState extends State<_DishDetailView> {
               child: SfCircularChart(
                 annotations: <CircularChartAnnotation>[
                   CircularChartAnnotation(
-                    widget: Container(
-                      child: Text(
-                        widget.meal.kcalString,
-                        style: TextStyles.s17MediumText
-                            .copyWith(color: ColorStyles.primary),
-                      ),
+                    widget: Text(
+                      widget.meal.kcalString,
+                      style: TextStyles.s17MediumText.copyWith(color: ColorStyles.primary),
                     ),
-                  )
+                  ),
                 ],
                 margin: EdgeInsets.zero,
                 legend: Legend(
@@ -115,14 +112,13 @@ class _DishDetailViewState extends State<_DishDetailView> {
                     dataSource: chartData,
                     dataLabelSettings: DataLabelSettings(
                       isVisible: true,
-                      textStyle:
-                          TextStyles.s14BoldText.copyWith(color: Colors.white),
+                      textStyle: TextStyles.s14BoldText.copyWith(color: Colors.white),
                     ),
                     pointColorMapper: (ChartData data, _) => data.color,
                     dataLabelMapper: (data, _) => '${data.y}g',
                     xValueMapper: (ChartData data, _) => data.title,
                     yValueMapper: (ChartData data, _) => data.y,
-                  )
+                  ),
                 ],
               ),
             ),
@@ -138,7 +134,7 @@ class _DishDetailViewState extends State<_DishDetailView> {
                 borderRadius: 1000,
                 content: 'Xem chi tiết công thức nấu ăn',
               ),
-            )
+            ),
           ],
         ),
       ),

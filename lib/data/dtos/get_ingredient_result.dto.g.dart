@@ -6,9 +6,9 @@ part of 'get_ingredient_result.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GetIngredientResultDTO _$$_GetIngredientResultDTOFromJson(
+_$GetIngredientResultDTOImpl _$$GetIngredientResultDTOImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GetIngredientResultDTO(
+    _$GetIngredientResultDTOImpl(
       data: (json['data'] as List<dynamic>)
           .map((e) => IngredientModel.fromJson(e as Map<String, dynamic>))
           .toList(),

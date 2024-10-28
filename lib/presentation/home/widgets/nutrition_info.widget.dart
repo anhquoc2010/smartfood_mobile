@@ -55,7 +55,7 @@ class NutritionInfo extends StatelessWidget {
                               text: '\n/2500 kcal',
                               style: TextStyles.mediumText
                                   .copyWith(color: Colors.white, fontSize: 16),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -65,7 +65,7 @@ class NutritionInfo extends StatelessWidget {
                     backgroundColor: ColorStyles.tint100.withOpacity(0.2),
                   ),
                   AppSize.w20,
-                  const CalorieTypeProgress()
+                  const CalorieTypeProgress(),
                 ],
               );
             },

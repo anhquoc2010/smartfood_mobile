@@ -2,9 +2,9 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 import 'package:quiver/check.dart';
-import '../bindings/delegates/coreml_delegate.dart';
-import '../bindings/types.dart';
-import '../delegate.dart';
+import 'package:tflite_flutter/src/bindings/delegates/coreml_delegate.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
+import 'package:tflite_flutter/src/delegate.dart';
 
 /// CoreMl Delegate
 class CoreMlDelegate implements Delegate {
@@ -55,7 +55,7 @@ class CoreMlDelegateOptions {
       coremlVersion,
       maxDelegatedPartitions,
       minNodesPerPartition,
-    ));
+    ),);
   }
 
   void delete() {

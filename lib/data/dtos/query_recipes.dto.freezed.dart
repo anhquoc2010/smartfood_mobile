@@ -12,7 +12,7 @@ part of 'query_recipes.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$QueryRecipesDTO {
@@ -84,11 +84,11 @@ class _$QueryRecipesDTOCopyWithImpl<$Res, $Val extends QueryRecipesDTO>
 }
 
 /// @nodoc
-abstract class _$$_QueryRecipesDTOCopyWith<$Res>
+abstract class _$$QueryRecipesDTOImplCopyWith<$Res>
     implements $QueryRecipesDTOCopyWith<$Res> {
-  factory _$$_QueryRecipesDTOCopyWith(
-          _$_QueryRecipesDTO value, $Res Function(_$_QueryRecipesDTO) then) =
-      __$$_QueryRecipesDTOCopyWithImpl<$Res>;
+  factory _$$QueryRecipesDTOImplCopyWith(_$QueryRecipesDTOImpl value,
+          $Res Function(_$QueryRecipesDTOImpl) then) =
+      __$$QueryRecipesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,11 +101,11 @@ abstract class _$$_QueryRecipesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QueryRecipesDTOCopyWithImpl<$Res>
-    extends _$QueryRecipesDTOCopyWithImpl<$Res, _$_QueryRecipesDTO>
-    implements _$$_QueryRecipesDTOCopyWith<$Res> {
-  __$$_QueryRecipesDTOCopyWithImpl(
-      _$_QueryRecipesDTO _value, $Res Function(_$_QueryRecipesDTO) _then)
+class __$$QueryRecipesDTOImplCopyWithImpl<$Res>
+    extends _$QueryRecipesDTOCopyWithImpl<$Res, _$QueryRecipesDTOImpl>
+    implements _$$QueryRecipesDTOImplCopyWith<$Res> {
+  __$$QueryRecipesDTOImplCopyWithImpl(
+      _$QueryRecipesDTOImpl _value, $Res Function(_$QueryRecipesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_QueryRecipesDTOCopyWithImpl<$Res>
     Object? pagination = null,
     Object? getNutrition = null,
   }) {
-    return _then(_$_QueryRecipesDTO(
+    return _then(_$QueryRecipesDTOImpl(
       ingredients: freezed == ingredients
           ? _value._ingredients
           : ingredients // ignore: cast_nullable_to_non_nullable
@@ -134,8 +134,8 @@ class __$$_QueryRecipesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_QueryRecipesDTO extends _QueryRecipesDTO {
-  const _$_QueryRecipesDTO(
+class _$QueryRecipesDTOImpl extends _QueryRecipesDTO {
+  const _$QueryRecipesDTOImpl(
       {final List<IngredientModel>? ingredients,
       required this.pagination,
       this.getNutrition = false})
@@ -164,10 +164,10 @@ class _$_QueryRecipesDTO extends _QueryRecipesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QueryRecipesDTO &&
+            other is _$QueryRecipesDTOImpl &&
             const DeepCollectionEquality()
                 .equals(other._ingredients, _ingredients) &&
             (identical(other.pagination, pagination) ||
@@ -186,15 +186,16 @@ class _$_QueryRecipesDTO extends _QueryRecipesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QueryRecipesDTOCopyWith<_$_QueryRecipesDTO> get copyWith =>
-      __$$_QueryRecipesDTOCopyWithImpl<_$_QueryRecipesDTO>(this, _$identity);
+  _$$QueryRecipesDTOImplCopyWith<_$QueryRecipesDTOImpl> get copyWith =>
+      __$$QueryRecipesDTOImplCopyWithImpl<_$QueryRecipesDTOImpl>(
+          this, _$identity);
 }
 
 abstract class _QueryRecipesDTO extends QueryRecipesDTO {
   const factory _QueryRecipesDTO(
       {final List<IngredientModel>? ingredients,
       required final PaginationQueryDTO<dynamic> pagination,
-      final bool getNutrition}) = _$_QueryRecipesDTO;
+      final bool getNutrition}) = _$QueryRecipesDTOImpl;
   const _QueryRecipesDTO._() : super._();
 
   @override
@@ -205,6 +206,6 @@ abstract class _QueryRecipesDTO extends QueryRecipesDTO {
   bool get getNutrition;
   @override
   @JsonKey(ignore: true)
-  _$$_QueryRecipesDTOCopyWith<_$_QueryRecipesDTO> get copyWith =>
+  _$$QueryRecipesDTOImplCopyWith<_$QueryRecipesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

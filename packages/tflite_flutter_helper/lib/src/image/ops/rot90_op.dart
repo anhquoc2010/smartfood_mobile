@@ -35,7 +35,7 @@ class Rot90Op extends ImageOperator {
 
   @override
   Point inverseTransform(
-      Point point, int inputImageHeight, int inputImageWidth) {
+      Point point, int inputImageHeight, int inputImageWidth,) {
     int inverseNumRotation = (4 - _numRotation) % 4;
     int height = getOutputImageHeight(inputImageHeight, inputImageWidth);
     int width = getOutputImageWidth(inputImageHeight, inputImageWidth);

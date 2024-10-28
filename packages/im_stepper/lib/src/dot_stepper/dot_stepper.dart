@@ -68,6 +68,7 @@ class DotStepper extends StatefulWidget {
   final OnDotTapped? onDotTapped;
 
   DotStepper({
+    super.key,
     required this.activeStep,
     this.dotCount = 2,
     this.dotRadius = 24,
@@ -95,11 +96,10 @@ class DotStepper extends StatefulWidget {
   }
 
   @override
-  _DotStepperState createState() => _DotStepperState();
+  DotStepperState createState() => DotStepperState();
 }
 
-class _DotStepperState extends State<DotStepper>
-    with SingleTickerProviderStateMixin {
+class DotStepperState extends State<DotStepper> with SingleTickerProviderStateMixin {
   /// The controller which handles the animations.
   AnimationController? _animationController;
 
@@ -129,7 +129,7 @@ class _DotStepperState extends State<DotStepper>
   @override
   void initState() {
     _animationController = AnimationController(
-      duration: Duration(milliseconds: 400),
+      duration: const Duration(milliseconds: 400),
       vsync: this,
     )..addListener(() {
         setState(() {});
@@ -224,9 +224,7 @@ class _DotStepperState extends State<DotStepper>
     _animationController!.forward();
 
     // Based on the event that updated the activeDot, set it to the corresponding value.
-    eventIsTap
-        ? _activeDotIndex = activeDotIndex
-        : _activeDotIndex = widget.activeStep;
+    eventIsTap ? _activeDotIndex = activeDotIndex : _activeDotIndex = widget.activeStep;
 
     // If activeDot is greater than the old dot that was active, the stepping is moving forward, else it's moving backward.
     _isSteppingForward = _activeDotIndex! > _oldDotIndex;
@@ -280,9 +278,7 @@ class _DotStepperState extends State<DotStepper>
 
     // Show stroke only when the strokeWidth is greater than 0.
     _fixedDotStrokeBrush = Paint()
-      ..color = widget.fixedDotDecoration.strokeWidth > 0.0
-          ? widget.fixedDotDecoration.strokeColor
-          : _fixedDotFillBrush!.color
+      ..color = widget.fixedDotDecoration.strokeWidth > 0.0 ? widget.fixedDotDecoration.strokeColor : _fixedDotFillBrush!.color
       ..style = PaintingStyle.stroke
       ..strokeWidth = widget.fixedDotDecoration.strokeWidth;
 

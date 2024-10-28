@@ -12,7 +12,7 @@ part of 'diary.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DiaryModel _$DiaryModelFromJson(Map<String, dynamic> json) {
   return _DiaryModel.fromJson(json);
@@ -128,11 +128,11 @@ class _$DiaryModelCopyWithImpl<$Res, $Val extends DiaryModel>
 }
 
 /// @nodoc
-abstract class _$$_DiaryModelCopyWith<$Res>
+abstract class _$$DiaryModelImplCopyWith<$Res>
     implements $DiaryModelCopyWith<$Res> {
-  factory _$$_DiaryModelCopyWith(
-          _$_DiaryModel value, $Res Function(_$_DiaryModel) then) =
-      __$$_DiaryModelCopyWithImpl<$Res>;
+  factory _$$DiaryModelImplCopyWith(
+          _$DiaryModelImpl value, $Res Function(_$DiaryModelImpl) then) =
+      __$$DiaryModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -148,11 +148,11 @@ abstract class _$$_DiaryModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DiaryModelCopyWithImpl<$Res>
-    extends _$DiaryModelCopyWithImpl<$Res, _$_DiaryModel>
-    implements _$$_DiaryModelCopyWith<$Res> {
-  __$$_DiaryModelCopyWithImpl(
-      _$_DiaryModel _value, $Res Function(_$_DiaryModel) _then)
+class __$$DiaryModelImplCopyWithImpl<$Res>
+    extends _$DiaryModelCopyWithImpl<$Res, _$DiaryModelImpl>
+    implements _$$DiaryModelImplCopyWith<$Res> {
+  __$$DiaryModelImplCopyWithImpl(
+      _$DiaryModelImpl _value, $Res Function(_$DiaryModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -168,7 +168,7 @@ class __$$_DiaryModelCopyWithImpl<$Res>
     Object? dinner = null,
     Object? exercises = null,
   }) {
-    return _then(_$_DiaryModel(
+    return _then(_$DiaryModelImpl(
       date: null == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -211,8 +211,8 @@ class __$$_DiaryModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_DiaryModel extends _DiaryModel {
-  _$_DiaryModel(
+class _$DiaryModelImpl extends _DiaryModel {
+  _$DiaryModelImpl(
       {required this.date,
       this.totalCalories,
       this.fat,
@@ -224,8 +224,8 @@ class _$_DiaryModel extends _DiaryModel {
       this.exercises = const []})
       : super._();
 
-  factory _$_DiaryModel.fromJson(Map<String, dynamic> json) =>
-      _$$_DiaryModelFromJson(json);
+  factory _$DiaryModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DiaryModelImplFromJson(json);
 
   @override
   DateTime date;
@@ -258,8 +258,8 @@ class _$_DiaryModel extends _DiaryModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DiaryModelCopyWith<_$_DiaryModel> get copyWith =>
-      __$$_DiaryModelCopyWithImpl<_$_DiaryModel>(this, _$identity);
+  _$$DiaryModelImplCopyWith<_$DiaryModelImpl> get copyWith =>
+      __$$DiaryModelImplCopyWithImpl<_$DiaryModelImpl>(this, _$identity);
 }
 
 abstract class _DiaryModel extends DiaryModel {
@@ -272,11 +272,11 @@ abstract class _DiaryModel extends DiaryModel {
       List<MealModel> breakfast,
       List<MealModel> lunch,
       List<MealModel> dinner,
-      List<PracticeModel> exercises}) = _$_DiaryModel;
+      List<PracticeModel> exercises}) = _$DiaryModelImpl;
   _DiaryModel._() : super._();
 
   factory _DiaryModel.fromJson(Map<String, dynamic> json) =
-      _$_DiaryModel.fromJson;
+      _$DiaryModelImpl.fromJson;
 
   @override
   DateTime get date;
@@ -307,6 +307,6 @@ abstract class _DiaryModel extends DiaryModel {
   set exercises(List<PracticeModel> value);
   @override
   @JsonKey(ignore: true)
-  _$$_DiaryModelCopyWith<_$_DiaryModel> get copyWith =>
+  _$$DiaryModelImplCopyWith<_$DiaryModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

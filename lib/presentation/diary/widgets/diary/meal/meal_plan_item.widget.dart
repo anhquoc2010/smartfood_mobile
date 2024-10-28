@@ -39,7 +39,7 @@ class MealPlanItem extends StatelessWidget {
             : MealList(
                 dishes: mealPlan.meals,
                 onDelete: (mealId) => _onDelete(context, mealId),
-              )
+              ),
       ],
     );
   }

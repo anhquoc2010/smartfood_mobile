@@ -65,7 +65,7 @@ class _HomeDataState extends State<HomeData> {
               children: [
                 RecipeToday(
                   recipes: state.recipes ?? [],
-                )
+                ),
               ],
             ),
           ),

@@ -6,8 +6,8 @@ part of 'recipe.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RecipeModel _$$_RecipeModelFromJson(Map<String, dynamic> json) =>
-    _$_RecipeModel(
+_$RecipeModelImpl _$$RecipeModelImplFromJson(Map<String, dynamic> json) =>
+    _$RecipeModelImpl(
       id: json['id'] as String,
       name: json['name'] as String,
       description: json['description'] as String?,

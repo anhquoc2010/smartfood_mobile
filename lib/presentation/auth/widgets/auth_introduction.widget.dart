@@ -26,7 +26,7 @@ class AuthIntroduction extends StatelessWidget {
               ? LocaleKeys.auth_sign_in_introduction.tr()
               : LocaleKeys.auth_sign_up_introduction.tr(),
           style: TextStyles.s14RegularText.copyWith(color: ColorStyles.gray500),
-        )
+        ),
       ],
     );
   }

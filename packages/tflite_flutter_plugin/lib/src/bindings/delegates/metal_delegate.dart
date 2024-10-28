@@ -2,9 +2,9 @@
 
 import 'dart:ffi';
 
-import '../dlib.dart';
+import 'package:tflite_flutter/src/bindings/dlib.dart';
 
-import '../types.dart';
+import 'package:tflite_flutter/src/bindings/types.dart';
 
 // iOS metal delegate bindings
 
@@ -16,25 +16,25 @@ import '../types.dart';
 Pointer<TfLiteDelegate> Function(Pointer<TFLGpuDelegateOptions>? options)
     tflGpuDelegateCreate = tflitelib
         .lookup<NativeFunction<_TFLGpuDelegateCreate_native_t>>(
-            'TFLGpuDelegateCreate')
+            'TFLGpuDelegateCreate',)
         .asFunction();
 
 typedef _TFLGpuDelegateCreate_native_t = Pointer<TfLiteDelegate> Function(
-    Pointer<TFLGpuDelegateOptions>? options);
+    Pointer<TFLGpuDelegateOptions>? options,);
 
 /// Destroys a delegate created with `TFLGpuDelegateCreate` call.
 void Function(Pointer<TfLiteDelegate>) tflGpuDelegateDelete = tflitelib
     .lookup<NativeFunction<_TFLGpuDelegateDelete_native_t>>(
-        'TFLGpuDelegateDelete')
+        'TFLGpuDelegateDelete',)
     .asFunction();
 
 typedef _TFLGpuDelegateDelete_native_t = Void Function(
-    Pointer<TfLiteDelegate> delegate);
+    Pointer<TfLiteDelegate> delegate,);
 
 /// Default Options
 TFLGpuDelegateOptions Function() tflGpuDelegateOptionsDefault = tflitelib
     .lookup<NativeFunction<_TFLGpuDelegateOptions_native_t>>(
-        'TFLGpuDelegateOptionsDefault')
+        'TFLGpuDelegateOptionsDefault',)
     .asFunction();
 
 typedef _TFLGpuDelegateOptions_native_t = TFLGpuDelegateOptions Function();

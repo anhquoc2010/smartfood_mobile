@@ -75,9 +75,9 @@ class _AppCarouselSliderState extends State<AppCarouselSlider> {
                   },
                   itemCount: widget.items.length,
                 ),
-              )
+              ),
             ],
-          )
+          ),
       ],
     );
   }

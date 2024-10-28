@@ -45,7 +45,7 @@ class RowPageButton extends StatelessWidget {
             onTap: () => navigatePage(false),
             icon: Icons.chevron_right_rounded,
             iconSize: 35,
-          )
+          ),
         ],
       ),
     );

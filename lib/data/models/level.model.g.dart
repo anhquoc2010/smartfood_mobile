@@ -6,8 +6,8 @@ part of 'level.model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LevelModel _$$_LevelModelFromJson(Map<String, dynamic> json) =>
-    _$_LevelModel(
+_$LevelModelImpl _$$LevelModelImplFromJson(Map<String, dynamic> json) =>
+    _$LevelModelImpl(
       id: json['id'] as String,
       name: $enumDecode(_$RecipeLevelEnumMap, json['name']),
     );

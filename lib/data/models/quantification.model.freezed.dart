@@ -12,7 +12,7 @@ part of 'quantification.model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 QuantificationModel _$QuantificationModelFromJson(Map<String, dynamic> json) {
   return _QuantificationModel.fromJson(json);
@@ -89,11 +89,11 @@ class _$QuantificationModelCopyWithImpl<$Res, $Val extends QuantificationModel>
 }
 
 /// @nodoc
-abstract class _$$_QuantificationModelCopyWith<$Res>
+abstract class _$$QuantificationModelImplCopyWith<$Res>
     implements $QuantificationModelCopyWith<$Res> {
-  factory _$$_QuantificationModelCopyWith(_$_QuantificationModel value,
-          $Res Function(_$_QuantificationModel) then) =
-      __$$_QuantificationModelCopyWithImpl<$Res>;
+  factory _$$QuantificationModelImplCopyWith(_$QuantificationModelImpl value,
+          $Res Function(_$QuantificationModelImpl) then) =
+      __$$QuantificationModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String value, String unit, IngredientModel ingredient});
@@ -103,11 +103,11 @@ abstract class _$$_QuantificationModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuantificationModelCopyWithImpl<$Res>
-    extends _$QuantificationModelCopyWithImpl<$Res, _$_QuantificationModel>
-    implements _$$_QuantificationModelCopyWith<$Res> {
-  __$$_QuantificationModelCopyWithImpl(_$_QuantificationModel _value,
-      $Res Function(_$_QuantificationModel) _then)
+class __$$QuantificationModelImplCopyWithImpl<$Res>
+    extends _$QuantificationModelCopyWithImpl<$Res, _$QuantificationModelImpl>
+    implements _$$QuantificationModelImplCopyWith<$Res> {
+  __$$QuantificationModelImplCopyWithImpl(_$QuantificationModelImpl _value,
+      $Res Function(_$QuantificationModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -118,7 +118,7 @@ class __$$_QuantificationModelCopyWithImpl<$Res>
     Object? unit = null,
     Object? ingredient = null,
   }) {
-    return _then(_$_QuantificationModel(
+    return _then(_$QuantificationModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -141,16 +141,16 @@ class __$$_QuantificationModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createToJson: false)
-class _$_QuantificationModel extends _QuantificationModel {
-  _$_QuantificationModel(
+class _$QuantificationModelImpl extends _QuantificationModel {
+  _$QuantificationModelImpl(
       {required this.id,
       required this.value,
       required this.unit,
       required this.ingredient})
       : super._();
 
-  factory _$_QuantificationModel.fromJson(Map<String, dynamic> json) =>
-      _$$_QuantificationModelFromJson(json);
+  factory _$QuantificationModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuantificationModelImplFromJson(json);
 
   @override
   final String id;
@@ -167,10 +167,10 @@ class _$_QuantificationModel extends _QuantificationModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuantificationModel &&
+            other is _$QuantificationModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.unit, unit) || other.unit == unit) &&
@@ -185,8 +185,8 @@ class _$_QuantificationModel extends _QuantificationModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuantificationModelCopyWith<_$_QuantificationModel> get copyWith =>
-      __$$_QuantificationModelCopyWithImpl<_$_QuantificationModel>(
+  _$$QuantificationModelImplCopyWith<_$QuantificationModelImpl> get copyWith =>
+      __$$QuantificationModelImplCopyWithImpl<_$QuantificationModelImpl>(
           this, _$identity);
 }
 
@@ -195,11 +195,11 @@ abstract class _QuantificationModel extends QuantificationModel {
       {required final String id,
       required final String value,
       required final String unit,
-      required final IngredientModel ingredient}) = _$_QuantificationModel;
+      required final IngredientModel ingredient}) = _$QuantificationModelImpl;
   _QuantificationModel._() : super._();
 
   factory _QuantificationModel.fromJson(Map<String, dynamic> json) =
-      _$_QuantificationModel.fromJson;
+      _$QuantificationModelImpl.fromJson;
 
   @override
   String get id;
@@ -211,6 +211,6 @@ abstract class _QuantificationModel extends QuantificationModel {
   IngredientModel get ingredient;
   @override
   @JsonKey(ignore: true)
-  _$$_QuantificationModelCopyWith<_$_QuantificationModel> get copyWith =>
+  _$$QuantificationModelImplCopyWith<_$QuantificationModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

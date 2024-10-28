@@ -12,7 +12,7 @@ part of 'change_password.dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ChangePasswordDTO {
@@ -71,11 +71,11 @@ class _$ChangePasswordDTOCopyWithImpl<$Res, $Val extends ChangePasswordDTO>
 }
 
 /// @nodoc
-abstract class _$$_ChangePasswordDTOCopyWith<$Res>
+abstract class _$$ChangePasswordDTOImplCopyWith<$Res>
     implements $ChangePasswordDTOCopyWith<$Res> {
-  factory _$$_ChangePasswordDTOCopyWith(_$_ChangePasswordDTO value,
-          $Res Function(_$_ChangePasswordDTO) then) =
-      __$$_ChangePasswordDTOCopyWithImpl<$Res>;
+  factory _$$ChangePasswordDTOImplCopyWith(_$ChangePasswordDTOImpl value,
+          $Res Function(_$ChangePasswordDTOImpl) then) =
+      __$$ChangePasswordDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -83,11 +83,11 @@ abstract class _$$_ChangePasswordDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ChangePasswordDTOCopyWithImpl<$Res>
-    extends _$ChangePasswordDTOCopyWithImpl<$Res, _$_ChangePasswordDTO>
-    implements _$$_ChangePasswordDTOCopyWith<$Res> {
-  __$$_ChangePasswordDTOCopyWithImpl(
-      _$_ChangePasswordDTO _value, $Res Function(_$_ChangePasswordDTO) _then)
+class __$$ChangePasswordDTOImplCopyWithImpl<$Res>
+    extends _$ChangePasswordDTOCopyWithImpl<$Res, _$ChangePasswordDTOImpl>
+    implements _$$ChangePasswordDTOImplCopyWith<$Res> {
+  __$$ChangePasswordDTOImplCopyWithImpl(_$ChangePasswordDTOImpl _value,
+      $Res Function(_$ChangePasswordDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,7 +97,7 @@ class __$$_ChangePasswordDTOCopyWithImpl<$Res>
     Object? newPassword = null,
     Object? confirmPassword = null,
   }) {
-    return _then(_$_ChangePasswordDTO(
+    return _then(_$ChangePasswordDTOImpl(
       currentPassword: null == currentPassword
           ? _value.currentPassword
           : currentPassword // ignore: cast_nullable_to_non_nullable
@@ -116,8 +116,8 @@ class __$$_ChangePasswordDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable(createFactory: false)
-class _$_ChangePasswordDTO implements _ChangePasswordDTO {
-  _$_ChangePasswordDTO(
+class _$ChangePasswordDTOImpl implements _ChangePasswordDTO {
+  _$ChangePasswordDTOImpl(
       {required this.currentPassword,
       required this.newPassword,
       required this.confirmPassword});
@@ -135,10 +135,10 @@ class _$_ChangePasswordDTO implements _ChangePasswordDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ChangePasswordDTO &&
+            other is _$ChangePasswordDTOImpl &&
             (identical(other.currentPassword, currentPassword) ||
                 other.currentPassword == currentPassword) &&
             (identical(other.newPassword, newPassword) ||
@@ -155,13 +155,13 @@ class _$_ChangePasswordDTO implements _ChangePasswordDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ChangePasswordDTOCopyWith<_$_ChangePasswordDTO> get copyWith =>
-      __$$_ChangePasswordDTOCopyWithImpl<_$_ChangePasswordDTO>(
+  _$$ChangePasswordDTOImplCopyWith<_$ChangePasswordDTOImpl> get copyWith =>
+      __$$ChangePasswordDTOImplCopyWithImpl<_$ChangePasswordDTOImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChangePasswordDTOToJson(
+    return _$$ChangePasswordDTOImplToJson(
       this,
     );
   }
@@ -171,7 +171,7 @@ abstract class _ChangePasswordDTO implements ChangePasswordDTO {
   factory _ChangePasswordDTO(
       {required final String currentPassword,
       required final String newPassword,
-      required final String confirmPassword}) = _$_ChangePasswordDTO;
+      required final String confirmPassword}) = _$ChangePasswordDTOImpl;
 
   @override
   String get currentPassword;
@@ -181,6 +181,6 @@ abstract class _ChangePasswordDTO implements ChangePasswordDTO {
   String get confirmPassword;
   @override
   @JsonKey(ignore: true)
-  _$$_ChangePasswordDTOCopyWith<_$_ChangePasswordDTO> get copyWith =>
+  _$$ChangePasswordDTOImplCopyWith<_$ChangePasswordDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

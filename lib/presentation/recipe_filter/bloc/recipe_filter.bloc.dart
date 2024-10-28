@@ -50,7 +50,7 @@ class RecipeFilterBloc extends Bloc<RecipeFilterEvent, RecipeFilterState> {
       ] = await Future.wait([
         _categoryRepository.getCategories(),
         _cuisineRepository.getCuisines(),
-        _levelRepository.getLevels()
+        _levelRepository.getLevels(),
       ]);
 
       emit(

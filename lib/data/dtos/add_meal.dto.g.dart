@@ -6,7 +6,7 @@ part of 'add_meal.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$$_AddMealDTOToJson(_$_AddMealDTO instance) =>
+Map<String, dynamic> _$$AddMealDTOImplToJson(_$AddMealDTOImpl instance) =>
     <String, dynamic>{
       'typeOfMeal': _$MealTypeEnumMap[instance.typeOfMeal]!,
       'dishes': instance.dishes.map((e) => e.toJson()).toList(),

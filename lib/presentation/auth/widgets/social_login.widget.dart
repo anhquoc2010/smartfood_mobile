@@ -36,7 +36,7 @@ class SocialLogin extends StatelessWidget {
               child: Divider(
                 color: ColorStyles.gray300,
               ),
-            )
+            ),
           ],
         ),
         AppSize.h20,
@@ -73,11 +73,11 @@ class SocialLogin extends StatelessWidget {
                   backgroundColor: Colors.black,
                   textStyle:
                       TextStyles.s14MediumText.copyWith(color: Colors.white),
-                )
+                ),
               ],
             );
           },
-        )
+        ),
       ],
     );
   }

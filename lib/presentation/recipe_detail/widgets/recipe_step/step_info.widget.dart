@@ -44,7 +44,7 @@ class _StepInfoState extends State<StepInfo>
               style: TextStyles.s14MediumText,
             ),
           ),
-        )
+        ),
       ],
     );
   }

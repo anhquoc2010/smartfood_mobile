@@ -53,7 +53,7 @@ class _DiaryFabState extends State<DiaryFab> with TickerProviderStateMixin {
       ),
       mode: DiaryMode.workout,
       beginTime: 100,
-    )
+    ),
   ];
 
   @override
@@ -165,7 +165,7 @@ class _DiaryFabState extends State<DiaryFab> with TickerProviderStateMixin {
                   Icons.add,
                   color: Colors.white,
                 ),
-              )
+              ),
             ],
           ),
         );

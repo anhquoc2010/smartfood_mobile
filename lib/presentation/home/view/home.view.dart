@@ -38,7 +38,7 @@ class _HomeView extends StatelessWidget {
             icon: Icons.notifications_on_outlined,
             iconColor: ColorStyles.primary,
           ),
-          AppSize.w20
+          AppSize.w20,
         ],
       ),
       body: const HomeBody(),

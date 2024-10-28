@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:typed_data';
-import 'sound_stream.dart';
+import 'package:tflite_flutter_helper/src/audio/sound_stream.dart';
 
 class RecorderStream {
   static final RecorderStream _instance = RecorderStream._internal();
@@ -20,19 +20,19 @@ class RecorderStream {
 
   /// Initialize Recorder with specified [sampleRate]
   Future<dynamic> initialize({int sampleRate = 16000, bool showLogs = false}) =>
-      methodChannel.invokeMethod<dynamic>("initializeRecorder", {
-        "sampleRate": sampleRate,
-        "showLogs": showLogs,
+      methodChannel.invokeMethod<dynamic>('initializeRecorder', {
+        'sampleRate': sampleRate,
+        'showLogs': showLogs,
       });
 
   /// Start recording. Recorder will start pushing audio chunks (PCM 16bit data)
   /// to audiostream as Uint8List
   Future<dynamic> start() =>
-      methodChannel.invokeMethod<dynamic>("startRecording");
+      methodChannel.invokeMethod<dynamic>('startRecording');
 
   /// Recorder will stop recording and sending audio chunks to the [audioStream].
   Future<dynamic> stop() =>
-      methodChannel.invokeMethod<dynamic>("stopRecording");
+      methodChannel.invokeMethod<dynamic>('stopRecording');
 
   /// Current status of the [RecorderStream]
   Stream<SoundStreamStatus> get status => _recorderStatusController.stream;
@@ -42,19 +42,19 @@ class RecorderStream {
 
   void _eventListener(dynamic event) {
     if (event == null) return;
-    final String eventName = event["name"] ?? "";
+    final String eventName = event['name'] ?? '';
     switch (eventName) {
-      case "dataPeriod":
+      case 'dataPeriod':
         final Uint8List audioData =
-            Uint8List.fromList(event["data"] ?? []);
+            Uint8List.fromList(event['data'] ?? []);
         if (audioData.isNotEmpty) _audioStreamController.add(audioData);
         break;
-      case "recorderStatus":
-        final String status = event["data"] ?? "Unset";
+      case 'recorderStatus':
+        final String status = event['data'] ?? 'Unset';
         _recorderStatusController.add(SoundStreamStatus.values.firstWhere(
               (value) => enumToString(value) == status,
           orElse: () => SoundStreamStatus.Unset,
-        ));
+        ),);
         break;
     }
   }

@@ -30,7 +30,7 @@ class MacrosLinear extends StatelessWidget {
           thickness: 10,
           color: color,
           edgeStyle: LinearEdgeStyle.bothCurve,
-        )
+        ),
       ],
       showLabels: false,
       showTicks: false,

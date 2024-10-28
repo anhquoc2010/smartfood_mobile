@@ -44,7 +44,7 @@ class NutritionNotFound extends StatelessWidget {
                   borderSide: const BorderSide(
                     color: ColorStyles.primary,
                   ),
-                )
+                ),
               ],
             ),
           );

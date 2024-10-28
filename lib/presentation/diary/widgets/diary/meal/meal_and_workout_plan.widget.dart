@@ -23,7 +23,7 @@ class _MealAndWorkoutPlanState extends State<MealAndWorkoutPlan> {
       type: MealType.breakfast,
     ),
     MealPlanUIModel(title: LocaleKeys.meal_lunch.tr(), type: MealType.lunch),
-    MealPlanUIModel(title: LocaleKeys.meal_dinner.tr(), type: MealType.dinner)
+    MealPlanUIModel(title: LocaleKeys.meal_dinner.tr(), type: MealType.dinner),
   ];
 
   List<PracticeModel>? _practices;
@@ -63,7 +63,7 @@ class _MealAndWorkoutPlanState extends State<MealAndWorkoutPlan> {
         AppSize.h20,
         DiaryPracticeSection(
           practices: _practices,
-        )
+        ),
       ],
     );
   }

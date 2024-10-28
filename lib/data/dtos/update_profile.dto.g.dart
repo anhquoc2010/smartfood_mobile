@@ -6,7 +6,8 @@ part of 'update_profile.dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$$_UpdateProfileDTOToJson(_$_UpdateProfileDTO instance) =>
+Map<String, dynamic> _$$UpdateProfileDTOImplToJson(
+        _$UpdateProfileDTOImpl instance) =>
     <String, dynamic>{
       'firstName': instance.firstName,
       'lastName': instance.lastName,
